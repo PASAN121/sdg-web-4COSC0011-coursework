@@ -1,1 +1,24 @@
+:root {
+    --primary-green: #26865e;
+    --secondary-green: #2d6a4f;
+    --accent-green: #40916c;
+    --light-green: #52b788;
+    --pale-green: #d4f0d4;
+    --bg-light: #f0f9f0;
+    --white: #ffffff;
+    --dark-text: #1a1a1a;
+    --medium-text: #555555;
+    --light-text: #999999;
+    --accent-yellow: #ffeaa7;
+    --accent-red: #ff7675;
+    --success-green: #27ae60;
+    --warning-orange: #f39c12;
+    --danger-red: #d63031;
+}
 
+/* reset default margin and padding, and set box-sizing to border-box for easier layout control */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
