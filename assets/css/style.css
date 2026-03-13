@@ -4,15 +4,28 @@
 
 /* COLORS */
 :root {
-    --primary-green: #1b4332;
-    --secondary-green: #2d6a4f;
-    --accent-green: #40916c;
+    --primary-green: #0e3320;
+    --secondary-green: #05d56d;
+    --accent-green: #168045;
     --light-green: #52b788;
     --pale-green: #d8f3dc;
     --white: #ffffff;
     --dark-text: #1a1a1a;
     --medium-text: #555555;
+    --neutral-gray: #6c757d;
+    --neutral-dark: #212529;
+
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'Lato', sans-serif;
+
+
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
 }
+
 
 /* RESET */
 * {
@@ -30,8 +43,41 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-text);
-    background: linear-gradient(135deg, #1e5631, #2d6a4f, #40916c);
+    background: linear-gradient(135deg, #e3f2fd 0%, var(--secondary-green) 100%);
     min-height: 100vh;
+}
+
+/*type*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-display);
+    color: var(--white);
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin-bottom: var(--spacing-sm);
 }
 
 /* ========================================
@@ -39,161 +85,216 @@ body {
    ======================================== */
 
 header {
-    background: var(--primary-green);
+    background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
     color: var(--white);
-    text-align: center;
-    padding: 25px 20px;
-}
-
-header h1 {
-    font-size: 2.2em;
-    letter-spacing: 2px;
-}
-
-header p {
-    color: var(--pale-green);
-}
-
-/* ========================================
-   NAVIGATION
-   ======================================== */
-
-nav {
-    background: var(--secondary-green);
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: var(--spacing-md) var(--spacing-lg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
-    gap: 20px;
-    padding: 12px;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+}
+
+.logo-section {
+    display: flex;
+    align-items: left;
+    gap: var(--spacing-sm);
+}
+
+.logo-section img {
+    height: 80px;
+    width: auto;
+
+}
+
+.site-title {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin: 0;
+}
+
+/* NAVIGATION */
+nav {
+    background: rgba(71, 146, 9, 0.384);
+    border-radius: 50px;
+    padding: var(--spacing-xs);
+    display: flex;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-xs);
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0;
 }
 
 nav a {
-    color: var(--white);
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--neutral-white);
     text-decoration: none;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 4px;
-    transition: 0.3s;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.95rem;
 }
 
-nav a:hover,
+/* Hover Effect for Navigation */
+nav a:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Page Indicator */
 nav a.active {
-    background: var(--light-green);
-}
-
-/* ========================================
-   LAYOUT
-   ======================================== */
-
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 30px 20px;
-}
-
-section {
-    background: var(--white);
-    margin: 25px 0;
-    padding: 35px;
-    border-radius: 8px;
-}
-
-section h2 {
+    background: var(--pale-green);
+    box-shadow: 0 4px 12px rgba(32, 201, 151, 0.4);
     color: var(--primary-green);
-    margin-bottom: 15px;
 }
 
-section h3 {
-    color: var(--secondary-green);
-    margin-top: 15px;
+
+/* Main Content Area */
+main {
+    max-width: 1200px;
+    margin: var(--spacing-lg) auto;
+    padding: 0 var(--spacing-md);
+    min-height: 60vh;
 }
 
-section p {
-    color: var(--medium-text);
-}
-
-/* ========================================
-   GRID SYSTEM
-   ======================================== */
-
-.grid {
-    display: grid;
-    gap: 25px;
-}
-
-.grid-2 {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-}
-
-.grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* ========================================
-   CARDS
-   ======================================== */
-
+/* Card Styles */
 .card {
-    background: #f0f9f0;
-    padding: 20px;
-    border-radius: 6px;
-    border-left: 4px solid var(--light-green);
-    transition: 0.3s;
+    background: var(--white);
+    border-radius: 12px;
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* ========================================
-   BUTTONS
-   ======================================== */
+.card h2,
+.card h3 {
+    color: var(--dark-text);
+    margin-top: 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.card p {
+    color: var(--neutral-gray);
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.content-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: var(--spacing-md) 0;
+}
+
+/* Links and Buttons */
+a {
+    color: var(--primary-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-coral);
+}
 
 .btn {
     display: inline-block;
-    padding: 10px 25px;
-    background: var(--light-green);
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-green);
     color: var(--white);
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: 0.3s;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn:hover {
-    background: var(--accent-green);
+    background: var(--secondary-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+    color: var(--white);
 }
 
-/* ========================================
-   FOOTER
-   ======================================== */
+.btn-secondary {
+    background: var(--secondary-teal);
+}
 
+.btn-secondary:hover {
+    background: var(--light-green);
+}
+
+/* Footer */
 footer {
     background: var(--primary-green);
     color: var(--white);
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
-    ;
+    padding: var(--spacing-md) var(--spacing-lg);
+    margin-top: var(--spacing-xl);
 }
 
-footer a {
-    color: var(--light-green);
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
 }
 
 .footer-links {
-    margin: 15px 0;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    gap: var(--spacing-md);
     flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: var(--pale-green);
+}
+
+.student-info {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ========================================
