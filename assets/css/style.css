@@ -90,21 +90,22 @@ header {
     color: var(--white);
     padding: var(--spacing-md) var(--spacing-lg);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: sticky;   /* Stays at top when scrolling */
     top: 0;
-    z-index: 1000;
+    z-index: 1000;  /* Stays above other elements */
 }
 
+/* Layout inside header */
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;/* Space between logo & nav */
     align-items: center;
     flex-wrap: wrap;
     gap: var(--spacing-sm);
 }
-
+/* Logo section */
 .logo-section {
     display: flex;
     align-items: left;
