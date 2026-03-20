@@ -99,10 +99,10 @@ header {
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;/* Space between logo & nav */
+    display: flex;/*Flexbox layout*/
+    justify-content: space-between;/* Space between logo & nav(Logo left Menu right) */
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/*Goes to next line if nesasry*/
     gap: var(--spacing-sm);
 }
 /* Logo section */
@@ -133,8 +133,8 @@ nav {
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none;/*Remove bullets */
+    display: flex;/* Horizontal layout */
     gap: var(--spacing-xs);
     flex-wrap: wrap;
 }
@@ -144,12 +144,12 @@ nav li {
 }
 
 nav a {
-    display: block;
+    display: block;/* Makes full clickable area */
     padding: 0.75rem 1.25rem;
-    color: var(--neutral-white);
-    text-decoration: none;
+    color: var(--white);
+    text-decoration: none;/* Remove underline */
     border-radius: 25px;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;/* Smooth hover animation */
     font-weight: 500;
     font-size: 0.95rem;
 }
@@ -157,7 +157,7 @@ nav a {
 /* Hover Effect for Navigation */
 nav a:hover {
     background: var(--accent-green);
-    transform: translateY(-2px);
+    transform: translateY(-2px);/* Move up slightly */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -171,16 +171,16 @@ nav a.active {
 
 /* Main Content Area */
 main {
-    max-width: 1200px;
-    margin: var(--spacing-lg) auto;
-    padding: 0 var(--spacing-md);
+    max-width: 1200px;  /* Limit width for better view*/
+    margin: var(--spacing-lg) auto;/* Center horizontally */
+    padding: 0 var(--spacing-md);/* Side spacing */
     min-height: 60vh;
 }
 
 /* Card Styles */
 .card {
     background: var(--white);
-    border-radius: 12px;
+    border-radius: 12px;/* Rounded corners */
     padding: var(--spacing-md);
     margin-bottom: var(--spacing-md);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -188,7 +188,7 @@ main {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px);/* Lift effect */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
