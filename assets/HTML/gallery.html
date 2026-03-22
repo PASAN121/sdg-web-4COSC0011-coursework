@@ -6,6 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NatureGuard | SDG 15 - Life on Land</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Page-Specific Embedded CSS for Home Page */
+    
+        /* galler head Section */
+        .gallery-head {
+            background-image: url(../../images/gallery/pexels-artempodrez-7048040.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    
+    
+            padding: 3rem 2rem;
+            border-radius: 12px;
+            color: rgb(2, 2, 2);
+            font-size: large;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 3rem;
+            /* Space below hero section */
+        }
+    
+        .gallery-section {
+            max-width: 1200px;
+            margin: 0 auto 4rem auto;
+            padding: 0 1rem;
+    
+        }
+    
+        .gallery-section h2 {
+            text-align: center;
+            color: white;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold
+        }
+    
+        /*GRID LAYOUT*/
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+    
+        /* Individual Cell */
+        .cell {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+    
+        .cell img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: transform 1.3s ease;
+    
+        }
+    
+        .cell:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+            transition: transform 1.3s ease;
+    
+        }
+    
+        .cell:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+            transition: transform 1.3s ease;
+        }
+    
+        .cell .label {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(223, 214, 214, 0.116);
+    
+            color: aqua;
+            font-weight: bolder;
+            font-size: 0.9rem;
+            text-align: center;
+            z-index: 2;
+            /* ensure it sits above the image */
+        }
+    </style>
 </head>
 
 <body>
@@ -30,103 +119,12 @@
                 </ul>
             </nav>
         </div>
-    <style>
-        /* Page-Specific Embedded CSS for Home Page */
-    
-        /* galler head Section */
-        .gallery-head {
-            background-image: url( ../../images/gallery/pexels-artempodrez-7048040.jpg) ;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-    
-            
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            color: rgb(2, 2, 2);
-            font-size: large;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 3rem;
-            /* Space below hero section */
-        }
-
-        .gallery-section{
-            max-width: 1200px;
-            margin:0 auto 4rem auto;
-            padding:0 1rem;
-
-        }
-        .gallery-section h2{
-            text-align: center;  
-            color:white;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            font-weight: bold  
-
-        }
-
-        /*GRID LAYOUT*/
-        .gallery-grid{
-            display:grid;
-            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-            gap:1.5rem;
-        }
-        /* Individual Cell */
-        .cell{
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor:pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .cell img{
-            display: block;
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            transition: transform 1.3s ease;
-            
-        }
-
-        .cell:hover img , .cell:hover{
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
-            transition: transform 0.3s ease;
-            
-        }
-
-        .cell .label{
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(223, 214, 214, 0.116);
-            
-            color: aqua;
-            font-weight: bolder;
-            font-size: 0.9rem;
-            text-align: center;
-            z-index: 2;  /* ensure it sits above the image */
-        }
-
-      
-</style>
 
     </header>
     <main>
 
-<section class="selection">
-
-
-</section>
-
-
-
-        <section class="gallery-head">
-        <h1>Gallery of NatureGuard</h1>
+    <section class="gallery-head">
+        <h2>Gallery of NatureGuard</h2>
         <p>"SDG 15 focuses on protecting and restoring life on land. Sustainable practices and ecological frameworks help preserve
         forests, wildlife, and natural habitats for future generations"<span> (Chango-Cañaveral et al., 2025; Reeya et al., 2024; Guo,
         2025).</span></p>            
@@ -182,8 +180,8 @@
     <h2>Take Acton</h2>
     <div class="gallery-grid">
          
-        <div class="cell"><img src="../../images/gallery/st4/pexels-ian-panelo-7538360.jpg"" alt="Image of Tree Planting"><span class="label">Tree Planting</span></div>
-        <div class="cell"><img src="../../images/gallery/st4/pexels-markusspiske-11622794.jpg" alt="Image of campaigne"><span class="label">Awareness Campaigns</span></div>
+        <div class="cell"><img src="../../images/gallery/st4/pexels-ian-panelo-7538360.jpg" alt="Image of Tree Planting"><span class="label">Tree Planting</span></div>
+        <div class="cell"><img src="../../images/gallery/st4/pexels-markusspiske-11622794.jpg"  alt="Image of campaigne"><span class="label">Awareness Campaigns</span></div>
         <div class="cell"><img src="../../images/gallery/st4/pexels-mumtahina-tanni-1080117-5355033.jpg" alt="Image of  recycle"><span class="label">Eco-Friendly Initiatives</span></div>
         <div class="cell"><img src="../../images/gallery/st4/pexels-shvetsa-5029811.jpg" alt="Image of Cleanup activities"><span class="label">Cleanup Drives</span></div>
         
@@ -192,28 +190,6 @@
 
     </section>         
  </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Footer -->
     <!--DONT CHANGE THIS-->
