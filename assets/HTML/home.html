@@ -23,12 +23,12 @@
             border-radius: 12px;
             color: white;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 3rem; /* Space below hero section */
         }
 
         .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            display: grid;  /* Use CSS Grid layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*auto-fit = fill available space min 300px per card, max = 1fr */
             gap: 2rem;
             margin-bottom: 3rem;
         }
@@ -47,7 +47,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            cursor: pointer;
+            cursor: pointer; /* Change cursor to pointer */
         }
 
         .gallery-item:hover {
@@ -58,7 +58,7 @@
         .gallery-item img {
             width: 100%;
             height: 200px;
-            object-fit: cover;
+            object-fit: cover;  /* Crop image nicely without distortion */
             transition: transform 0.3s ease;
         }
 
@@ -67,6 +67,7 @@
         }
 
         .gallery-overlay {
+            /* Position overlay over image */
             position: absolute;
             bottom: 0;
             left: 0;
@@ -74,13 +75,13 @@
             background: linear-gradient(to top, rgba(0, 92, 26, 0.95), transparent);
             color: white;
             padding: 1.5rem;
-            transform: translateY(100%);
+            transform: translateY(100%);/* Initially hidden (moved down) */
             transition: transform 0.3s ease;
 
         }
 
         .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
+            transform: translateY(0);/* Slide up into view */
         }
 
         .gallery-overlay h3 {
@@ -126,7 +127,7 @@
     <main>
         <!-- Hero Section -->
         <section class="hero-section">
-            <h1>Protecting Life on Land</h1>
+            <h2>Protecting Life on Land</h2>
             <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
                 Forests, wildlife, and natural ecosystems support life across our planet. Join us in taking action to
                 protect
@@ -203,7 +204,7 @@
             <div class="content-gallery">
 
                 <a href="../../content/content_ST1.html" class="gallery-item">
-                    <img src="../../images/pexels-pixabay-160709 (2).jpg" alt="Wildlife protection">
+                    <img src="../../images/pexels-pixabay-160709(2).jpg" alt="Wildlife protection">
                     <div class="gallery-overlay">
                         <h3>Wildlife Protection</h3>
                         <p>Learn about endangered animals and biodiversity conservation</p>
