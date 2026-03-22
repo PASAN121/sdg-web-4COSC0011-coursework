@@ -51,137 +51,170 @@
             /* Space below hero section */
         }
 
+        .gallery-section{
+            max-width: 1200px;
+            margin:0 auto 4rem auto;
+            padding:0 1rem;
 
-        .cards-grid {
-            max-width: 1200px;   /* main container width */
-            margin: 0 auto;       /* center the grid horizontally */
-            padding: 1rem;        /* optional spacing inside */
-    }
-        .cards-grid ul{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-            list-style: none;
+        }
+        .gallery-section h2{
+            text-align: center;  
+            color:white;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            font-weight: bold  
 
-        }       
-
-        .cell,.cell img{
-            display: block;
-            width: 100%;
-            height: 200px;
-            background-color: rgb(49, 196, 49);
-            box-shadow: 0 4px 6px rgb(0, 0, 0);
-            border-radius: 10px;
         }
 
+        /*GRID LAYOUT*/
+        .gallery-grid{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap:1.5rem;
+        }
+        /* Individual Cell */
+        .cell{
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor:pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
 
+        .cell img{
+            display: block;
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            transition: transform 1.3s ease;
+            
+        }
+
+        .cell:hover img , .cell:hover{
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+            transition: transform 0.3s ease;
+            
+        }
+
+        .cell .label{
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(223, 214, 214, 0.116);
+            
+            color: aqua;
+            font-weight: bolder;
+            font-size: 0.9rem;
+            text-align: center;
+            z-index: 2;  /* ensure it sits above the image */
+        }
+
+      
 </style>
 
     </header>
-
     <main>
+
+<section class="selection">
+
+
+</section>
+
+
+
         <section class="gallery-head">
         <h1>Gallery of NatureGuard</h1>
         <p>"SDG 15 focuses on protecting and restoring life on land. Sustainable practices and ecological frameworks help preserve
         forests, wildlife, and natural habitats for future generations"<span> (Chango-Cañaveral et al., 2025; Reeya et al., 2024; Guo,
-        2025).</span></p> 
-            
+        2025).</span></p>            
     </section>
 
     <!-- Wildlife Protection -->
-    <h2>Wildlife Protection</h2>
-    <div class="cards-grid">
-        <ul>
-            <li class="cell">
-                <img src="../../images/pexels-akilmazumder-1072824.jpg" alt="abc">
-            </li>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            </ul>
-    </div>
-    <br>
+    <section class="gallery-section">
+        <h2>Wildlife Protection</h2>
+        <div class="gallery-grid">
+             
+            <div class="cell"><img src="../../images/gallery/st1/pexels-dayna-shoot-2151601547-36194850.jpg" alt="Image of Animals in natural habitats"><span class="label">Animals in natural habitats</span></div>
+            <div class="cell"><img src="../../images/gallery/st1/pexels-laarkstudio-7243663.jpg" alt="Image of"><span class="label">Conservation efforts</span></div>
+            <div class="cell"><img src="../../images/gallery/st1/wenying-yuan-hRALOfpQyZY-unsplash.jpg" alt="Image of"><span class="label">Protected species</span></div>
+            <div class="cell"><img src="../../images/gallery/st1/cocoparisienne-elephants-279505_640.jpg" alt="Image of"><span class="label">Wildlife reserves</span></div>
+    
+    
+        </div>
+    
+    </section>
+
     <!-- Deforestation -->
-    <h2>Deforestation</h2>
-    <div class="cards-grid">
-        <ul>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">c</li>
-            </ul>
-     </div>
-    <br>
+    <section class="gallery-section">
+        <h2>Deforestation</h2>
+        <div class="gallery-grid">
+             
+            <div class="cell"><img src="../../images/gallery/st2/pexels-pok-rie-33563-6038224.jpg" alt="Image of Logging Activities"><span class="label">Logging Activities</span></div>
+            <div class="cell"><img src="../../images/gallery/st2/pexels-matthias-behr-11195793-6175399.jpg" alt="Image of Clear-Cut Forests"><span class="label">Clear-Cut Forests</span></div>
+            <div class="cell"><img src="../../images/gallery/st2/pexels-oren-beitan-35449142-7106972.jpg" alt="Image of Reforestation Efforts"><span class="label">Reforestation Efforts</span></div>
+            <div class="cell"><img src="../../images/gallery/st2/pexels-yogendras31-7104646.jpg" alt="Image of Human Impact"><span class="label">Human Impact</span></div>
+    
+    
+        </div>
+    
+    </section>
+
     <!-- Land Degradation & Protection -->
-    <h2>Land Degradation & Protection</h2>
-    <div class="cards-grid">
-        <ul>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">c</li>
-        </ul>
-    </div>
-    <br>
+    <section class="gallery-section">
+        <h2>Land Degradation & Protection</h2>
+        <div class="gallery-grid">
+            
+            <div class="cell"><img src="../../images/gallery/st3/pexels-peppe-occhipinti-527585500-27894120.jpg" alt="Image of Soil Erosion"><span class="label">Soil Erosion</span></div>
+
+            <div class="cell"><img src="../../images/gallery/st3/pexels-charldurand-6491627.jpg" alt="Image of Desertification"><span class="label">Desertification</span></div>
+            <div class="cell"><img src="../../images/gallery/st3/pexels-quang-nguyen-vinh-222549-6415962.jpg" alt="Image of Afforestation "><span class="label">Afforestation Projects</span></div>
+            <div class="cell"><img src="../../images/gallery/st3/pexels-simon-kan-56314180-11534647.jpg" alt="Image of Sustainable Farming"><span class="label">Sustainable Farming</span></div>
+    
+    
+        </div>
+    
+    </section>
     <!-- Take Action -->
-    <h2>Take Action</h2>
-    <div class="cards-grid">
-        <ul>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">f</li>
-            <li class="cell">c</li>
-        </ul>
-    </div>
+    <section class="gallery-section">
+    <h2>Take Acton</h2>
+    <div class="gallery-grid">
          
+        <div class="cell"><img src="../../images/gallery/st4/pexels-ian-panelo-7538360.jpg"" alt="Image of Tree Planting"><span class="label">Tree Planting</span></div>
+        <div class="cell"><img src="../../images/gallery/st4/pexels-markusspiske-11622794.jpg" alt="Image of campaigne"><span class="label">Awareness Campaigns</span></div>
+        <div class="cell"><img src="../../images/gallery/st4/pexels-mumtahina-tanni-1080117-5355033.jpg" alt="Image of  recycle"><span class="label">Eco-Friendly Initiatives</span></div>
+        <div class="cell"><img src="../../images/gallery/st4/pexels-shvetsa-5029811.jpg" alt="Image of Cleanup activities"><span class="label">Cleanup Drives</span></div>
+        
+
+    </div>
+
+    </section>         
+ </main>
 
 
 
-   
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- Footer -->
     <!--DONT CHANGE THIS-->
     <footer>
