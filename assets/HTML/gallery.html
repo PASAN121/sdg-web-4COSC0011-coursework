@@ -1,320 +1,394 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NatureGuard | SDG 15 - Life on Land</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
     <script src="../js/gallery.js" defer></script>
     <style>
-        /* Page-Specific Embedded CSS for Home Page */
-    
-        /* galler head Section */
-        .gallery-head {
-            background-image: url(../../images/gallery/pexels-artempodrez-7048040.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-    
-    
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            color: rgb(2, 2, 2);
-            font-size: large;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 3rem;
-            /* Space below hero section */
-        }
-    
-        .gallery-section {
-            max-width: 1200px;
-            margin: 0 auto 4rem auto;
-            padding: 0 1rem;
-    
-        }
-    
-        .gallery-section h2 {
-            text-align: center;
-            color: white;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-            font-weight: bold
-        }
-    
-        /*GRID LAYOUT*/
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-    
-        /* Individual Cell */
-        .cell {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-    
-        .cell img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-            transition: transform 1.3s ease;
-    
-        }
-    
-        .cell:hover img {
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
-            transition: transform 1.3s ease;
-    
-        }
-    
-        .cell:hover {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
-            transition: transform 1.3s ease;
-        }
-    
-        .cell .label {
-            position: absolute;
-            bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(223, 214, 214, 0.116);
-    
-            color: white;
-            font-weight: bolder;
-            font-size: 0.9rem;
-            text-align: center;
-            z-index: 2;
-            /* ensure it sits above the image */
-        }
-            /* Modal overlay */
-            #modal {
-                display: none;
-                position: fixed;
-                top:0; left:0;
-                width:100%; height:100%;
-                background: rgba(0,0,0,0.7);
-                justify-content: center;
-                align-items: center;
-                z-index: 1000;
-                transition: opacity 0.3s ease;
-                opacity: 0;
-            }
+      /* Page-Specific Embedded CSS for Home Page */
 
-            /* Show modal with fade */
-            #modal.active {
-                display: flex;
-                opacity: 1;
-            }
+      /* galler head Section */
+      .gallery-head {
+        background-image: url(../../images/gallery/pexels-artempodrez-7048040.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
-            /* Modal content */
-            #modalBody {
-                background: #fff;
-                max-width: 600px;
-                width: 90%;
-                max-height: 80%;
-                padding: 20px;
-                border-radius: 12px;
-                position: relative;
-                box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-                overflow-y: auto;
-                transform: scale(0.9);
-                transition: transform 0.3s ease;
-            }
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        color: rgb(2, 2, 2);
+        font-size: large;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 3rem;
+        /* Space below hero section */
+      }
 
-            #modal.active #modalBody {
-                transform: scale(1); /* pop effect */
-            }
+      .gallery-section {
+        max-width: 1200px;
+        margin: 0 auto 4rem auto;
+        padding: 0 1rem;
+      }
 
-            /* Modal image */
-            #modalBody img {
-                width: 100%;
-                height: auto;           /* maintain original aspect ratio */
-                border-radius: 8px;
-                display: block;
-                margin-bottom: 15px;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            }
+      .gallery-section h2 {
+        text-align: center;
+        color: white;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: bold;
+      }
 
-            /* Close button */
-            #closeBtn {
-                position: absolute;
-                top: 12px;
-                right: 15px;
-                font-size: 26px;
-                font-weight: bold;
-                cursor: pointer;
-            }
+      /*GRID LAYOUT*/
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
 
-            /* Gallery hover effect */
-            .cell {
-                overflow: hidden;
-                border-radius: 10px;
-                cursor: pointer;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
+      /* Individual Cell */
+      .cell {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
 
-            .cell:hover {
-                transform: scale(1.05);
-                box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-            }
+      .cell img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        transition: transform 1.3s ease;
+      }
 
-            .cell img {
-                width: 100%;
-                height: 200px;
-                object-fit: cover; /* crops to fit box nicely */
-                transition: transform 0.3s ease;
-            }
+      .cell:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+        transition: transform 1.3s ease;
+      }
 
-            .cell:hover img {
-                transform: scale(1.07);
-            }
-            .customization-controls {
-                margin-top: 15px;
-                text-align: left;
-            }
+      .cell:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.89);
+        transition: transform 1.3s ease;
+      }
 
-            .control-group {
-                margin: 8px 0;
-            }
+      .cell .label {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(223, 214, 214, 0.116);
 
-            .control-group label {
-                font-weight: bold;
-                margin-right: 10px;
-            }
-            #modalTitle{
-                color:black
-            }
+        color: white;
+        font-weight: bolder;
+        font-size: 0.9rem;
+        text-align: center;
+        z-index: 2;
+        /* ensure it sits above the image */
+      }
+      /* Modal overlay */
+      #modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+        opacity: 0;
+      }
+
+      /* Show modal with fade */
+      #modal.active {
+        display: flex;
+        opacity: 1;
+      }
+
+      /* Modal content */
+      #modalBody {
+        background: #fff;
+        max-width: 600px;
+        width: 90%;
+        max-height: 80%;
+        padding: 20px;
+        border-radius: 12px;
+        position: relative;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+        overflow-y: auto;
+        transform: scale(0.9);
+        transition: transform 0.3s ease;
+      }
+
+      #modal.active #modalBody {
+        transform: scale(1); /* pop effect */
+      }
+
+      /* Modal image */
+      #modalBody img {
+        width: 100%;
+        height: auto; /* maintain original aspect ratio */
+        border-radius: 8px;
+        display: block;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Close button */
+      #closeBtn {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 26px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      /* Gallery hover effect */
+      .cell {
+        overflow: hidden;
+        border-radius: 10px;
+        cursor: pointer;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .cell:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .cell img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* crops to fit box nicely */
+        transition: transform 0.3s ease;
+      }
+
+      .cell:hover img {
+        transform: scale(1.07);
+      }
+      .customization-controls {
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      #modalTitle {
+        color: black;
+      }
+      #modalDescription {
+        background-color: rgba(144, 238, 144, 0.325);
+        padding: 10px 10px;
+        border-radius: 10px;
+      }
+
+      .control-group {
+        margin: 8px 0;
+      }
+
+      .control-group label {
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .collect-group {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <!--DONT CHANGE THIS-->
-        <div class="header-content">
-            <a href="home.html">
-            <div class="logo-section">
-                <img src="logo.png" alt="NatureGuard Logo">
-                <h1 class="site-title"> NatureGuard</h1>
-            </div></a>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li> <a href="gallery.html" class="active">Gallery</a></li>
-                    <li><a href="ais.html">Impact Simulator</a></li>
-                    <li> <a href="feedback.html">Feedback</a></li>
-                    <li> <a href="team.html">Team</a></li>
-                    <li> <a href="profile.html">Profile</a></li>
-                    <li> <a href="sitemap.html">Sitemap</a></li>
-                </ul>
-            </nav>
-        </div>
-
+      <!--DONT CHANGE THIS-->
+      <div class="header-content">
+        <a href="home.html">
+          <div class="logo-section">
+            <img src="logo.png" alt="NatureGuard Logo" />
+            <h1 class="site-title">NatureGuard</h1>
+          </div></a
+        >
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="ais.html">Impact Simulator</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
-
-    <section class="gallery-head">
+      <section class="gallery-head">
         <h2>Gallery of NatureGuard</h2>
-        <p>"SDG 15 focuses on protecting and restoring life on land. Sustainable practices and ecological frameworks help preserve
-        forests, wildlife, and natural habitats for future generations"<span> (Chango-Cañaveral et al., 2025; Reeya et al., 2024; Guo,
-        2025).</span></p>            
-    </section>
+        <p>
+          "SDG 15 focuses on protecting and restoring life on land. Sustainable
+          practices and ecological frameworks help preserve forests, wildlife,
+          and natural habitats for future generations"<span>
+            (Chango-Cañaveral et al., 2025; Reeya et al., 2024; Guo,
+            2025).</span
+          >
+        </p>
+      </section>
 
-    <!-- Wildlife Protection -->
-    <section class="gallery-section st1">
+      <!-- Wildlife Protection -->
+      <section class="gallery-section st1">
         <h2>Wildlife Protection</h2>
         <div class="gallery-grid">
-             
-            <div class="cell"><img src="../../images/gallery/st1/pexels-dayna-shoot-2151601547-36194850.jpg" alt="Image of Animals in natural habitats"><span class="label">Animals in natural habitats</span></div>
-            <div class="cell"><img src="../../images/gallery/st1/pexels-laarkstudio-7243663.jpg" alt="Image of"><span class="label">Conservation efforts</span></div>
-            <div class="cell"><img src="../../images/gallery/st1/wenying-yuan-hRALOfpQyZY-unsplash.jpg" alt="Image of"><span class="label">Protected species</span></div>
-            <div class="cell"><img src="../../images/gallery/st1/cocoparisienne-elephants-279505_640.jpg" alt="Image of"><span class="label">Wildlife reserves</span></div>
-    
-    
+          <div class="cell">
+            <img
+              src="../../images/gallery/st1/pexels-dayna-shoot-2151601547-36194850.jpg"
+              alt="Image of Animals in natural habitats"
+            /><span class="label">Animals in natural habitats</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st1/pexels-laarkstudio-7243663.jpg"
+              alt="Image of"
+            /><span class="label">Conservation efforts</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st1/wenying-yuan-hRALOfpQyZY-unsplash.jpg"
+              alt="Image of Protected species"
+            /><span class="label">Protected species</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st1/cocoparisienne-elephants-279505_640.jpg"
+              alt="Image of Wildlife reserves "
+            /><span class="label">Wildlife reserves</span>
+          </div>
         </div>
-    
-    </section>
+      </section>
 
-    <!-- Deforestation -->
-    <section class="gallery-section st2">
+      <!-- Deforestation -->
+      <section class="gallery-section st2">
         <h2>Deforestation</h2>
         <div class="gallery-grid">
-             
-            <div class="cell"><img src="../../images/gallery/st2/pexels-pok-rie-33563-6038224.jpg" alt="Image of Logging Activities"><span class="label">Logging Activities</span></div>
-            <div class="cell"><img src="../../images/gallery/st2/pexels-matthias-behr-11195793-6175399.jpg" alt="Image of Clear-Cut Forests"><span class="label">Clear-Cut Forests</span></div>
-            <div class="cell"><img src="../../images/gallery/st2/pexels-oren-beitan-35449142-7106972.jpg" alt="Image of Reforestation Efforts"><span class="label">Reforestation Efforts</span></div>
-            <div class="cell"><img src="../../images/gallery/st2/pexels-yogendras31-7104646.jpg" alt="Image of Human Impact"><span class="label">Human Impact</span></div>
-    
-    
+          <div class="cell">
+            <img
+              src="../../images/gallery/st2/pexels-pok-rie-33563-6038224.jpg"
+              alt="Image of Logging Activities"
+            /><span class="label">Logging Activities</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st2/pexels-matthias-behr-11195793-6175399.jpg"
+              alt="Image of Clear-Cut Forests"
+            /><span class="label">Clear-Cut Forests</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st2/pexels-oren-beitan-35449142-7106972.jpg"
+              alt="Image of Reforestation Efforts"
+            /><span class="label">Reforestation Efforts</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st2/pexels-yogendras31-7104646.jpg"
+              alt="Image of Human Impact"
+            /><span class="label">Human Impact</span>
+          </div>
         </div>
-    
-    </section>
+      </section>
 
-    <!-- Land Degradation & Protection -->
-    <section class="gallery-section st3">
+      <!-- Land Degradation & Protection -->
+      <section class="gallery-section st3">
         <h2>Land Degradation & Protection</h2>
         <div class="gallery-grid">
-            
-            <div class="cell"><img src="../../images/gallery/st3/pexels-peppe-occhipinti-527585500-27894120.jpg" alt="Image of Soil Erosion"><span class="label">Soil Erosion</span></div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st3/pexels-peppe-occhipinti-527585500-27894120.jpg"
+              alt="Image of Soil Erosion"
+            /><span class="label">Soil Erosion</span>
+          </div>
 
-            <div class="cell"><img src="../../images/gallery/st3/pexels-charldurand-6491627.jpg" alt="Image of Desertification"><span class="label">Desertification</span></div>
-            <div class="cell"><img src="../../images/gallery/st3/pexels-quang-nguyen-vinh-222549-6415962.jpg" alt="Image of Afforestation "><span class="label">Afforestation Projects</span></div>
-            <div class="cell"><img src="../../images/gallery/st3/pexels-simon-kan-56314180-11534647.jpg" alt="Image of Sustainable Farming"><span class="label">Sustainable Farming</span></div>
-    
-    
+          <div class="cell">
+            <img
+              src="../../images/gallery/st3/pexels-charldurand-6491627.jpg"
+              alt="Image of Desertification"
+            /><span class="label">Desertification</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st3/pexels-quang-nguyen-vinh-222549-6415962.jpg"
+              alt="Image of Afforestation "
+            /><span class="label">Afforestation Projects</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st3/pexels-simon-kan-56314180-11534647.jpg"
+              alt="Image of Sustainable Farming"
+            /><span class="label">Sustainable Farming</span>
+          </div>
         </div>
-    
-    </section>
-    <!-- Take Action -->
-    <section class="gallery-section st4">
-    <h2>Take Acton</h2>
-    <div class="gallery-grid">
-         
-        <div class="cell"><img src="../../images/gallery/st4/pexels-ian-panelo-7538360.jpg" alt="Image of Tree Planting"><span class="label">Tree Planting</span></div>
-        <div class="cell"><img src="../../images/gallery/st4/pexels-markusspiske-11622794.jpg"  alt="Image of campaigne"><span class="label">Awareness Campaigns</span></div>
-        <div class="cell"><img src="../../images/gallery/st4/pexels-mumtahina-tanni-1080117-5355033.jpg" alt="Image of  recycle"><span class="label">Eco-Friendly Initiatives</span></div>
-        <div class="cell"><img src="../../images/gallery/st4/pexels-shvetsa-5029811.jpg" alt="Image of Cleanup activities"><span class="label">Cleanup Drives</span></div>
-        
+      </section>
+      <!-- Take Action -->
+      <section class="gallery-section st4">
+        <h2>Take Action</h2>
+        <div class="gallery-grid">
+          <div class="cell">
+            <img
+              src="../../images/gallery/st4/pexels-ian-panelo-7538360.jpg"
+              alt="Image of Tree Planting"
+            /><span class="label">Tree Planting</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st4/pexels-markusspiske-11622794.jpg"
+              alt="Image of campaigne"
+            /><span class="label">Awareness Campaigns</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st4/pexels-mumtahina-tanni-1080117-5355033.jpg"
+              alt="Image of  recycle"
+            /><span class="label">Eco-Friendly Initiatives</span>
+          </div>
+          <div class="cell">
+            <img
+              src="../../images/gallery/st4/pexels-shvetsa-5029811.jpg"
+              alt="Image of Cleanup activities"
+            /><span class="label">Cleanup Drives</span>
+          </div>
+        </div>
+      </section>
 
-    </div>
-
-    </section> 
-    
-    <div id="modal">
+      <div id="modal">
         <div id="modalBody">
-            <span id="closeBtn">&times;</span>
-            <h2 id="modalTitle"></h2>
-            <img id="modalImage" src="" alt="">
-            <p id="modalDescription"></p>
+          <span id="closeBtn">&times;</span>
+          <h2 id="modalTitle"></h2>
+          <!--added using JS later-->
+          <img id="modalImage" src="" alt="" /><!--added using JS later-->
+          <p id="modalDescription"></p>
         </div>
-    </div>
-
-    
- </main>
+      </div>
+    </main>
     <!-- Footer -->
     <!--DONT CHANGE THIS-->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="../../page-editor/pageEditor_ST1.html">Page Editor</a>
-                <a href="../../page-editor/pageEditor_ST1.html">Validation</a>
-                <a href="#">Accessibility Statement</a>
-            </div>
-            <div class="student-info">
-                Student 1: Pasan Chandima | NatureGuard Project 2026
-            </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="../../page-editor/pageEditor_ST1.html">Page Editor</a>
+          <a href="../../page-editor/pageEditor_ST1.html">Validation</a>
+          <a href="#">Accessibility Statement</a>
         </div>
+        <div class="student-info">
+          Student 1: Pasan Chandima | NatureGuard Project 2026
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
