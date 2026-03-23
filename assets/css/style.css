@@ -335,21 +335,22 @@ footer {
 
 @media (max-width:768px) {
 
-    nav {
+    .header-content {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        text-align: center;
     }
 
-    section {
-        padding: 20px;
+    nav {
+        width: 100%;
+        justify-content: center;
     }
 
-    .grid-2,
-    .grid-3 {
-        grid-template-columns: 1fr;
+    nav ul {
+        justify-content: center;
     }
 
-    header h1 {
-        font-size: 1.6em;
+    .logo-section {
+        justify-content: center;
     }
 }
