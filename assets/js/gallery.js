@@ -122,10 +122,20 @@ cells.forEach((cell, index) => {
   });
 });
 
+//function for reset the model
+function resetModalStyle() {
+  modalBody.style.backgroundColor = "";
+  modalBody.style.color = "";
+  document.getElementById("modalTitle").style.color = "";
+}
+
 // Close modal
 closeBtn.addEventListener("click", () => modal.classList.remove("active"));
 modal.addEventListener("click", (e) => {
-  if (e.target === modal) modal.classList.remove("active");
+  if (e.target === modal) {
+    modal.classList.remove("active");
+    resetModalStyle();
+  }
 });
 
 // Get modal body
@@ -161,13 +171,7 @@ controls.innerHTML = `
 `;
 // Append to modal
 modalBody.appendChild(controls);
-//function for reset the model
 
-function resetModalStyle() {
-  modalBody.style.backgroundColor = "";
-  modalBody.style.color = "";
-  document.getElementById("modalTitle").style.color = "";
-}
 // COLOR CHANGE
 document.getElementById("colorScheme").addEventListener("change", function () {
   switch (this.value) {

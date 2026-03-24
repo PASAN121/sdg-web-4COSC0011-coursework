@@ -261,7 +261,7 @@ a:hover {
 }
 
 .btn-secondary {
-  background: var(--secondary-teal);
+  background: var(--secondary-green);
 }
 
 .btn-secondary:hover {
