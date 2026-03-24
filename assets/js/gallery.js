@@ -4,7 +4,7 @@ const selection = document.querySelectorAll(".cell");
 
 selection.forEach((element) => {
   element.addEventListener("mouseenter", function () {
-    this.style.borderLeft = "5px solid #ffffff";
+    this.style.borderLeft = "5px solid #000000";
   });
 
   element.addEventListener("mouseleave", function () {
