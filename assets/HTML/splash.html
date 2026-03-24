@@ -4,36 +4,148 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NatureGuard | SDG 15 - Life on Land</title>
-    <link rel="stylesheet" href="../css/style.css" />
-  </head>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta http-equiv="refresh" content="4;url=home.html">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden;
+    }
 
-  <body>
-    <header>
-      <!--DONT CHANGE THIS-->
-      <div class="header-content">
-        <div class="logo-section">
-          <img src="logo.png" alt="NatureGuard Logo" />
-          <h1 class="site-title">NatureGuard</h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="ais.html">Impact Simulator</a></li>
-            <li><a href="feedback.html">Feedback</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="sitemap.html">Sitemap</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    .splash-screen {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../../images/pexels-fox-58267-1172675.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .overlay {
+        background-color: rgba(0, 0, 0, 0.65);
+        padding: 3rem 2rem;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    .loader {
+        margin: 30px auto;
+        width: 50px;
+        height: 50px;
+        border: 6px solid rgba(255, 255, 255, 0.3);
+        border-top: 6px solid #2e8b57;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+    h1 {
+        font-size: 2.8rem;
+        margin: 0 0 1rem 0;
+        color: #2e8b57;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        margin: 2rem 0 1rem 0;
+        color: #2e8b57;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0.5rem 0 1.5rem 0;
+        color: #f0f0f0;
+    }
+
+    ul {
+        list-style: disc;
+        padding: 0 0 0 1.5rem;
+        margin: 1rem 0 1.5rem 0;
+        text-align: left;
+        display: inline-block;
+    }
+
+    ul li {
+        font-size: 0.95rem;
+        padding: 0.4rem 0;
+        color: #e0e0e0;
+    }
+
+    #countdown {
+        font-size: 1rem;
+        margin-top: 1.5rem;
+        color: #2e8b57;
+        font-weight: bold;
+    }
+
+    .skip-button {
+        display: inline-block;
+        margin-top: 1.5rem;
+        padding: 12px 28px;
+        background-color: #2e8b57;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-size: 0.95rem;
+    }
+
+    .skip-button:hover {
+        background-color: #246b45;
+    }
+
+
+
+</style>
+<body>
+    
     <main>
-      <h2>Page under construction</h2>
+        <section class="splash-screen">
+            <div class="overlay">
+                <h1>Welcome to NatureGuard</h1>
+                <p>Join us in protecting life on land and preserving our planet's biodiversity.</p>
+                <h2>Group Members</h2>
+                <ul>
+                    <li>Ashwin Jayarahal</li>
+                    <li>Hamid Razik</li>
+                    <li>Pasan Chandima</li>
+                    <li>Krishanika Kathiresan</li>
+                </ul>
+                <p id="countdown">Entering Site in 4..</p>
+                <div class="loader"></div>
+                <a href="home.html" class="skip-button">Skip Intro</a>
+            </div>
+        </section>
+
+
     </main>
 
-    <!-- Footer -->
-    <!--DONT CHANGE THIS-->
+
     <footer>
       <div class="footer-content">
         <div class="footer-links">
@@ -46,5 +158,19 @@
         </div>
       </div>
     </footer>
-  </body>
+<script>
+    let seconds = 4;
+    const countdownText = document.getElementById("countdown");
+
+    const timer = setInterval(function () {
+        seconds--;
+        countdownText.textContent = "Entering site in " + seconds + "...";
+
+        if (seconds <= 0) {
+            clearInterval(timer);
+        }
+    }, 1000);
+</script>
+</body>
+
 </html>
