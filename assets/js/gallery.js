@@ -124,13 +124,24 @@ cells.forEach((cell, index) => {
 
 //function for reset the model
 function resetModalStyle() {
+  //reset colors
   modalBody.style.backgroundColor = "";
   modalBody.style.color = "";
   document.getElementById("modalTitle").style.color = "";
+
+  //resetdropdown to default
+  document.getElementById("colorScheme").value = "default";
+  document.getElementById("fontstyle").value = "default";
 }
 
 // Close modal
-closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+//close button behave
+closeBtn.addEventListener("click", () => {
+  modal.classList.remove("active");
+  resetModalStyle();
+});
+
+//close when click else where
 modal.addEventListener("click", (e) => {
   if (e.target === modal) {
     modal.classList.remove("active");
