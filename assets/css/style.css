@@ -43,12 +43,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--dark-text);
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     var(--primary-green) 0%,
     var(--secondary-green) 100%
   );
-  min-height: 100vh;
+  min-height: 100vh;*/
+  background-color: var(--white);
 }
 
 /*type*/
@@ -59,7 +60,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-display);
-  color: var(--white);
+  color: var(--dark-text);
   margin-bottom: var(--spacing-sm);
   font-weight: 700;
 }
@@ -89,13 +90,14 @@ p {
    ======================================== */
 
 header {
-  background: linear-gradient(
+  /*background: linear-gradient(
     135deg,
     var(--primary-green) 0%,
     var(--secondary-green) 100%
-  );
+  );*/
+  background-color: var(--light-green);
   color: var(--white);
-  padding: var(--spacing-md) var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-sm);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: sticky; /* Stays at top when scrolling */
   top: 0;
@@ -120,7 +122,7 @@ header {
 }
 
 .logo-section img {
-  height: 80px;
+  height: 70px;
   width: auto;
 }
 

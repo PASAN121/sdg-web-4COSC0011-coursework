@@ -1,260 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NatureGuard | SDG 15 - Life on Land</title>
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../css/style.css" />
 
     <style>
-        /* Page-Specific Embedded CSS for Home Page */
+      /* Page-Specific Embedded CSS for Home Page */
 
-        /* Hero Section */
-        .hero-section {
-            background-image: url(../../images/pexels-mali-142497.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+      /* Hero Section */
+      .hero-section {
+        background-image: url(../../images/home/pexels-farisi-2158123179-35170068.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        color: white;
+        text-align: center;
+        margin-bottom: 3rem; /* Space below hero section */
+      }
 
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-            margin-bottom: 3rem; /* Space below hero section */
-        }
+      .cards-grid {
+        display: grid; /* Use CSS Grid layout */
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(300px, 1fr)
+        ); /*auto-fit = fill available space min 300px per card, max = 1fr */
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
 
-        .cards-grid {
-            display: grid;  /* Use CSS Grid layout */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));/*auto-fit = fill available space min 300px per card, max = 1fr */
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
+      /*  Gallery interaction*/
+      .content-gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
 
-        /*  Gallery interaction*/
-        .content-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer; /* Change cursor to pointer */
+      }
 
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer; /* Change cursor to pointer */
-        }
+      .gallery-item:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      }
 
-        .gallery-item:hover {
-            transform: translateY(-8px) scale(1.02);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-        }
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* Crop image nicely without distortion */
+        transition: transform 0.3s ease;
+      }
 
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;  /* Crop image nicely without distortion */
-            transition: transform 0.3s ease;
-        }
+      .gallery-item:hover img {
+        transform: scale(1.1);
+      }
 
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
+      .gallery-overlay {
+        /* Position overlay over image */
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to top, rgba(0, 92, 26, 0.95), transparent);
+        color: white;
+        padding: 1.5rem;
+        transform: translateY(100%); /* Initially hidden (moved down) */
+        transition: transform 0.3s ease;
+      }
 
-        .gallery-overlay {
-            /* Position overlay over image */
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 92, 26, 0.95), transparent);
-            color: white;
-            padding: 1.5rem;
-            transform: translateY(100%);/* Initially hidden (moved down) */
-            transition: transform 0.3s ease;
+      .gallery-item:hover .gallery-overlay {
+        transform: translateY(0); /* Slide up into view */
+      }
 
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);/* Slide up into view */
-        }
-
-        .gallery-overlay h3 {
-            color: white;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
+      .gallery-overlay h3 {
+        color: white;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
     </style>
+  </head>
 
-
-
-
-</head>
-
-<body>
-
+  <body>
     <header>
-        <!--DONT CHANGE THIS-->
-        <div class="header-content">
-            <a href="home.html">
-            <div class="logo-section">
-                <img src="logo.png" alt="NatureGuard Logo">
-                <h1 class="site-title"> NatureGuard</h1>
-            </div></a>
-            <nav>
-                <ul>
-                    <li><a href="home.html" class="active">Home</a></li>
-                    <li> <a href="gallery.html">Gallery</a></li>
-                    <li><a href="ais.html">Impact Simulator</a></li>
-                    <li> <a href="feedback.html">Feedback</a></li>
-                    <li> <a href="team.html">Team</a></li>
-                    <li> <a href="profile.html">Profile</a></li>
-                    <li> <a href="sitemap.html">Sitemap</a></li>
-                </ul>
-            </nav>
-        </div>
+      <!--DONT CHANGE THIS-->
+      <div class="header-content">
+        <a href="home.html">
+          <div class="logo-section">
+            <img src="logo.png" alt="NatureGuard Logo" />
+            <h1 class="site-title">NatureGuard</h1>
+          </div></a
+        >
+        <nav>
+          <ul>
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="ais.html">Impact Simulator</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
-
-
 
     <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h2>Protecting Life on Land</h2>
-            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
-                Forests, wildlife, and natural ecosystems support life across our planet. Join us in taking action to
-                protect
-                biodiversity, restore forests, and preserve land ecosystems for future generations.
-            </p>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <h2 style="color: white">Protecting Life on Land</h2>
+        <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto">
+          Forests, wildlife, and natural ecosystems support life across our
+          planet. Join us in taking action to protect biodiversity, restore
+          forests, and preserve land ecosystems for future generations.
+        </p>
+      </section>
 
-        <!-- Mission Cards -->
-        <div class="cards-grid">
+      <!-- Mission Cards -->
+      <div class="cards-grid">
+        <div class="card">
+          <img
+            src="../../images/pexels-mali-142497.jpg"
+            alt="Forest biodiversity illustration"
+          />
 
-            <div class="card">
-                <img src="../../images/pexels-mali-142497.jpg" alt="Forest biodiversity illustration">
+          <h2>Why Land Conservation Matters</h2>
 
-                <h2>Why Land Conservation Matters</h2>
+          <p>
+            Forests, wildlife, and natural ecosystems play a vital role in
+            maintaining biodiversity and supporting life on Earth. Protecting
+            land ecosystems helps regulate climate, preserve habitats, and
+            ensure a sustainable future for all living species.
+          </p>
 
-                <p>
-                    Forests, wildlife, and natural ecosystems play a vital role in maintaining biodiversity
-                    and supporting life on Earth. Protecting land ecosystems helps regulate climate,
-                    preserve habitats, and ensure a sustainable future for all living species.
-                </p>
-
-                <ul>
-                    <li>Protect forests and natural habitats</li>
-                    <li>Reduce land pollution and waste</li>
-                    <li>Support wildlife conservation efforts</li>
-                </ul>
-            </div>
-
-
-            <div class="card">
-                <img src="../../images/pexels-tuongchopper-28662967.jpg" alt="Community tree planting icon">
-
-                <h2>For Students & Communities</h2>
-
-                <p>
-                    Students and communities can make a powerful difference in protecting nature.
-                    Small actions such as planting trees, reducing waste, and spreading awareness
-                    can collectively help preserve our planet's ecosystems.
-                </p>
-
-                <ul>
-                    <li>Organize environmental awareness programs</li>
-                    <li>Participate in tree planting campaigns</li>
-                    <li>Protect local parks and natural areas</li>
-                </ul>
-            </div>
-
-
-            <div class="card">
-                <img src="../../images/pexels-pixabay-247431.jpg" alt="Wildlife protection representation">
-
-                <h2>Potential Impact</h2>
-
-                <p>
-                    When individuals and communities work together to protect nature, the results
-                    can be transformative. Every action contributes to healthier ecosystems and
-                    stronger biodiversity across the planet.
-                </p>
-
-                <ul>
-                    <li>Millions of trees planted and forests restored</li>
-                    <li>Protection of endangered wildlife species</li>
-                    <li>Sustainable ecosystems for future generations</li>
-                </ul>
-            </div>
-
-
+          <ul>
+            <li>Protect forests and natural habitats</li>
+            <li>Reduce land pollution and waste</li>
+            <li>Support wildlife conservation efforts</li>
+          </ul>
         </div>
 
-        <!-- Interactive Content Gallery -->
-        <section>
-            <h2 style="text-align: center; margin-bottom: 2rem;">Explore Our Content</h2>
+        <div class="card">
+          <img
+            src="../../images/pexels-tuongchopper-28662967.jpg"
+            alt="Community tree planting icon"
+          />
 
-            <div class="content-gallery">
+          <h2>For Students & Communities</h2>
 
-                <a href="content_ST1.html" class="gallery-item">
-                    <img src="../../images/pexels-pixabay-160709(2).jpg" alt="Wildlife protection">
-                    <div class="gallery-overlay">
-                        <h3>Wildlife Protection</h3>
-                        <p>Learn about endangered animals and biodiversity conservation</p>
-                    </div>
-                </a>
+          <p>
+            Students and communities can make a powerful difference in
+            protecting nature. Small actions such as planting trees, reducing
+            waste, and spreading awareness can collectively help preserve our
+            planet's ecosystems.
+          </p>
 
-                <a href="content_ST2.html" class="gallery-item">
-                    <img src="../../images/pexels-arlindphotography-30555905.jpg" alt="Deforestation">
-                    <div class="gallery-overlay">
-                        <h3>Deforestation</h3>
-                        <p>Understanding the causes and impact of forest loss</p>
-                    </div>
-                </a>
+          <ul>
+            <li>Organize environmental awareness programs</li>
+            <li>Participate in tree planting campaigns</li>
+            <li>Protect local parks and natural areas</li>
+          </ul>
+        </div>
 
-                <a href="content_ST3.html" class="gallery-item">
-                    <img src="../../images/pexels-marioavilleda-3773042.jpg" alt="Land degradation">
-                    <div class="gallery-overlay">
-                        <h3>Land Degradation</h3>
-                        <p>Explore soil erosion, desertification, and ecosystem damage</p>
-                    </div>
-                </a>
+        <div class="card">
+          <img
+            src="../../images/pexels-pixabay-247431.jpg"
+            alt="Wildlife protection representation"
+          />
 
-                <a href="content_ST4.html" class="gallery-item">
-                    <img src="../../images/pexels-akilmazumder-1072824.jpg" alt="Community environmental action">
-                    <div class="gallery-overlay">
-                        <h3>Take Action</h3>
-                        <p>Discover ways individuals and communities can protect nature</p>
-                    </div>
-                </a>
+          <h2>Potential Impact</h2>
 
+          <p>
+            When individuals and communities work together to protect nature,
+            the results can be transformative. Every action contributes to
+            healthier ecosystems and stronger biodiversity across the planet.
+          </p>
+
+          <ul>
+            <li>Millions of trees planted and forests restored</li>
+            <li>Protection of endangered wildlife species</li>
+            <li>Sustainable ecosystems for future generations</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Interactive Content Gallery -->
+      <section>
+        <h2 style="text-align: center; margin-bottom: 2rem">
+          Explore Our Content
+        </h2>
+
+        <div class="content-gallery">
+          <a href="content_ST1.html" class="gallery-item">
+            <img
+              src="../../images/pexels-pixabay-160709(2).jpg"
+              alt="Wildlife protection"
+            />
+            <div class="gallery-overlay">
+              <h3>Wildlife Protection</h3>
+              <p>
+                Learn about endangered animals and biodiversity conservation
+              </p>
             </div>
-        </section>
-    </main>
+          </a>
 
+          <a href="content_ST2.html" class="gallery-item">
+            <img
+              src="../../images/pexels-arlindphotography-30555905.jpg"
+              alt="Deforestation"
+            />
+            <div class="gallery-overlay">
+              <h3>Deforestation</h3>
+              <p>Understanding the causes and impact of forest loss</p>
+            </div>
+          </a>
+
+          <a href="content_ST3.html" class="gallery-item">
+            <img
+              src="../../images/pexels-marioavilleda-3773042.jpg"
+              alt="Land degradation"
+            />
+            <div class="gallery-overlay">
+              <h3>Land Degradation</h3>
+              <p>Explore soil erosion, desertification, and ecosystem damage</p>
+            </div>
+          </a>
+
+          <a href="content_ST4.html" class="gallery-item">
+            <img
+              src="../../images/pexels-akilmazumder-1072824.jpg"
+              alt="Community environmental action"
+            />
+            <div class="gallery-overlay">
+              <h3>Take Action</h3>
+              <p>
+                Discover ways individuals and communities can protect nature
+              </p>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <!--DONT CHANGE THIS-->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="../../page-editor/pageEditor_ST1.html">Page Editor</a>
-                <a href="../../page-editor/pageEditor_ST1.html">Validation</a>
-                <a href="#">Accessibility Statement</a>
-            </div>
-            <div class="student-info">
-                Student 1: Pasan Chandima | NatureGuard Project 2026
-            </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="../../page-editor/pageEditor_ST1.html">Page Editor</a>
+          <a href="../../page-editor/pageEditor_ST1.html">Validation</a>
+          <a href="#">Accessibility Statement</a>
         </div>
+        <div class="student-info">
+          Student 1: Pasan Chandima | NatureGuard Project 2026
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
