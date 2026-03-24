@@ -3,241 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatureGuard | Action Impact Simulator</title>
+    <title>NatureGuard | Impact Simulator</title>
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
-        /* Page-specific CSS for AIS only */
+        /* Page-specific styles (DO NOT affect global CSS) */
+
         body {
-            background-image: url("../images/low.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            transition: background-image 0.5s ease-in-out;
-            
-        }
-
-        .page-overlay {
-            background-color:green;
-            min-height: 100vh;
-            padding-bottom: 30px;
+            transition: background-image 0.5s ease;
         }
 
         .ais-intro {
             text-align: center;
-            color: white;
-            padding: 30px 20px 10px;
-        }
-
-        .ais-intro h2 {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
 
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            padding: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
         }
 
         .action-card {
-            background-color: rgba(255, 255, 255, 0.95);
-            border: 2px solid #cccccc;
-            border-radius: 12px;
-            padding: 15px;
             cursor: pointer;
-            transition: transform 0.3s, border-color 0.3s, background-color 0.3s;
-        }
-
-        .action-card:hover,
-        .action-card:focus {
-            transform: scale(1.03);
-            border-color: #2e7d32;
-            outline: none;
+            border: 2px solid transparent;
         }
 
         .action-card.selected {
-            border-color: #1b5e20;
-            background-color: #dff5df;
-        }
-
-        .action-card img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 10px;
+            border: 2px solid var(--accent-green);
+            background-color: var(--pale-green);
         }
 
         .result-box {
-            background-color: rgba(255, 255, 255, 0.95);
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 12px;
+            margin-top: 30px;
             text-align: center;
         }
 
-        .result-box h3 {
-            margin-top: 0;
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            margin: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="page-overlay">
-        <header>
-            <!--DONT CHANGE THIS-->
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="logo.png" alt="NatureGuard Logo">
-                    <h1 class="site-title">NatureGuard</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="home.html">Home</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="ais.html" class="active">Impact Simulator</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                        <li><a href="team.html">Team</a></li>
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
 
-        <main>
-            <section class="ais-intro">
-                <h2>Life on Land Action Impact Simulator</h2>
-                <p>Select actions you can take to protect forests, wildlife, and biodiversity.</p>
-            </section>
+<header>
+    <div class="header-content">
+        <div class="logo-section">
+            <img src="logo.png" alt="NatureGuard Logo">
+            <h1 class="site-title">NatureGuard</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="ais.html" class="active">Impact Simulator</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-            <section class="card-container">
-                <div class="action-card" data-points="5" tabindex="0">
-                    <img src="../images/tree.jpg" alt="Person planting a tree">
-                    <h3>Plant a Tree</h3>
-                    <p>Planting trees helps restore habitats and supports biodiversity.</p>
-                    <p><strong>Impact Points:</strong> 5</p>
-                </div>
+<main>
 
-                <div class="action-card" data-points="3" tabindex="0">
-                    <img src="../images/paper.jpg" alt="Notebook and paper items on a desk">
-                    <h3>Use Less Paper</h3>
-                    <p>Using less paper helps reduce deforestation and protect forests.</p>
-                    <p><strong>Impact Points:</strong> 3</p>
-                </div>
+    <section class="ais-intro">
+        <h2>Life on Land Action Impact Simulator</h2>
+        <p>Select actions to see your environmental impact.</p>
+    </section>
 
-                <div class="action-card" data-points="4" tabindex="0">
-                    <img src="../images/cleanup.jpg" alt="Students cleaning a park">
-                    <h3>Join a Clean-Up</h3>
-                    <p>Cleaning natural spaces protects ecosystems and wildlife habitats.</p>
-                    <p><strong>Impact Points:</strong> 4</p>
-                </div>
+    <!-- Cards -->
+    <section class="card-container">
 
-                <div class="action-card" data-points="5" tabindex="0">
-                    <img src="../images/wildlife.jpg" alt="Wild animals in a natural habitat">
-                    <h3>Protect Wildlife Habitats</h3>
-                    <p>Protecting habitats helps animals live safely and naturally.</p>
-                    <p><strong>Impact Points:</strong> 5</p>
-                </div>
+        <div class="card action-card" data-points="5" tabindex="0">
+            <img src="../images/tree.jpg" alt="Planting a tree">
+            <h3>Plant a Tree</h3>
+            <p>Helps restore habitats and biodiversity.</p>
+            <p><strong>Impact Points:</strong> 5</p>
+        </div>
 
-                <div class="action-card" data-points="2" tabindex="0">
-                    <img src="../images/recycle.jpg" alt="Colourful recycling bins">
-                    <h3>Recycle Waste</h3>
-                    <p>Recycling reduces landfill waste and protects land resources.</p>
-                    <p><strong>Impact Points:</strong> 2</p>
-                </div>
+        <div class="card action-card" data-points="3" tabindex="0">
+            <img src="../images/paper.jpg" alt="Paper usage">
+            <h3>Use Less Paper</h3>
+            <p>Reduces deforestation.</p>
+            <p><strong>Impact Points:</strong> 3</p>
+        </div>
 
-                <div class="action-card" data-points="3" tabindex="0">
-                    <img src="../images/eco.jpg" alt="Reusable eco-friendly shopping products">
-                    <h3>Support Eco Products</h3>
-                    <p>Buying sustainable products reduces environmental harm.</p>
-                    <p><strong>Impact Points:</strong> 3</p>
-                </div>
-            </section>
+        <div class="card action-card" data-points="4" tabindex="0">
+            <img src="../images/cleanup.jpg" alt="Cleaning environment">
+            <h3>Join a Clean-Up</h3>
+            <p>Protects ecosystems.</p>
+            <p><strong>Impact Points:</strong> 4</p>
+        </div>
 
-            <section class="result-box">
-                <h3>Your Impact Result</h3>
-                <p id="total-points">Total Points: 0</p>
-                <p id="impact-level">Impact Level: Low</p>
-                <p id="impact-message">Start selecting actions to see your impact.</p>
-            </section>
-        </main>
+        <div class="card action-card" data-points="5" tabindex="0">
+            <img src="../images/wildlife.jpg" alt="Wildlife habitat">
+            <h3>Protect Wildlife</h3>
+            <p>Supports animal habitats.</p>
+            <p><strong>Impact Points:</strong> 5</p>
+        </div>
 
-        <footer>
-            <!--DONT CHANGE THIS-->
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="../../page-editor/pageEditor_ST2.html">Page Editor</a>
-                    <a href="../../validation/validation_ST2.html">Validation</a>
-                    <a href="#">Accessibility Statement</a>
-                </div>
-                <div class="student-info">
-                    Student 2: Ashwin Jayarahal | NatureGuard Project 2026
-                </div>
-            </div>
-        </footer>
+        <div class="card action-card" data-points="2" tabindex="0">
+            <img src="../images/recycle.jpg" alt="Recycling">
+            <h3>Recycle Waste</h3>
+            <p>Reduces pollution.</p>
+            <p><strong>Impact Points:</strong> 2</p>
+        </div>
+
+        <div class="card action-card" data-points="3" tabindex="0">
+            <img src="../images/eco.jpg" alt="Eco products">
+            <h3>Eco Products</h3>
+            <p>Supports sustainability.</p>
+            <p><strong>Impact Points:</strong> 3</p>
+        </div>
+
+    </section>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button class="btn" onclick="submitImpact()">Submit</button>
+        <button class="btn btn-secondary" onclick="resetImpact()">Reset</button>
     </div>
 
-    <script>
-        // Impact thresholds:
-        // 0-5 points = Low impact
-        // 6-12 points = Medium impact
-        // 13 or more points = High impact
+    <!-- Results -->
+    <section class="card result-box">
+        <h3>Your Impact</h3>
+        <p id="points">Total Points: 0</p>
+        <p id="level">Impact Level: Low</p>
+        <p id="message">Click actions and press submit.</p>
+    </section>
 
-        const cards = document.querySelectorAll(".action-card");
-        const totalPointsText = document.getElementById("total-points");
-        const impactLevelText = document.getElementById("impact-level");
-        const impactMessageText = document.getElementById("impact-message");
+</main>
 
-        let totalPoints = 0;
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="../../page-editor/pageEditor_ST2.html">Page Editor</a>
+            <a href="../../validation/validation_ST2.html">Validation</a>
+            <a href="#">Accessibility</a>
+        </div>
+        <div class="student-info">
+            Student 2: Ashwin Jayarahal
+        </div>
+    </div>
+</footer>
 
-        cards.forEach(function(card) {
-            card.addEventListener("click", function() {
-                toggleCard(card);
-            });
+<script>
+    // Impact thresholds:
+    // 0-5 = Low
+    // 6-12 = Medium
+    // 13+ = High
 
-            card.addEventListener("keydown", function(event) {
-                if (event.key === "Enter" || event.key === " ") {
-                    event.preventDefault();
-                    toggleCard(card);
-                }
-            });
+    const cards = document.querySelectorAll(".action-card");
+    let selectedPoints = 0;
+
+    cards.forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("selected");
+        });
+    });
+
+    function submitImpact() {
+        selectedPoints = 0;
+
+        cards.forEach(card => {
+            if (card.classList.contains("selected")) {
+                selectedPoints += Number(card.getAttribute("data-points"));
+            }
         });
 
-        function toggleCard(card) {
-            const points = Number(card.getAttribute("data-points"));
+        document.getElementById("points").textContent = "Total Points: " + selectedPoints;
 
-            if (card.classList.contains("selected")) {
-                card.classList.remove("selected");
-                totalPoints -= points;
-            } else {
-                card.classList.add("selected");
-                totalPoints += points;
-            }
-
-            updateImpact();
+        if (selectedPoints <= 5) {
+            document.getElementById("level").textContent = "Impact Level: Low";
+            document.getElementById("message").textContent = "Start taking more actions!";
+            document.body.style.backgroundImage = "url('../images/low.jpg')";
+        } 
+        else if (selectedPoints <= 12) {
+            document.getElementById("level").textContent = "Impact Level: Medium";
+            document.getElementById("message").textContent = "Good job! Keep improving.";
+            document.body.style.backgroundImage = "url('../images/medium.jpg')";
+        } 
+        else {
+            document.getElementById("level").textContent = "Impact Level: High";
+            document.getElementById("message").textContent = "Excellent! You are helping the planet.";
+            document.body.style.backgroundImage = "url('../images/high.jpg')";
         }
+    }
 
-        function updateImpact() {
-            totalPointsText.textContent = "Total Points: " + totalPoints;
+    function resetImpact() {
+        cards.forEach(card => {
+            card.classList.remove("selected");
+        });
 
-            if (totalPoints <= 5) {
-                impactLevelText.textContent = "Impact Level: Low";
-                impactMessageText.textContent = "You have made a small start. Try selecting more actions to help nature.";
-                document.body.style.backgroundImage = "url('../images/low.jpg')";
-            } else if (totalPoints <= 12) {
-                impactLevelText.textContent = "Impact Level: Medium";
-                impactMessageText.textContent = "Good effort! Your choices can make a positive difference for life on land.";
-                document.body.style.backgroundImage = "url('../images/medium.jpg')";
-            } else {
-                impactLevelText.textContent = "Impact Level: High";
-                impactMessageText.textContent = "Excellent! You are making strong choices to protect ecosystems and biodiversity.";
-                document.body.style.backgroundImage = "url('../images/high.jpg')";
-            }
-        }
+        document.getElementById("points").textContent = "Total Points: 0";
+        document.getElementById("level").textContent = "Impact Level: Low";
+        document.getElementById("message").textContent = "Click actions and press submit.";
+        document.body.style.backgroundImage = "none";
+    }
+</script>
 
-        updateImpact();
-    </script>
 </body>
 </html>
