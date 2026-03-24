@@ -8,7 +8,207 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <style>
-        
+        /* Page-Specific CSS - Program Directory Section */
+ 
+        /* Scrollable container for the cards */
+        .program-scroll-wrapper {
+            max-height: 700px;
+            overflow-y: auto;
+            padding: 1rem 0.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: #2d6a4f #e8f5e9;
+        }
+ 
+        /* Cards sit side by side, 2 per row */
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+ 
+        /* The card itself */
+        .prog-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+ 
+        /* Card image at top */
+        .prog-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+ 
+        /* Card tag line at top (like "Tanzania" or "Volunteering") */
+        .prog-card-tag {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 1rem 0 1rem;
+            font-size: 0.85rem;
+            color: #555;
+            font-weight: bold;
+        }
+ 
+        /* Card title */
+        .prog-card-title {
+            padding: 0.2rem 1rem 0.6rem 1rem;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #1b4332;
+        }
+ 
+        /* Stats row — 3 icons with labels */
+        .prog-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 0.6rem 1rem;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            font-size: 0.78rem;
+            color: #555;
+        }
+ 
+        .prog-stats div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.2rem;
+        }
+ 
+        .prog-stats span.icon {
+            font-size: 1.3rem;
+        }
+ 
+        /* Duration/Fee info rows */
+        .prog-meta {
+            padding: 0.5rem 1rem;
+            font-size: 0.82rem;
+            color: #444;
+        }
+ 
+        .prog-meta p {
+            margin: 0.2rem 0;
+        }
+ 
+        .prog-meta .meta-icon {
+            margin-right: 5px;
+        }
+ 
+        /* Duration/Fee table */
+        .prog-table {
+            margin: 0.5rem 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            font-size: 0.82rem;
+        }
+ 
+        .prog-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+ 
+        .prog-table thead {
+            background: #1b4332;
+            color: white;
+        }
+ 
+        .prog-table thead th {
+            padding: 0.4rem 0.7rem;
+            text-align: left;
+            font-weight: bold;
+        }
+ 
+        .prog-table tbody td {
+            padding: 0.4rem 0.7rem;
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+ 
+        /* Description text */
+        .prog-description {
+            padding: 0.6rem 1rem;
+            font-size: 0.83rem;
+            color: #555;
+            line-height: 1.5;
+            flex: 1;
+        }
+ 
+        /* Two buttons at bottom */
+        .prog-buttons {
+            display: flex;
+            gap: 0;
+            margin-top: auto;
+        }
+ 
+        .prog-buttons a {
+            flex: 1;
+            text-align: center;
+            padding: 0.7rem;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+ 
+        .btn-view {
+            background: #52b788;
+            color: white;
+        }
+ 
+        .btn-apply {
+            background: #2d6a4f;
+            color: white;
+        }
+ 
+        .btn-view:hover,
+        .btn-apply:hover {
+            opacity: 0.85;
+        }
+ 
+        /* Filter bar above cards */
+        .filter-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+ 
+        .filter-bar p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+ 
+        .filter-bar select {
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            border: 1.5px solid #2d6a4f;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+ 
+        /* Section heading */
+        .section-heading {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin-bottom: 0.4rem;
+        }
+ 
+        .section-sub {
+            text-align: center;
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
     </style>
 
 
@@ -125,7 +325,7 @@
                      CARD 2: Campaign
                 ============================= -->
                 <div class="prog-card">
-                    <img src="../../images/feedback/campaign.jpg"
+                    <img src="../../images/compaign.jpg"
                         alt="Students holding banners at a wildlife awareness campaign">
  
                     <div class="prog-card-tag">
@@ -193,7 +393,7 @@
                      CARD 3: Student Action
                 ============================= -->
                 <div class="prog-card">
-                    <img src="../../images/feedback/student-action.jpg"
+                    <img src="../../images/student-actions.jpg"
                         alt="Students planting trees as part of a student action programme">
  
                     <div class="prog-card-tag">
@@ -261,7 +461,7 @@
                      CARD 4: Community Project
                 ============================= -->
                 <div class="prog-card">
-                    <img src="../../images/feedback/community-project.jpg"
+                    <img src="../../images/community-projects.jpg"
                         alt="Community members restoring a local wetland area">
  
                     <div class="prog-card-tag">
@@ -330,51 +530,7 @@
             
  
         </section>
-        
-        <section class="feedback-section">
-            <h2>Recent Reviews</h2>
-            <div class="rating">
-                <div class="rating-most">9.4/10</div>
-                <p><strong>Exceptional</strong>Reviews are verified unless labelled otherwise.</p>
-            </div>
 
-            <div class="reviews-grid">
- 
-                <!-- Review 1 -->
-                <div class="review-card">
-                    <h4>Truly life-changing experience</h4>
-                    <p>The Urban Tree Planting Drive was one of the most rewarding things I have done as a student. I met so many like-minded people...</p>
-                    <a href="#">See more</a>
-                    <div class="review-meta">
-                        <span>Amara S. — 12 Jan 2026</span>
-                        <span class="review-rating">9/10</span>
-                    </div>
-                </div>
- 
-                <!-- Review 2 -->
-                <div class="review-card">
-                    <h4>Great for building real-world skills</h4>
-                    <p>Joining the Biodiversity Research Program gave me hands-on fieldwork experience I could not get in a lecture hall...</p>
-                    <a href="#">See more</a>
-                    <div class="review-meta">
-                        <span>Liam T. — 03 Feb 2026</span>
-                        <span class="review-rating">8/10</span>
-                    </div>
-                </div>
- 
-                <!-- Review 3 -->
-                <div class="review-card">
-                    <h4>Simple but very impactful</h4>
-                    <p>The Forest Clean-Up Initiative is well-organised and easy to join even if you are busy. Just a few hours makes a real difference...</p>
-                    <a href="#">See more</a>
-                    <div class="review-meta">
-                        <span>Priya K. — 18 Feb 2026</span>
-                        <span class="review-rating">9/10</span>
-                    </div>
-                </div>
- 
-            </div>
-        </section>
     </main>
     <!-- Footer -->
     <!--DONT CHANGE THIS-->
