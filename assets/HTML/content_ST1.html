@@ -7,18 +7,23 @@
     <link rel="stylesheet" href="../css/style.css" />
     <style>
       body {
-        background-image: url(../../images/content/st1/pexels-sonneblom-516541.jpg);
+        background-image: url(../../images/content/st1/Gemini_Generated_Image_euayyceuayyceuay.jpg);
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
       }
       .hero-section {
         text-align: center;
       }
       .hero-section ul {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
-        text-align: center;
-        gap: 1.5rem;
+        justify-content: center;
+        gap: 1rem;
         padding-left: 0;
+        margin-top: 1rem;
       }
       .hero-section ul li {
         display: block;
@@ -28,13 +33,32 @@
         display: flex;
         gap: 2rem;
         align-items: center;
+        overflow: hidden; /*to fix overflow when image*/
+      }
+      .contentText p {
+        color: black;
+        line-height: 1.8;
+      }
+      .contentText ul {
+        list-style-position: inside;
+        margin: 0.5rem 0 1rem 1rem;
+        color: #1a1a1a;
+        line-height: 1.9;
       }
       .stcard img {
-        width: 40%;
+        width: 30%;
         border-radius: 10px;
+        transition: transform 1.3s ease;
       }
       .stcard img:hover {
-        scale: 1.01;
+        transform: scale(1.05) rotate(1deg);
+      }
+         /* Go to Top Button */
+      .go-top-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 0;
       }
     </style>
   </head>
@@ -70,73 +94,150 @@
           <li>
             <a href="#importance" class="btn">Importance Of Wild Life</a>
           </li>
-          <li><a href="#importance" class="btn">Importance Of Wild Life</a></li>
-          <li><a href="#importance" class="btn">Importance Of Wild Life</a></li>
-          <li><a href="#importance" class="btn">Importance Of Wild Life</a></li>
+          <li><a href="#threats" class="btn">Major Threats to Wildlife</a></li>
+          <li>
+            <a href="#conservation" class="btn">Conservation and Protection
+              Efforts</a>
+          </li>
+          <li>
+            <a href="#action" class="btn">What You Can Do</a>
+          </li>
+
         </ul>
       </section>
 
+      <!--section 1-->
       <div class="card stcard" id="importance">
-        <h3>Importance Of Wild Life</h3>
-        <img src="../../images/content/st1/pexels-pixabay-259554.jpg" alt="" />
-        <p>
-          Wild life plays a cruxial role in maintainin cological balance and
-          supporting life on Earth. Different species interact within ecosystems
-          to regulate food chains, pollinate plants, and maintain soil and water
-          health. Protecting biodiversity ensures that natural systems continue
-          to function effectively and sustainably (Guo, 2025).
-        </p>
+        <h3 class="text-center">Importance Of Wild Life</h3>
+
+        <div class="contentText">
+          <p>
+            Wildlife plays a crucial role in maintaining ecological balance and
+            supporting life on Earth. Different species interact within
+            ecosystems to regulate food chains, pollinate plants, and maintain
+            soil and water quality. These interactions ensure that natural
+            systems function effectively and remain sustainable over time.
+            According to Guo (2025), biodiversity is essential for supporting
+            ecosystem stability and long-term environmental resilience.
+          </p>
+
+          <p>
+            Beyond environmental values wildlife also supports human life by
+            contributing to food security, medicine , tourism, and cultueal
+            identity. Protecting willife is therfore essential not only for
+            nature,but for sustainable human development.
+          </p>
+        </div>
+        <img
+          src="../../images/content/st1/Gemini_Generated_Image_sec1.png"
+          alt />
       </div>
 
-      <div class="card stcard" id="importance">
-        <h3>Importance Of Wild Life</h3>
-        <img src="../../images/content/st1/pexels-pixabay-259554.jpg" alt="" />
-        <p>
-          Wild life plays a cruxial role in maintainin cological balance and
-          supporting life on Earth. Different species interact within ecosystems
-          to regulate food chains, pollinate plants, and maintain soil and water
-          health. Protecting biodiversity ensures that natural systems continue
-          to function effectively and sustainably (Guo, 2025).
-        </p>
+      <!--section 2-->
+      <div class="card stcard" id="threats">
+        <h3 class="text-center">Major Threats to Wildlife</h3>
+        <img
+          src="../../images/content/st1/Gemini_Generated_Image_r3hrerr3hrerr3hr.png"
+          alt />
 
-        <ul>
-          <li>Maintains Ecosystem balance.</li>
-          <li>Supports biodiversity</li>
-          <li>Regulate climate</li>
-          <li>provides economic values</li>
-        </ul>
+        <div class="contentText">
+          <p>
+            Despite its important,wildlife is increasingly under threat due to
+            human activites.RApid urbanization, deforestation, and industrial
+            expansion have led to the destruction of natural habitats. As a
+            result, many species are losing their homes and struggling to
+            survive.
+          </p>
+          <ul>
+            <li>Habitat destruction from deforestation and development</li>
+            <li>Illegal hunting and wildlife trade</li>
+            <li>Climate change and environmental shifts</li>
+            <li>Pollution affecting land and water ecosystems</li>
+          </ul>
+          <br />
+          <p>
+            Climate change is another significant factor, as it alters
+            ecosystems and affects species’ ability to adapt. Unsustainable land
+            use and poorly planned development are identified as key drivers of
+            biodiversity loss (Chango-Cañaveral et al., 2025). For example,
+            expanding tourism infrastructure without environmental planning can
+            damage ecosystems and reduce wildlife populations.
+          </p>
+        </div>
       </div>
-      <div class="card stcard" id="importance">
-        <h3>Importance Of Wild Life</h3>
-        <img src="../../images/content/st1/pexels-pixabay-259554.jpg" alt="" />
-        <p>
-          Wild life plays a cruxial role in maintainin cological balance and
-          supporting life on Earth. Different species interact within ecosystems
-          to regulate food chains, pollinate plants, and maintain soil and water
-          health. Protecting biodiversity ensures that natural systems continue
-          to function effectively and sustainably (Guo, 2025).
-        </p>
+      <!--section 3-->
+      <div class="card stcard" id="conservation">
+        <h3 class="text-center">Conservation and Protection Efforts</h3>
+
+        <div class="contentText">
+          <p>
+            To address these challenges, conservation efforts focus on
+            protecting natural habitats and restoring damaged ecosystems.
+            Governments and organisations have established protected areas such
+            as national parks and wildlife reserves to safeguard biodiversity.
+          </p>
+
+          <p>
+            Modern conservation approaches also involve local communities,
+            recognising that sustainable solutions require both environmental
+            protection and human participation. Ecological restoration projects
+            are increasingly used to rebuild degraded landscapes and improve
+            biodiversity. According to Reeya et al. (2024), restoring damaged
+            ecosystems is essential for achieving long-term sustainability under
+            SDG 15.
+          </p>
+        </div>
+        <img
+          src="../../images/content/st1/pexels-regan-dsouza-1315522347-34582686.jpg"
+          alt />
+      </div>
+      <!--section 4-->
+      <div class="card stcard" id="action">
+        <h3 class="text-center">What You Can Do</h3>
+        <img src="../../images/content/st1/pexels-pixabay-461049.jpg" alt />
+
+        <div class="contentText">
+          <p>
+            Individuals, especially students, play an important role in wildlife
+            protection. Small actions can contribute significantly to
+            conservation efforts when practiced consistently.
+          </p>
+          <p>You can do:</p>
+          <ul>
+            <li>Support wildlife conservation organisations and awareness
+              campaigns</li>
+            <li>Avoid buying products made from endangered animals</li>
+            <li>Reduce waste and pollution to protect natural habitats</li>
+            <li>Participate in tree planting and environmental programs</li>
+            <li>Promote sustainable and eco-friendly tourism practices</li>
+          </ul>
+          <br />
+          <p>
+            For example, students in Sri Lanka can take part in local
+            conservation projects and awareness programs to protect
+            biodiversity. These actions help create a sense of responsibility
+            towards nature and contribute to achieving SDG 15.
+          </p>
+        </div>
+      </div>
+      <!-conclusion-->
+      <div class="card conclusion" id="conclusion">
+        <h3 class="text-center">Conclusion</h3>
+
+        <div class="contentText">
+          <p>
+            In conclusion, wildlife protection is essential for maintaining
+            ecological balance and supporting life on Earth. Although wildlife
+            faces many threats due to human activities, effective conservation
+            strategies and individual actions can help reduce biodiversity loss.
+            By making responsible choices and promoting sustainability,
+            individuals and communities can contribute to protecting life on
+            land for future generations.
+          </p>
+        </div>
       </div>
 
-      <div class="card stcard" id="importance">
-        <h3>Importance Of Wild Life</h3>
-        <img src="../../images/content/st1/pexels-pixabay-259554.jpg" alt="" />
-        <p>
-          Wild life plays a cruxial role in maintainin cological balance and
-          supporting life on Earth. Different species interact within ecosystems
-          to regulate food chains, pollinate plants, and maintain soil and water
-          health. Protecting biodiversity ensures that natural systems continue
-          to function effectively and sustainably (Guo, 2025).
-        </p>
-
-        <ul>
-          <li>Maintains Ecosystem balance.</li>
-          <li>Supports biodiversity</li>
-          <li>Regulate climate</li>
-          <li>provides economic values</li>
-        </ul>
-      </div>
-      <div class="text-center">
+      <div class="text-center go-top-btn">
         <a href="#top" class="btn">Go to Top</a>
       </div>
     </main>
