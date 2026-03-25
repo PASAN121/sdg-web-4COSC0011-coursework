@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NatureGuard | SDG 15 - Life on Land</title>
     <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+     .part1, .part2, .part3 {
+    width: 100%;           /* Full width of the container */
+    max-width: 500px;      /* Optional: limit max size */
+    min-height: 120px;     /* Minimum height for nice spacing */
+    padding: 15px;         /* Inner spacing */
+    margin: 10px auto;     /* Space between cards, center them */
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    font-size: 16px;       /* Text size */
+    line-height: 1.5;      /* Spacing between lines */
+}
+.part1 { background-color: #ffffff; }
+.part2 { background-color: #f9f9f9; }
+.part3 { background-color: #f0fff0; }
+ 
+    </style>
 </head>
 
 <body>
@@ -35,7 +53,97 @@
 
 
     <main>
-        <h2>Page under construction</h2>
+
+        
+        <h1>Bulid your Enviromental Profile</h1>
+
+        <p>Create your profile by completing progressive steps about your
+        environmental interests and commitments to Life on Land.
+        </p>
+
+        <h2>User profile</h2>
+        
+        <button onclick="StartProfile()">Start Profile</button>
+
+        <p id="output"></p>
+        <p id="progress">Progress 0%</p>
+
+        
+
+        <script>
+
+            function StartProfile(){
+
+    
+                let name = prompt("Enter your name: ");
+                if(name ===""){
+                    return;
+                }
+                let age = prompt("Enter your age: ")
+                if(age===""){
+                    return;
+                }
+
+                document.getElementById("progress").innerHTML = "Progress 30%";
+
+
+
+                let interset = prompt("What do you like? (flowers, tress)")
+                if(interset===""){
+                    return;
+                }
+
+                document.getElementById("progress").innerHTML = "Progress 50%";
+
+
+
+                let action =prompt("Enter your what action do you take to protect the environment: ")
+                if(action===""){
+                    return;
+                }
+
+                let goals = prompt("What is your future golas: ")
+                if(goals===""){
+                    return;
+                }
+                let commitments= prompt("What is your future commitments: ")
+                if(commitments===""){
+                    return;
+                }
+                
+                document.getElementById("progress").innerHTML = "Progress 100%";
+
+
+            
+                document.getElementById("output").innerHTML=`
+
+
+                    <div class="part1">
+                        <h4>part 1</h4>
+                        Name:  ${name} <br>
+                        Age:  ${age}
+                    </div>
+
+                    <div class="part2">
+                        <h4>part 2</h4>
+                        Interest: ${interset} 
+                    </div>
+
+                    
+                    <div class="part3">
+                        <h4>part 3</h4>
+                        Action: ${action}<br>  
+                        Goals: ${goals}<br>
+                        Commitments: ${commitments}
+                    </div>
+                    
+                    `;
+                    
+                }
+
+        </script>
+        
+    
     </main>
 
     <!-- Footer -->
