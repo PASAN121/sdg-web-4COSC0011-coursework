@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <style>
       body {
-        background-image: url(../../images/content/st1/Gemini_Generated_Image_euayyceuayyceuay.jpg);
-        background-repeat: no-repeat;
+         
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -46,19 +45,38 @@
         line-height: 1.9;
       }
       .stcard img {
-        width: 30%;
+        width: 35%;
         border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.338);
+        object-fit: cover;
         transition: transform 1.3s ease;
       }
       .stcard img:hover {
         transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      }
+      
+      /* Conclusion card –  */
+      .conclusion {
+        text-align: center;
       }
          /* Go to Top Button */
       .go-top-btn {
-        position: fixed;
+        position: sticky;
+        text-align: right;
         bottom: 30px;
         right: 30px;
-        z-index: 0;
+        z-index: 999;/* Ensure it sits above all other elements */
+         
+      }
+       .fact-box {
+        background-color: rgba(56, 142, 60, 0.12);
+        border-left: 4px solid #388e3c;
+        border-radius: 6px;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0;
+        font-style: italic;
+        color: #2e6b30;
       }
     </style>
   </head>
@@ -87,9 +105,14 @@
       </div>
     </header>
     <main>
-      <!--section 1-->
+      <!-- SECTION: Hero / Page Title + Internal Nav -->
       <section class="card hero-section" id="top">
         <h2>WILD LIFE PROTECTION</h2>
+        <p>
+          Explore why protecting wildlife matters, the threats our ecosystems
+          face, and the real actions that students and communities can take to
+          make a difference.
+        </p>
         <ul>
           <li>
             <a href="#importance" class="btn">Importance Of Wild Life</a>
@@ -102,7 +125,9 @@
           <li>
             <a href="#action" class="btn">What You Can Do</a>
           </li>
-
+          <li>
+            <a href="#conclusion" class="btn">Conclusion</a>
+          </li>
         </ul>
       </section>
 
@@ -127,10 +152,17 @@
             identity. Protecting willife is therfore essential not only for
             nature,but for sustainable human development.
           </p>
+
+          <div class="fact-box">
+            Over <strong>1 million species</strong> are currently threatened
+            with extinction, according to the UN Biodiversity Report — the
+            highest rate in human history.
+          </div>
         </div>
         <img
           src="../../images/content/st1/Gemini_Generated_Image_sec1.png"
           alt />
+
       </div>
 
       <!--section 2-->
@@ -226,19 +258,22 @@
 
         <div class="contentText">
           <p>
-            In conclusion, wildlife protection is essential for maintaining
-            ecological balance and supporting life on Earth. Although wildlife
-            faces many threats due to human activities, effective conservation
-            strategies and individual actions can help reduce biodiversity loss.
-            By making responsible choices and promoting sustainability,
-            individuals and communities can contribute to protecting life on
-            land for future generations.
+            In conclusion protecting wildlife is crucial for keeping our planets
+            ecosystem in balance and supporting life on Earth.
+
+            Wildlife faces dangers because of things people do but if we work
+            together with good plans and take action we can reduce losing
+            different kinds of plants and animals.
+
+            When we make choices and live in a way that is good for the Earth we
+            and the communities we live in can help protect animals and plants,
+            for the people who will live on Earth in the future.
           </p>
         </div>
       </div>
 
       <div class="text-center go-top-btn">
-        <a href="#top" class="btn">Go to Top</a>
+        <a href="#top" class="btn">▲ Go to Top</a>
       </div>
     </main>
 
