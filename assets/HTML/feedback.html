@@ -20,9 +20,52 @@
         }
 
         p{
-            font-size: 1.2rem; 
-            max-width: 800px; 
+            font-size: auto;  
             margin: 0 auto;
+            color:black;
+
+        }
+
+        .icons-main{
+            text-align: center;
+        }
+
+        .icon{
+            font-size:40px;
+        }
+
+        .fees table{
+            width: 100%;            
+            border-collapse: collapse;
+        }
+
+        .fees th{
+            padding:10px;
+            text-align: left;
+            background-color: rgb(30, 111, 30);
+        }
+
+        .fees td{
+            padding:10px;
+            text-align: left;
+            background-color:rgb(221, 217, 217);
+        }
+        .prog-buttons{
+            text-align: center;
+        }
+        .view-project{
+            display: inline-block;
+            margin: 2px;
+            color:white;
+            background-color: rgb(18, 130, 195);
+            
+        }
+
+        .apply{
+            display: inline-block;
+            margin: 2px;
+            color:white;
+            background-color: rgb(4, 103, 4);
         }
     </style>
 
@@ -60,83 +103,77 @@
         </section>
 
         <section class="feedback-section">
- 
             <div class="sort">
-                <label for="selection"></label>
+                <span><label for="selection"></label>
                 <select id="selection">
                     <option>Most Popular</option>
                     <option>Nearest</option>
                     <option>Student-Friendly</option>
-                </select>
+                </select></span>
             </div>
             <br>
 
+            <!--First Program-->
             <div class="card">
-                <h3>Volunteering Opportunity</h3>
-                <p style="text-align: right;">♡</p>
-                    <img src="../../images/volunteers.jpg"
-                        alt="Volunteers working">
+                <div style="display: flex; justify-content: space-between;">
+                    <span><h3>Volunteering Opportunity</h3></span>
+                    <span><p>♡</p></span>
+                </div>
+
+                <img src="../../images/volunteers.jpg"  alt="Volunteers working">
  
-                    <div class="prog-card-title">Forest Conservation Volunteering</div>
- 
-                    <!-- Stats row -->
-                    <div class="prog-stats">
-                        <div>
-                            <span class="icon">🌳</span>
-                            <span>Protects forests</span>
-                        </div>
-                        <div>
-                            <span class="icon">⏱️</span>
-                            <span>3–5 hours voluteering per day</span>
-                        </div>
-                        <div>
-                            <span class="icon">💷</span>
-                            <span>Program Fees from £100</span>
-                        </div>
+                <div class="icons-main" style="display: flex; justify-content: space-between;"">
+                    <div>
+                        <span class="icon">🌳</span><br>
+                        <span>Protects forests</span>
+                       </div>
+                    <div>
+                         <span class="icon">⌛</span><br>
+                        <span>3 – 5 hours voluteering per day</span>
                     </div>
- 
-                    <!-- Meta info -->
-                    <div class="prog-meta">
-                        <p><span class="meta-icon">🕐</span> Durations from 1 – 8 weeks</p>
-                        <p><span class="meta-icon">👤</span> Open to all ages and students</p>
-                    </div>
- 
-                    <!-- Duration/Fee table -->
-                    <div class="prog-table">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Duration</th>
-                                    <th>Program Fee</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1 week</td>
-                                    <td>Free &nbsp;&nbsp;&nbsp; £0/day</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
- 
-                    <!-- Description -->
-                    <div class="prog-description">
-                        Volunteer with local conservation teams to protect and restore forest ecosystems.
-                        Tasks include planting native trees, removing invasive species, and monitoring
-                        wildlife habitats in your local area.
-                    </div>
- 
-                    <!-- Buttons -->
-                    <div class="prog-buttons">
-                        <a href="#" class="btn-view">VIEW PROJECT</a>
-                        <a href="#" class="btn-apply">APPLY</a>
+                    <div>
+                        <span class="icon">💵</span><br>
+                        <span>Program Fees from £100</span>
                     </div>
                 </div>
- 
-            <!-- ============================
-                     CARD 2: Campaign
-                ============================= -->
-                <div class="card">
+                <br>
+
+                <p>🕐 Durations from 1 – 8 weeks</p>
+                <p>👤 Open to all ages and students</p>
+                    
+                <div class="fees">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Duration</th>
+                                <th>Program Fee</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1 week</td> 
+                                <td>£7/day</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>                
+                <br>
+
+                <p> Volunteer with local conservation teams to protect and restore forest ecosystems.
+                    Tasks include planting native trees, removing invasive species, and monitoring
+                    wildlife habitats in your local area.</p>
+                <br>
+
+                <nav class="prog-buttons">
+                    <ul>
+                        <li><a href="#" class="view-project">VIEW PROJECT</a></li>
+                        <li><a href="#" class="apply">APPLY</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!--Second Program-->>
+            <div class="card">
                     <img src="../../images/compaign.jpg"
                         alt="Students holding banners at a wildlife awareness campaign">
  
@@ -195,8 +232,8 @@
  
                     <!-- Buttons -->
                     <div class="prog-buttons">
-                        <a href="#" class="btn-view">VIEW PROJECT</a>
-                        <a href="#" class="btn-apply">APPLY</a>
+                        <a href="#" class="view-project">VIEW PROJECT</a>
+                        <a href="#" class="apply">APPLY</a>
                     </div>
                 </div>
  
