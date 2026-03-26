@@ -1,57 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatureGuard | SDG 15 - Life on Land</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NatureGuard | SDG 15 - Life on Land</title>
+        <link rel="stylesheet" href="../css/style.css">
 
-<body>
+        <style>
+ 
+    </style>
+    </head>
 
-    <header>
+    <body>
+
+        <header>
+            <!--DONT CHANGE THIS-->
+            <div class="header-content">
+                <a href="home.html">
+                    <div class="logo-section">
+                        <img src="logo.png" alt="NatureGuard Logo">
+                        <h1 class="site-title"> NatureGuard</h1>
+                    </div></a>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li> <a href="gallery.html">Gallery</a></li>
+                        <li><a href="ais.html">Impact Simulator</a></li>
+                        <li> <a href="feedback.html">Feedback</a></li>
+                        <li> <a href="team.html">Team</a></li>
+                        <li> <a href="profile.html"
+                                class="active">Profile</a></li>
+                        <li> <a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <h1>Bulid your Enviromental Profile</h1>
+
+            <p>Create your profile by completing progressive steps about your
+                environmental interests and commitments to Life on Land.
+            </p>
+
+            <h2>User profile</h2>
+
+            <button onclick="StartProfile()">Start Profile</button>
+
+            <p id="output"></p>
+            <p id="progress">Progress 0%</p>
+
+            <script>
+
+            function StartProfile(){
+
+    
+                let name = prompt("Enter your name: ");
+                if(name ===""){
+                    return;
+                }
+                let age = prompt("Enter your age: ")
+                if(age===""){
+                    return;
+                }
+
+                document.getElementById("progress").innerHTML = "Progress 30%";
+
+
+
+                let interset = prompt("What do you like? (flowers, tress)")
+                if(interset===""){
+                    return;
+                }
+
+                document.getElementById("progress").innerHTML = "Progress 50%";
+
+
+
+                let action =prompt("Enter your what action do you take to protect the environment: ")
+                if(action===""){
+                    return;
+                }
+
+                let goals = prompt("What is your future golas: ")
+                if(goals===""){
+                    return;
+                }
+                let commitments= prompt("What is your future commitments: ")
+                if(commitments===""){
+                    return;
+                }
+                
+                document.getElementById("progress").innerHTML = "Progress 100%";
+
+
+            
+                document.getElementById("output").innerHTML=`
+
+
+                    <div class="card part1">
+                        <h4>part 1</h4>
+                        Name:  ${name} <br>
+                        Age:  ${age}
+                    </div>
+
+                    <div class="card part2">
+                        <h4>part 2</h4>
+                        Interest: ${interset} 
+                    </div>
+
+                    
+                    <div class="card part3">
+                        <h4>part 3</h4>
+                        Action: ${action}<br>  
+                        Goals: ${goals}<br>
+                        Commitments: ${commitments}
+                    </div>
+                    
+                    `;
+                    
+                }
+
+        </script>
+
+        </main>
+
+        <!-- Footer -->
         <!--DONT CHANGE THIS-->
-        <div class="header-content">
-            <a href="home.html">
-            <div class="logo-section">
-                <img src="logo.png" alt="NatureGuard Logo">
-                <h1 class="site-title"> NatureGuard</h1>
-            </div></a>
-            <nav>
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li> <a href="gallery.html">Gallery</a></li>
-                    <li><a href="ais.html">Impact Simulator</a></li>
-                    <li> <a href="feedback.html">Feedback</a></li>
-                    <li> <a href="team.html">Team</a></li>
-                    <li> <a href="profile.html" class="active">Profile</a></li>
-                    <li> <a href="sitemap.html">Sitemap</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
-
-    <main>
-        <h2>Page under construction</h2>
-    </main>
-
-    <!-- Footer -->
-    <!--DONT CHANGE THIS-->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="../../page-editor/pageEditor_ST4.html">Page Editor</a>
-                <a href="../../page-editor/pageEditor_ST4.html">Validation</a>
-                <a href="#">Accessibility Statement</a>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="../../page-editor/pageEditor_ST4.html">Page
+                        Editor</a>
+                    <a
+                        href="../../page-editor/pageEditor_ST4.html">Validation</a>
+                    <a href="#">Accessibility Statement</a>
+                </div>
+                <div class="student-info">
+                    Student 4: Hamid Razik | NatureGuard Project 2026
+                </div>
             </div>
-            <div class="student-info">
-                Student 4: Hamid Razik | NatureGuard Project 2026
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 
 </html>
