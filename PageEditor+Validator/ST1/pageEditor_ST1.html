@@ -185,81 +185,278 @@ footer {
                 <section>
                     <h2 id="home">Home page</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p> The Home Page was developed using semantic HTML5
+                        elements such as
+                        <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+                        <code>&lt;section&gt;</code>, and
+                        <code>&lt;footer&gt;</code> to ensure
+                        a clear and meaningful structure. The page layout is
+                        divided into a
+                        hero section, a card-based information section, and an
+                        interactive gallery..</p>
+                    <p> CSS Grid was used to create responsive layouts,
+                        particularly with
+                        <code>grid-template-columns: repeat(auto-fit,
+                            minmax(300px, 1fr))</code>,
+                        allowing content cards to automatically adjust based on
+                        screen size.
+                        The hero section uses a background image with
+                        <code>background-size: cover</code> and
+                        <code>background-position: center</code>
+                        to maintain visual consistency across different
+                        devices.</p>
 
-                    <h3>Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <p>
+                        The gallery section includes hover effects implemented
+                        using CSS
+                        transitions and transforms such as <code>transform:
+                            scale()</code> and
+                        <code>translateY()</code>. These effects enhance
+                        interactivity and user
+                        engagement. The overall design focuses on simplicity,
+                        readability,
+                        and a modern user interface.
+                    </p>
+
+                    <h3 id="#accesebility1">Accessibility</h3>
+                    <p>
+                        Accessibility was considered by using descriptive
+                        <code>alt</code>
+                        attributes for all images to support screen readers.
+                        Semantic HTML
+                        elements improve navigation for assistive technologies.
+                        Text contrast
+                        was carefully selected to ensure readability, especially
+                        in the hero
+                        section where white text is placed over a dark overlay.
+                    </p>
+
+                    <p>
+                        The layout is fully responsive, ensuring usability
+                        across desktops,
+                        tablets, and mobile devices. Clear navigation links and
+                        structured
+                        headings (<code>&lt;h1&gt;</code>,
+                        <code>&lt;h2&gt;</code>) also help
+                        users understand the content hierarchy.
+                    </p>
 
                     <h3>Link to the validation page</h3>
                     <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#splashVal">Include a link to
+                    <p><a href="validation_ST1.html">Include a link to
                             the validation page</a>, use the marker to jump to
                         the corresponding section of the validation page.</p>
                     <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                    <p><a href="splash.html">Include a link to the actual page
+                    <p><a href="../../assets/HTML/home.html">Include a link to
+                            the actual page
                             you describe.</a></p>
                 </section>
 
                 <section>
                     <h2 id="gallery">Gallery Page</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p>
+                        The Gallery Page was implemented using structured HTML
+                        sections and a
+                        responsive grid layout to display images in an organized
+                        way. The
+                        <code>grid-template-columns: repeat(auto-fit,
+                            minmax(250px, 1fr))</code>
+                        property ensures that gallery items automatically adjust
+                        based on screen
+                        size, providing a flexible and responsive design.
+                    </p>
+
+                    <p>
+                        Each gallery item is placed inside a <code>div</code>
+                        with the class
+                        <code>.cell</code>, containing an image and a label. CSS
+                        properties such as
+                        <code>object-fit: cover</code> and
+                        <code>aspect-ratio</code> maintain
+                        consistent image dimensions. Hover effects are created
+                        using
+                        <code>transform: scale()</code> and
+                        <code>box-shadow</code> to enhance
+                        interactivity.
+                    </p>
+
+                    <p>
+                        JavaScript is used to implement a dynamic modal system.
+                        When a gallery
+                        image is clicked, event listeners
+                        (<code>addEventListener()</code>) capture
+                        the interaction and update the modal content. The
+                        selected image source,
+                        title, and description are dynamically inserted into
+                        elements such as
+                        <code>modalImage</code>, <code>modalTitle</code>, and
+                        <code>modalDescription</code>.
+                    </p>
+
+                    <p>
+                        The <code>modalBody</code> element acts as the main
+                        container for the popup
+                        content. It is dynamically updated using JavaScript to
+                        change styles such as
+                        background color, font, and text color. Additional
+                        controls (dropdown menus)
+                        are created using <code>createElement()</code> and
+                        inserted into the DOM
+                        using <code>appendChild()</code>, allowing users to
+                        customize the modal
+                        appearance in real-time.
+                    </p>
+
+                    <p>
+                        The modal visibility is controlled by toggling the
+                        <code>.active</code> class using JavaScript. Smooth
+                        animations are achieved
+                        using CSS transitions and transforms, creating a modern
+                        and interactive
+                        user experience without reloading the page.
+                    </p>
 
                     <h3>Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <p>
+                        Accessibility was considered by including descriptive
+                        <code>alt</code> attributes for all images, ensuring
+                        that users with
+                        screen readers can understand the content. Semantic
+                        headings
+                        (<code>&lt;h2&gt;</code>) are used to clearly structure
+                        different sections
+                        such as Wildlife Protection, Deforestation, and Take
+                        Action.
+                    </p>
+
+                    <p>
+                        The modal design ensures readability with proper
+                        contrast between text
+                        and background. Interactive elements such as buttons and
+                        dropdowns are
+                        clearly labeled, improving usability. The responsive
+                        grid layout also
+                        ensures accessibility across different devices including
+                        mobile and tablets.
+                    </p>
 
                     <h3>Link to the validation page</h3>
                     <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#volunteerVal">Include a link
+                    <p><a href="validation_ST1.html#volunteerVal">Include a link
                             to the validation page</a>, use the marker to jump
                         to the corresponding section of the validation page.</p>
                     <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                    <p><a href="volunteer.html">Include a link to the actual
+                    <p><a href="../../assets/HTML/gallery.html">Include a link
+                            to the actual
                             page you describe.</a></p>
                 </section>
 
                 <section>
-                    <h2 id="content">Content Page</h2>
+                    <h2 id="content">Content Page 01 </h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p>
+                        The Content Page was structured using semantic HTML
+                        elements such as
+                        <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>,
+                        and
+                        <code>&lt;h2&gt; - &lt;h4&gt;</code> headings to
+                        organize information into
+                        meaningful sections. Each topic, such as wildlife
+                        importance, threats,
+                        and conservation efforts, is presented using separate
+                        sections to
+                        improve readability and logical flow.
+                    </p>
+
+                    <p>
+                        A flexible layout was created using CSS Flexbox in the
+                        <code>.stcard</code> class, allowing text and images to
+                        be displayed
+                        side-by-side. The <code>display: flex</code> and
+                        <code>align-items: center</code> properties ensure
+                        proper alignment
+                        and spacing between content elements. Images are styled
+                        using
+                        <code>object-fit: cover</code> and hover effects such as
+                        <code>transform: scale()</code> to enhance visual
+                        interaction.
+                    </p>
+
+                    <p>
+                        Internal navigation is implemented using anchor links
+                        (<code>&lt;a href="#section-id"&gt;</code>) within the
+                        hero section,
+                        allowing users to quickly jump to different parts of the
+                        page. This
+                        improves usability and user experience, especially for
+                        long-form
+                        content.
+                    </p>
+
+                    <p>
+                        Additional styling elements such as the
+                        <code>.fact-box</code> are used
+                        to highlight important information. CSS properties like
+                        <code>border-left</code>, <code>background-color</code>,
+                        and
+                        <code>border-radius</code> help visually separate key
+                        facts from the
+                        main content.
+                    </p>
+
+                    <p>
+                        A "Go to Top" button is implemented using anchor links,
+                        improving
+                        navigation and allowing users to easily return to the
+                        top of the page
+                        without scrolling manually.
+                    </p>
 
                     <h3>Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <p>
+                        Accessibility was addressed by using descriptive
+                        <code>alt</code>
+                        attributes for all images, ensuring compatibility with
+                        screen readers.
+                        Proper heading hierarchy (<code>&lt;h2&gt;</code> to
+                        <code>&lt;h4&gt;</code>) was maintained to help users
+                        understand the
+                        structure of the content.
+                    </p>
+
+                    <p>
+                        Text readability was improved by using appropriate line
+                        spacing,
+                        contrast, and font sizes. The layout is responsive and
+                        adapts to
+                        different screen sizes, ensuring usability on mobile
+                        devices, tablets,
+                        and desktops.
+                    </p>
+
+                    <p>
+                        Internal navigation links and clear section labels
+                        improve user
+                        interaction and make the content easier to explore,
+                        especially for
+                        users relying on keyboard navigation.
+                    </p>
 
                     <h3>Link to the validation page</h3>
                     <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#contentVal">Include a link
+                    <p><a href="validation_ST1.html">Include a link
                             to the validation page</a>, use the marker to jump
                         to the corresponding section of the validation page.</p>
                     <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
 
                     <h3>Link to the page</h3>
-                    <p><a href="content.html">Include a link to the actual page
+                    <p><a href="../../assets/HTML/content_ST1.html">Include a
+                            link to the actual page
                             you describe.</a></p>
                 </section>
 
@@ -445,10 +642,10 @@ footer {
                 <div class="footer-content">
                     <div class="footer-links">
                         <a
-                            href="../../PageEditor+Validator/ST1/pageEditor_ST0.html">Page
+                            href="#">Page
                             Editor</a>
                         <a
-                            href="../../PageEditor+Validator/ST1/validation_ST0.html">Validation</a>
+                            href="../../PageEditor+Validator/ST1/validation_ST1.html">Validation</a>
                         <a href="#">Accessibility Statement</a>
                     </div>
                     <div class="student-info">
