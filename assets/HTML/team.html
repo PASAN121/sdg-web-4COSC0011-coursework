@@ -7,79 +7,52 @@
     <title>NatureGuard | SDG 15 - Life on Land</title>
     <link rel="stylesheet" href="../css/style.css">
     <style>
-        body {
-         
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-      }
-      .hero-section {
-        text-align: center;
-      }
-      .hero-section ul {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
-        justify-content: center;
-        gap: 1rem;
-        padding-left: 0;
-        margin-top: 1rem;
-      }
-      .hero-section ul li {
-        display: block;
-      }
+        .team-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
 
-      .stcard {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
-        overflow: hidden; /*to fix overflow when image*/
-      }
-      .contentText p {
-        color: black;
-        line-height: 1.8;
-      }
-      .contentText ul {
-        list-style-position: inside;
-        margin: 0.5rem 0 1rem 1rem;
-        color: #1a1a1a;
-        line-height: 1.9;
-      }
-      .stcard img {
-        width: 35%;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.338);
-        object-fit: cover;
-        transition: transform 1.3s ease;
-      }
-      .stcard img:hover {
-        transform: scale(1.05) rotate(1deg);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-      }
-      
-      /* Conclusion card –  */
-      .conclusion {
-        text-align: center;
-      }
-         /* Go to Top Button */
-      .go-top-btn {
-        position: sticky;
-        text-align: right;
-        bottom: 30px;
-        right: 30px;
-        z-index: 999;/* Ensure it sits above all other elements */
-         
-      }
-       .fact-box {
-        background-color: rgba(56, 142, 60, 0.12);
-        border-left: 4px solid #388e3c;
-        border-radius: 6px;
-        padding: 0.8rem 1.2rem;
-        margin: 1rem 0;
-        font-style: italic;
-        color: #2e6b30;
-      }
-        
+        .team-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        /* Image */
+        .team-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Hover effect */
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Hide details initially */
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Show on hover */
+        .team-card:hover .details,
+        .team-card:focus .details {
+            max-height: 500px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        /* Accessibility */
+        .team-card:focus {
+            outline: 2px solid green;
+        }   
     </style>
 </head>
 
@@ -163,10 +136,7 @@
                         <p>Summary: Created form and validation.</p>
                     </div>
                 </div>
-
-            </div>
-</section>
-                
+            </div>    
         </section>
     </main>
 
@@ -181,7 +151,7 @@
                 <a href="../../PageEditor+Validator_ST3/pageEditor_ST0.html#accesability">Accessibility Statement</a>
             </div>
             <div class="student-info">
-                Student 3: Krishanika | NatureGuard Project 2026
+                Student 3: Krishanika Kathiresan | NatureGuard Project 2026
             </div>
         </div>
     </footer>
