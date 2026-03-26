@@ -16,6 +16,11 @@
 
         }
 
+        h2{
+            text-align:center;
+            color:black;
+        }
+
         /* four programs */
         .card-grids {
             display: grid;
@@ -120,102 +125,62 @@
             color: green; 
         }
 
+        .review-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 15px;
+            min-width: 200px;
+            flex: 1;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+                }
 
-.reviews-section {
-    padding: 30px 20px;
-    margin-top: 30px;
-    border-top: 2px solid #eee;
-}
+        .review-card a {
+            color: rgb(30, 111, 30);
+            font-size: 0.85rem;
+                }
+        
+        /* form */
+        .form {
+            display: flex;
+            flex-direction: column;
+                }
 
-/* Individual review card */
-.review-card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    min-width: 200px;
-    flex: 1;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
+        .fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 2px solid #ccc;
+                }
+        
+        .form input, textarea, .form-selection{
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+                }
+    
+        .form button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color:rgb(30, 111, 30);;
+            color: white;
+            border: none;
+                }
 
-.review-card a {
-    color: rgb(30, 111, 30);
-    font-size: 0.85rem;
-}
+        .form button:hover {
+            background-color: rgb(30, 111, 30);;
+                }
 
-/* Form Section */
-.form-section {
-    padding: 30px 20px;
-    margin-top: 30px;
-    border-top: 2px solid #eee;
-}
+        .error {
+            color: red;
+            font-size: 12px;
+                }
 
-fieldset {
-    border: 2px solid rgb(30, 111, 30);
-    border-radius: 10px;
-    padding: 15px 20px;
-    margin-bottom: 20px;
-}
+        #successMessage {
+            color: green;
+            font-weight: bold;
+            margin-top: 10px;
+            }
 
-legend {
-    font-weight: bold;
-    color: rgb(30, 111, 30);
-    padding: 0 8px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 12px;
-}
-
-.form-group label {
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea,
-.form-group select {
-    padding: 8px;
-    border: 1.5px solid #ccc;
-    border-radius: 6px;
-    font-size: 0.9rem;
-    font-family: inherit;
-}
-
-.form-group input:focus,
-.form-group textarea:focus,
-.form-group select:focus {
-    outline: none;
-    border-color: rgb(30, 111, 30);
-}
-
-/* Error messages - shown by JavaScript */
-.error-msg {
-    font-size: 0.8rem;
-    color: red;
-    margin-top: 3px;
-    display: none;
-}
-
-/* Submit button */
-.btn-submit {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 30px;
-    background: rgb(4, 103, 4);
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-submit:hover { opacity: 0.85; }
     </style>
 
     </head>
@@ -324,8 +289,7 @@ legend {
 
                         <nav class="prog-buttons">
                             <ul>
-                                <li><a href="#" class="learn">Learn
-                                        more</a></li>
+                                <li><a href="#" class="learn">Learn more</a></li>
                                 <li><a href="#" class="join">Join</a></li>
                             </ul>
                         </nav>
@@ -537,8 +501,7 @@ legend {
 
             <section class="reviews">
 
-                <div
-                    style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
+                <div style="display: flex; gap: 40px; align-items: flex-start; flex-wrap: wrap;">
 
                     <div>
                         <div class="s1">9.4/10</div>
@@ -561,7 +524,7 @@ legend {
                         <a href="#">See more</a>
                         <br><br>
                         <p>Amara S.</p>
-                        <p style="color: #888; font-size: 0.8rem;">Jan 12,
+                        <p class="p-review" style="color: #888; font-size: 0.8rem;">Jan 12,
                             2026</p>
                     </div>
 
@@ -591,155 +554,146 @@ legend {
                         <p style="color: #888; font-size: 0.8rem;">Feb 18,
                             2026</p>
                     </div>
-
                 </div>
-            </div>
+            </section>
+            <br>
 
-        </section>
+            <section class="form">
+                <h2>Send us your Review</h2>
 
-        <!-- FEEDBACK FORM SECTION -->
-        <section class="form-section">
-            <h2>Send us your Review</h2>
+                <form id="feedback">
+                    <fieldset>
+                        <legend>Personal Details</legend>
 
-            <form id="feedback-form" novalidate>
+                        <label for="name">Full Name: </label>
+                        <input type="text" id="name" required><br>
+                        <small class="error" id="name-error"></small>
+                        
+                        <label for="email">Email Address: </label> 
+                        <input type="email" id="email" required><br>
+                        <small class="error" id="email-error"></small>
 
-                <!-- FIELDSET 1: Personal Details -->
-                <fieldset>
-                    <legend>Personal Details</legend>
+                        <label for="phone">Mobile Number: </label>
+                        <input type="tel" id="phone" required><br>
+                        <small class="error" id="phone-error"></small>
+                            
+                        <label for="address">Address: </label>
+                        <textarea id="address" required></textarea><br>
+                        <small class="error" id="address-error"></small>
+                    </fieldset>
 
-                    <div class="form-group">
-                        <label for="full-name">Full Name *</label>
-                        <input type="text" id="full-name" name="full-name"
-                            placeholder="e.g. Jane Smith">
-                        <span class="error-msg" id="name-error">Please enter
-                            your full name.</span>
+                    <fieldset>
+                        <legend>Feedback Details</legend>
+
+                        <label for="message">Message: </label>
+                        <textarea id="message" maxlength="200" required></textarea>
+                        <p id="charCount">200 characters remaining</p>
+                        <small class="error" id="message-error"></small><br>
+    
+                        <label for="type">Feedback Type: </label>
+                        <select class="form-selection" id="type">
+                            <option>Select</option>
+                            <option>General</option>
+                            <option>Suggestion</option>
+                            <option>Complaint</option>
+                        </select><br>
+    
+                        <label for="date">Select Date:</label>
+                        <input type="date" id="date"><br>
+    
+                        <label>Date &amp; Time:</label>
+                        <input type="datetime-local" id="datetime"><br>
+                    </fieldset>
+    
+                    <button type="submit">Submit</button>
+                    <p id="successMessage"></p>
+
+                </form>
+            </section>
+            </main>
+
+            <script>
+                const form = document.getElementById("feedback");
+                const message = document.getElementById("message");
+                const charCount = document.getElementById("charCount");
+                
+                // live character Counter
+                message.addEventListener("input", function () {
+                    let remaining = 200 - message.value.length;
+                    charCount.textContent = remaining + " characters remaining";
+                    });
+
+                // Form Validation
+                form.addEventListener("submit", function (e) {
+                     e.preventDefault();
+
+                    let valid = true;
+
+                    // Clear previous errors
+                    document.querySelectorAll(".error").forEach(el => el.textContent = "");
+
+                    // Name
+                    const name = document.getElementById("name").value;
+                    if (name === "") {
+                        document.getElementById("name-error").textContent = "Name is required";
+                        valid = false;
+                    }
+
+                    // Email          
+                    const email = document.getElementById("email").value;
+                    if (email === "") {
+                        document.getElementById("email-error").textContent = "Email is required";
+                        valid = false;
+                    } else if (!email.includes("@")) {
+                        document.getElementById("email-error").textContent = "Enter a valid email";
+                        valid = false;
+                    }
+                    // Phone
+                    const phone = document.getElementById("phone").value;
+                    if (phone.length < 10) {
+                        document.getElementById("phone-error").textContent = "Enter valid phone number";
+                        valid = false;
+                    }
+
+                    // Address
+                    const address = document.getElementById("address").value;
+                    if (address === "") {
+                        document.getElementById("address-error").textContent = "Address required";
+                        valid = false;
+                    }
+
+                    // Message
+                    if (message.value === "") {
+                        document.getElementById("message-error").textContent = "Message required";
+                        valid = false;
+                    }
+
+                    // Success Message
+                    if (valid) {
+                        document.getElementById("successMessage").textContent = "Thank you for your feedback!";
+                        form.reset();
+                        charCount.textContent = "200 characters remaining";
+                    }
+                });
+
+            </script>
+                            <!-- Footer -->
+                            <!--DONT CHANGE THIS-->
+        <footer>
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a
+                            href="../../page-editor/pageEditor_ST3.html">Page
+                            Editor</a>
+                        <a
+                            href="../../page-editor/pageEditor_ST3.html">Validation</a>
+                        <a href="#">Accessibility Statement</a>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email"
-                            placeholder="e.g. jane@email.com">
-                        <span class="error-msg" id="email-error">Please enter a
-                            valid email.</span>
+                    <div class="student-info">
+                        Student 3: Krishanika Kathiresan|
+                        NatureGuard Project 2026
                     </div>
-
-                    <div class="form-group">
-                        <label for="phone">Telephone Number</label>
-                        <input type="tel" id="phone" name="phone"
-                            placeholder="e.g. +44 7700 900123">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="address">Address</label>
-                        <textarea id="address" name="address" rows="2"
-                            placeholder="Your address (optional)"></textarea>
-                    </div>
-                </fieldset>
-
-                <!-- FIELDSET 2: Feedback Details -->
-                <fieldset>
-                    <legend>Feedback Details</legend>
-
-                    <div class="form-group">
-                        <label for="program-select">Program of Interest
-                            *</label>
-                        <select id="program-select" name="program-select">
-                            <option value>-- Select a program --</option>
-                            <option value="volunteering">Volunteering
-                                Opportunity</option>
-                            <option value="campaign">Student Campaign</option>
-                            <option value="action">Student Action</option>
-                            <option value="community">Community Project</option>
-                        </select>
-                        <span class="error-msg" id="program-error">Please select
-                            a program.</span>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="interest-input">Your Conservation
-                            Interest</label>
-                        <input type="text" id="interest-input"
-                            list="interests-list"
-                            placeholder="Type or choose...">
-                        <datalist id="interests-list">
-                            <option value="Reforestation">
-                                <option value="Wildlife Protection">
-                                    <option value="Soil Conservation">
-                                        <option value="Wetland Restoration">
-                                            <option value="Climate Action">
-                                            </datalist>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="visit-date">Date of
-                                                Participation</label>
-                                            <input type="date" id="visit-date"
-                                                name="visit-date">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="visit-datetime">Date &
-                                                Time of Submission</label>
-                                            <input type="datetime-local"
-                                                id="visit-datetime"
-                                                name="visit-datetime">
-                                        </div>
-
-                                        <!-- Comment box with live character counter -->
-                                        <div class="form-group">
-                                            <label for="comment">Comments /
-                                                Suggestions *</label>
-                                            <textarea id="comment"
-                                                name="comment" rows="5"
-                                                placeholder="Share your experience here..."
-                                                maxlength="500"></textarea>
-                                            <!-- Updated live by JavaScript -->
-                                            <div id="comment-counter"
-                                                style="text-align:right; font-size:0.8rem; color:#888;">500
-                                                characters remaining</div>
-                                            <span class="error-msg"
-                                                id="comment-error">Please enter
-                                                your comments.</span>
-                                        </div>
-
-                                    </fieldset>
-
-                                    <!-- Submit button -->
-                                    <button type="submit"
-                                        class="btn-submit">Send
-                                        Feedback</button>
-
-                                    <!-- Shown by JavaScript on successful submit -->
-                                    <div id="confirmation-msg"
-                                        style="display:none; background:#d8f3dc; border:1px solid green; border-radius:10px; padding:1rem; text-align:center; color:green; font-weight:bold; margin-top:1rem;">
-                                        Thank you for your feedback! We
-                                        appreciate your support for SDG 15 -
-                                        Life on Land.
-                                    </div>
-
-                                </form>
-                            </section>
-
-                        </main>
-                        <!-- Footer -->
-                        <!--DONT CHANGE THIS-->
-                        <footer>
-                            <div class="footer-content">
-                                <div class="footer-links">
-                                    <a
-                                        href="../../page-editor/pageEditor_ST3.html">Page
-                                        Editor</a>
-                                    <a
-                                        href="../../page-editor/pageEditor_ST3.html">Validation</a>
-                                    <a href="#">Accessibility Statement</a>
-                                </div>
-                                <div class="student-info">
-                                    Student 3: Krishanika Kathiresan|
-                                    NatureGuard Project 2026
-                                </div>
-                            </div>
-                        </footer>
-
-                    </body>
-
-                </html>
+                </div>
+        </footer>
+    </body>
+</html>
