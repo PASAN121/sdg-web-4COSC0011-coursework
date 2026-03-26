@@ -12,27 +12,12 @@
             text-align:center;
             color: white;
         }
-        .sentence {
-            font-size: 1.2rem; 
-            max-width: 800px; 
-            margin: 0 auto;
-        }
+        
 
-        .feedback {
-            background-image: url(../../images/feedback-main.jpg);
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
 
-            padding: 3rem 2rem;
-            border-radius: 12px;
-            color: white;
-            text-align: center;
-            margin-bottom: 3rem; /* Space below hero section */
-        }
-
-        .team {
-            text-align: center;
+        /* team */
+        .p {
+            text-align: left;
             padding: 40px;
         }
 
@@ -48,8 +33,10 @@
             border-radius: 10px;
             transition: 0.3s;
             position: relative;
+            overflow: hidden;
         }
 
+        /* Image */
         .team-card img {
             width: 100%;
             border-radius: 10px;
@@ -71,7 +58,15 @@
         .team-card:hover .details,
         .team-card:focus .details {
             max-height: 150px;
+            opacity: 1;
+            margin-top: 10px;
         }
+
+        /* Focus accessibility */
+        .team-card:focus {
+            outline: 2px solid green;
+        }
+        
     </style>
 </head>
 
@@ -99,69 +94,67 @@
     </header>
     <main>
         <section class="feedback">
-                <h2>Feedback & Program Directory</h2>
-                <p class="sentence">Explore and share your feedback with us.</p>
+                <h2>Team Page</h2>
+                <p class="sentence">Learn about the team! Hover over the images for details. </p>
         </section>
 
         <section class="team">
             <h2>Meet Our Team</h2>
 
-                <div class="team-divider">
+            <div class="team-container">
 
-                    <!-- member 1 -->
-                    <div class="team-card" tabindex="0">
-                        <img src="../../images/compaign.jpg" alt="Photo of Pasan">
-                        <h3>Pasan</h3>
-                        <p>Home Page Developer</p>
+                <!-- Member 1 -->
+                <div class="team-card" tabindex="0">
+                    <img src="../../images/compaign.jpg" alt="Photo of Pasan">
+                    <h3>Pasan</h3>
 
-                        <div class="Informations">
-                            <p><strong>Full Name:</strong> Pasan</p>
-                            <p><strong>Role:</strong> Home Page</p>
-                            <p>Worked on designing and developing the home page.</p>
-                        </div>
+                    <div class="details">
+                        <p>Role: Team Leader</p>
+                        <p>Contribution: Designed homepage and coordinated team.</p>
+                        <p>Summary: Led the project and ensured all parts were completed on time.</p>
                     </div>
-
-                    <!-- member 2 -->
-                    <div class="team-card" tabindex="0">
-                        <img src="../../images/compaign.jpg" alt="Photo of Ashwins">
-                        <h3>Student 2</h3>
-                        <p>Gallery Developer</p>
-
-                        <div class="Informations">
-                            <p><strong>Full Name: </strong> Ashwin</p>
-                            <p><strong>Role: </strong> Gallery</p>
-                            <p>Created the gallery page and handled images.</p>
-                        </div>
-                    </div>
-
-                    <!-- member 3 -->
-                    <div class="team-card" tabindex="0">
-                        <img src="../../images/compaign.jpg" alt="Photo of Krishanika">
-                        <h3>Krishanika</h3>
-                        <p>Team Page Developer</p>
-
-                        <div class="details">
-                            <p><strong>Full Name: </strong> Krishanika</p>
-                            <p><strong>Role: </strong> Team Page</p>
-                            <p>Developed the feedback page and Team page</p>
-                        </div>
-                    </div>
-
-                    <!-- Member 4 -->
-                    <div class="team-card" tabindex="0">
-                        <img src="../../images/compaign.jpg" alt="Photo of Student 4">
-                        <h3>Hameed</h3>
-                        <p>Profile Developer</p>
-
-                        <div class="details">
-                            <p><strong>Full Name: </strong> Hameed</p>
-                            <p><strong>Role: </strong> Profile</p>
-                            <p>Designed and implemented the profile page.</p>
-                        </div>
-                    </div>
-
                 </div>
-            </section>
+
+                <!-- Member 2 -->
+                <div class="team-card" tabindex="0">
+                    <img src="../../images/compaign.jpg" alt="Photo of Ashwin">
+                    <h3>Ashwin</h3>
+
+                    <div class="details">
+                        <p>Role: Member</p>
+                        <p>Contribution: Worked on gallery page.</p>
+                        <p>Summary: Helped design layout and add images.</p>
+                    </div>
+                </div>
+
+                <!-- Member 3 -->
+                <div class="team-card" tabindex="0">
+                    <img src="../../images/compaign.jpg" alt="Photo of Krishanika">
+                    <h3>Krishanika</h3>
+
+                    <div class="details">
+                        <p>Role: Member</p>
+                        <p>Contribution: Developed team page.</p>
+                        <p>Summary: Implemented layout and hover effects.</p>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="team-card" tabindex="0">
+                    <img src="../../images/compaign.jpg" alt="Photo of Hameed">
+                    <h3>Hameed</h3>
+
+                    <div class="details">
+                        <p>Role: Member</p>
+                        <p>Contribution: Worked on feedback page.</p>
+                        <p>Summary: Created form and validation.</p>
+                    </div>
+                </div>
+
+            </div>
+</section>
+                
+        </section>
     </main>
 
 
