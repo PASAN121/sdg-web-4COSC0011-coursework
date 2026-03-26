@@ -4,8 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG Website</title>
+    <title>NatureGuard | SDG 15 - Life on Land</title>
     <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+         
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .hero-section {
+        text-align: center;
+
+      }
+      .hero-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 0;
+        margin-top: 1rem;
+      }
+
+      .hero-section ul li {
+        display: block;
+      }
+
+      .stcard {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        overflow: hidden; /*to fix overflow when image*/
+      }
+
+      .contentText p {
+        color: black;
+        line-height: 1.8;
+      }
+
+      .contentText ul {
+        list-style-position: inside;
+        margin: 0.5rem 0 1rem 1rem;
+        color: #1a1a1a;
+        line-height: 1.9;
+      }
+
+      .stcard img {
+        width: 35%;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.338);
+        object-fit: cover;
+        transition: transform 1.3s ease;
+      }
+
+      .stcard img:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      }
+      
+      /* Conclusion card –  */
+      .conclusion {
+        text-align: center;
+      }
+
+         /* Go to Top Button */
+      .go-top-btn {
+        position: sticky;
+        text-align: right;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;/* Ensure it sits above all other elements */
+         
+      }
+       .fact-box {
+        background-color: rgba(56, 142, 60, 0.12);
+        border-left: 4px solid #388e3c;
+        border-radius: 6px;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0;
+        font-style: italic;
+        color: #2e6b30;
+      }
+      
+    </style>
 </head>
 
 <body>
