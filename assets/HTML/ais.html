@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NatureGuard | Impact Simulator</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>NatureGuard | Impact Simulator</title>
+        <link rel="stylesheet" href="../css/style.css">
 
-    <style>
+        <style>
         /* Page-specific styles (DO NOT affect global CSS) */
 
         body {
@@ -68,114 +68,133 @@
                 grid-template-columns: 1fr;
             }
         }
+        header-content a{
+            text-decoration:none;
+        }
     </style>
-</head>
+    </head>
 
-<body>
+    <body>
 
-<header>
-    <div class="header-content">
-        <div class="logo-section">
-            <img src="logo.png" alt="NatureGuard Logo">
-            <h1 class="site-title">NatureGuard</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="ais.html" class="active">Impact Simulator</a></li>
-                <li><a href="feedback.html">Feedback</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="profile.html">Profile</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+        <header>
+            <div class="header-content">
+                <a href="home.html">
+                    <div class="logo-section">
+                        <img src="logo.png" alt="NatureGuard Logo">
+                        <h1 class="site-title">NatureGuard</h1>
+                    </div></a>
+                <nav>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="ais.html" class="active">Impact
+                                Simulator</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="sitemap.html">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-<main>
+        <main>
 
-    <section class="card ais-intro">
-    <h2>Life on Land Action Impact Simulator</h2>
-    <p>Select actions to see your environmental impact.</p>
-</section>
-    <!-- Cards -->
-    <section class="card-container">
+            <section class="card ais-intro">
+                <h2>Life on Land Action Impact Simulator</h2>
+                <p>Select actions to see your environmental impact.</p>
+            </section>
+            <!-- Cards -->
+            <section class="card-container">
 
-        <div class="card action-card" data-points="5" tabindex="0">
-            <img src="../../images/ais/pexels-shvetsa-5027792.jpg" alt="Planting a tree">
-            <h3>Plant a Tree</h3>
-            <p>Helps restore habitats and biodiversity.</p>
-            <p><strong>Impact Points:</strong> 5</p>
-        </div>
+                <div class="card action-card" data-points="5" tabindex="0">
+                    <img src="../../images/ais/pexels-shvetsa-5027792.jpg"
+                        alt="Planting a tree">
+                    <h3>Plant a Tree</h3>
+                    <p>Helps restore habitats and biodiversity.</p>
+                    <p><strong>Impact Points:</strong> 5</p>
+                </div>
 
-        <div class="card action-card" data-points="3" tabindex="0">
-            <img src="../../images/ais/pexels-icon0-479444.jpg" alt="Paper usage">
-            <h3>Use Less Paper</h3>
-            <p>Reduces deforestation.</p>
-            <p><strong>Impact Points:</strong> 3</p>
-        </div>
+                <div class="card action-card" data-points="3" tabindex="0">
+                    <img src="../../images/ais/pexels-icon0-479444.jpg"
+                        alt="Paper usage">
+                    <h3>Use Less Paper</h3>
+                    <p>Reduces deforestation.</p>
+                    <p><strong>Impact Points:</strong> 3</p>
+                </div>
 
-        <div class="card action-card" data-points="4" tabindex="0">
-            <img src="../../images/ais/pexels-micaasato-1198171.jpg" alt="Cleaning environment">
-            <h3>Join a Clean-Up</h3>
-            <p>Protects ecosystems.</p>
-            <p><strong>Impact Points:</strong> 4</p>
-        </div>
+                <div class="card action-card" data-points="4" tabindex="0">
+                    <img src="../../images/ais/pexels-micaasato-1198171.jpg"
+                        alt="Cleaning environment">
+                    <h3>Join a Clean-Up</h3>
+                    <p>Protects ecosystems.</p>
+                    <p><strong>Impact Points:</strong> 4</p>
+                </div>
 
-        <div class="card action-card" data-points="5" tabindex="0">
-            <img src="../../images/ais/pexels-frans-van-heerden-201846-624063.jpg" alt="Wildlife habitat">
-            <h3>Protect Wildlife</h3>
-            <p>Supports animal habitats.</p>
-            <p><strong>Impact Points:</strong> 5</p>
-        </div>
+                <div class="card action-card" data-points="5" tabindex="0">
+                    <img
+                        src="../../images/ais/pexels-frans-van-heerden-201846-624063.jpg"
+                        alt="Wildlife habitat">
+                    <h3>Protect Wildlife</h3>
+                    <p>Supports animal habitats.</p>
+                    <p><strong>Impact Points:</strong> 5</p>
+                </div>
 
-        <div class="card action-card" data-points="2" tabindex="0">
-            <img src="../../images/ais/pexels-polina-tankilevitch-3738388.jpg" alt="Recycling">
-            <h3>Recycle Waste</h3>
-            <p>Reduces pollution.</p>
-            <p><strong>Impact Points:</strong> 2</p>
-        </div>
+                <div class="card action-card" data-points="2" tabindex="0">
+                    <img
+                        src="../../images/ais/pexels-polina-tankilevitch-3738388.jpg"
+                        alt="Recycling">
+                    <h3>Recycle Waste</h3>
+                    <p>Reduces pollution.</p>
+                    <p><strong>Impact Points:</strong> 2</p>
+                </div>
 
-        <div class="card action-card" data-points="3" tabindex="0">
-            <img src="../../images/ais/pexels-alleksana-4406796.jpg" alt="Eco products">
-            <h3>Eco Products</h3>
-            <p>Supports sustainability.</p>
-            <p><strong>Impact Points:</strong> 3</p>
-        </div>
+                <div class="card action-card" data-points="3" tabindex="0">
+                    <img src="../../images/ais/pexels-alleksana-4406796.jpg"
+                        alt="Eco products">
+                    <h3>Eco Products</h3>
+                    <p>Supports sustainability.</p>
+                    <p><strong>Impact Points:</strong> 3</p>
+                </div>
 
-    </section>
+            </section>
 
-    <!-- Buttons -->
-    <div class="buttons">
-        <button class="btn" onclick="submitImpact()">Submit</button>
-        <button class="btn btn-secondary" onclick="resetImpact()">Reset</button>
-    </div>
+            <!-- Buttons -->
+            <div class="buttons">
+                <button class="btn" onclick="submitImpact()">Submit</button>
+                <button class="btn btn-secondary"
+                    onclick="resetImpact()">Reset</button>
+            </div>
 
-    <!-- Results -->
-    <section class="card result-box">
-        <h3>Your Impact</h3>
-        <p id="points">Total Points: 0</p>
-        <p id="level">Impact Level: Low</p>
-        <p id="message">Click actions and press submit.</p>
-    </section>
+            <!-- Results -->
+            <section class="card result-box">
+                <h3>Your Impact</h3>
+                <p id="points">Total Points: 0</p>
+                <p id="level">Impact Level: Low</p>
+                <p id="message">Click actions and press submit.</p>
+            </section>
 
-</main>
+        </main>
 
-<footer>
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="../../page-editor/pageEditor_ST2.html">Page Editor</a>
-            <a href="../../validation/validation_ST2.html">Validation</a>
-            <a href="#">Accessibility</a>
-        </div>
-        <div class="student-info">
-            Student 2: Ashwin Jayarahal
-        </div>
-    </div>
-</footer>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a
+                        href="../../ST2_pageEditor_validation/pageEditor_ST0.html">Page
+                        Editor</a>
+                    <a
+                        href="../../ST2_pageEditor_validation/validation_ST0.html">Validation</a>
+                    <a
+                        href="../../ST2_pageEditor_validation/pageEditor_ST0.html#acc">Accessibility
+                        Statement</a>
+                </div>
+                <div class="student-info">
+                    Student 2: Ashwin Jayarahal | NatureGuard Project 2026
+                </div>
+            </div>
+        </footer>
 
-<script>
+        <script>
     // Impact thresholds:
     // 0-5 = Low
     // 6-12 = Medium
@@ -230,5 +249,5 @@
     }
 </script>
 
-</body>
+    </body>
 </html>

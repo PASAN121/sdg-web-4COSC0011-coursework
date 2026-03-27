@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validator Page Student - provide your student name</title>
+
+    <link rel="stylesheet" href="css/pageEditor_validator.css"> <!-- External CSS link -->
+
+       <style>
+  /* ── Import fonts used by NatureGuard ── */
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato&display=swap');/*fix the font error assosiate with the style.css*/
+
+  /* ── CSS variables (mirrors style.css) ── */
+  :root {
+    --primary-green:   #0e3320;
+    --secondary-green: #05d56d;
+    --accent-green:    #168045;
+    --light-green:     #52b788;
+    --pale-green:      #d8f3dc;
+    --white:           #ffffff;
+    --font-display: "Playfair Display", serif;
+  }
+
+  /* ── HEADER override ── */
+  header {
+    background-color: var(--light-green) !important;
+    color: var(--white) !important;
+    padding: 1rem !important;
+    text-align: left !important;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header inner layout — logo left, nav right */
+  header .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Logo + site title */
+  header .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .logo-section img {
+    height: 60px;
+    width: auto;
+  }
+
+  header .site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: var(--white);
+    margin: 0;
+  }
+
+  /* Navigation pill */
+  header nav {
+    background: rgba(71, 146, 9, 0.384);
+    border-radius: 50px;
+    padding: 0.5rem;
+    display: flex;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  header nav a {
+    display: block;
+    padding: 0.6rem 1.1rem;
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+
+  header nav a:hover {
+    background: var(--accent-green);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+
+  header nav a.active {
+    background: var(--pale-green);
+    color: var(--primary-green);
+  }
+
+  /* h1 inside header (the plain-text fallback) */
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  /* ── FOOTER override ── */
+  footer {
+    background: var(--primary-green) !important;
+    color: var(--white) !important;
+    padding: 2rem 3rem !important;
+    margin-top: 4rem;
+    text-align: left !important;
+  }
+
+  footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer .footer-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  footer .footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  footer .footer-links a:hover {
+    color: var(--pale-green);
+  }
+
+  footer .student-info {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* plain <p> fallback inside footer */
+  footer p {
+    margin: 0;
+    color: rgba(255,255,255,0.85);
+  }
+html{
+    scroll-padding-top: 100000px;
+    scroll-behavior: smooth;
+}
+ 
+</style>
+</head>
+  <body>
+    <header id="top">
+            <div class="header-content">
+                <a href="../assets/HTML/home.html" style="text-decoration:none">
+                    <div class="logo-section">
+                        <img src="../assets/HTML/logo.png" alt=" NatureGuard
+                            Logo">
+                        <span class="site-title">NatureGuard</span>
+                    </div>
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="../assets/HTML/home.html">Home</a></li>
+                        <li><a
+                                href="../assets/HTML/gallery.html">Gallery</a></li>
+                        <li><a href="../assets/HTML/ais.html">Impact
+                                Simulator</a></li>
+                        <li><a
+                                href="../assets/HTML/feedback.html">Feedback</a></li>
+                        <li><a href="../assets/HTML/team.html">Team</a></li>
+                        <li><a
+                                href="../assets/HTML/profile.html">Profile</a></li>
+                        <li><a
+                                href="../assets/HTML/sitemap.html">Sitemap</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <section class="stud">
+        <h2>Ashiwin, team name, student role</h2>
+    </section>
+
+    <div class="container">
+        <!-- Main content area -->
+        <main>
+
+            <!-- Update the content of the following sections with the information that corresponds to the pages you implemented  -->
+
+            <section>
+                <h2 id="splashVal">Home Page validation report</h2>
+                    <p>Include a short reflection on the validation report for the pages you implemented.</p> 
+                    <img src="validationSnapshots/validation_splash.png">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST0.html#splash">Include a link back to the corresponding section of the Page Editor.</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section>
+
+            <section>
+                <h2 id="volunteerVal">Gallery Page validation report</h2>
+                <p>Include a short reflection on the validation report for the pages you implemented.</p>
+                    <img src="validationSnapshots/validation_splash.png">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST0.html#volunteer">Include a link back to the corresponding section of the Page Editor.</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+            <section>
+                <h2 id="contentVal">Content Page validation report</h2>
+                <p>Include a short reflection on the validation report for the pages you implemented.</p>
+                    <img src="validationSnapshots/validation_splash.png">
+                                    
+                <h3>Back to Page Editor page</h3>
+                    <p><a href="pageEditor_ST0.html#content">Include a link back to the corresponding section of the Page Editor.</a></p>
+                <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+            </section></a></p>
+
+
+            <p class="top"><a href="#top">Go top</a></p>
+        </main>
+
+        <!-- Sidebar area -->
+        <aside>
+            <h3>Core pages developed:</h3>
+
+        <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+            <ul class="top-level-ul">
+                <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                <li>Student 1</li>
+                <ul>
+                        <li><a href="#home">Home page </a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#content">Content</a></li>
+                    </ul>
+                <li>Student 2</li>
+                <ul> 
+                    <li><a href="#">Splash Screen</a></li>
+                    <li><a href="#">Action Impact Simulator</a></li>
+                    <li><a href="#">Content</a></li>
+                </ul>
+                    
+                <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback</a> </li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+                <li>Student 4</li>
+                    <ul>
+                        <li><a href="#">User Profile </a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+            </ul>
+        </aside>
+    </div>
+
+      <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a
+                        href="../../ST2_pageEditor_validation/pageEditor_ST0.html">Page
+                        Editor</a>
+                    <a
+                        href="../../ST2_pageEditor_validation/validation_ST0.html">Validation</a>
+                    <a
+                        href="../../ST2_pageEditor_validation/pageEditor_ST0.html#acc">Accessibility
+                        Statement</a>
+                </div>
+                <div class="student-info">
+                    Student 2: Ashwin Jayarahal | NatureGuard Project 2026
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
