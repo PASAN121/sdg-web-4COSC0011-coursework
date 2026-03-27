@@ -10,7 +10,7 @@
         <style>
         /* common */
         p{
-            font-size: auto;  
+            font-size: 1rem;  
             margin: 0;
             color:black;
 
@@ -21,10 +21,15 @@
             color: white;
         }
 
+        h3{
+            color:#1A4301;
+        }
+
         .sentence {
             font-size: 1.2rem; 
             max-width: 800px; 
             margin: 0 auto;
+            color:white;
         }
 
         .feedback {
@@ -39,6 +44,10 @@
             text-align: center;
             margin-bottom: 3rem; /* Space below hero section */
         }
+
+        section {
+            margin-bottom: 40px;
+            }
 
         /* four programs */
         .card-grids {
@@ -85,7 +94,7 @@
         .fees th{
             padding:10px;
             text-align: left;
-            background-color: rgb(30, 111, 30);
+            background-color: #73A942;
         }
 
         .fees td{
@@ -95,26 +104,31 @@
         }
         .prog-buttons{
             text-align: center;
-        }
+            justify-content: center;
+            gap:20px;
+            display: flex;
+            list-style-type:none;
+                }
 
         .learn{
             display: block;
-            text-align: center;
-            padding:10px;
             color:white;
-            background-color: rgb(18, 130, 195);
-            border-radius: 5px;
-            text-decoration: none;   
+            background-color: rgb(221, 217, 217);
+            border-radius: 10px;
+            text-decoration: none;  
+            width:120px; 
+            height:30px;
         }
 
         .join{
             display: block;
             text-align: center;
-            padding:10px;
             color:white;
-            background-color: rgb(4, 103, 4);
-            border-radius: 5px;
+            background-color: #1A4301;
+            border-radius: 10px;
             text-decoration: none;
+            width:120px;
+            height:30px;
         }
 
         .learn:hover { opacity: 0.85; }
@@ -124,24 +138,25 @@
         .s1{
             font-size: 3rem; 
             font-weight: bold; 
-            color: rgb(30, 111, 30);
+            color:#1A4301;
         }
 
         .s2{
             font-weight: bold; 
-            font-size: 1.1rem
+            font-size: 1.1rem;
+            color:#73A942;
         }
 
         .s3, .s4{
             color: #888; 
             font-size: 0.85rem;
         }
-
+ 
         .review-button{
-            border: 1px solid green; 
+            border: 1px solid #245501; 
             padding: 8px 15px; 
             border-radius: 20px; 
-            color: green; 
+            color: #245501; 
         }
 
         .review-card {
@@ -165,7 +180,7 @@
             flex-direction: column;
                 }
 
-        .fieldset {
+        fieldset {
             margin-bottom: 15px;
             padding: 10px;
             border: 2px solid #ccc;
@@ -240,6 +255,7 @@
                 <div class="sort">
                     <span><label for="selection"></label>
                         <select id="selection">
+                            <option value="">Select</option>
                             <option>Most Popular</option>
                             <option>Nearest</option>
                             <option>Student-Friendly</option>
@@ -263,22 +279,22 @@
                         <div class="icons-main"
                             style="display: flex; justify-content: space-between;">
                             <div>
-                                <span class="icon">🌳</span><br>
+                                <span class="icon">🌳 </span><br>
                                 <span>Protects<br> forests</span>
                             </div>
                             <div>
                                 <span class="icon">⌛</span><br>
-                                <span>3 – 5 hours<br> per day</span>
+                                <span>3 - 5 hours<br> per week</span>
                             </div>
                             <div>
                                 <span class="icon">💵</span><br>
-                                <span>Program Fees<br> from £100</span>
+                                <span>Program Fees<br> from £7</span>
                             </div>
                         </div>
                         <br>
 
-                        <p>🕐 Durations from 1 – 8 weeks</p>
-                        <p>👤 Open to all ages and students</p>
+                        <p>• Durations from 1 – 8 weeks</p>
+                        <p>• Open to all ages</p>
                         <br>
 
                         <div class="fees">
@@ -287,32 +303,30 @@
                                     <tr>
                                         <th>Duration</th>
                                         <th>Program Fee</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1 week</td>
-                                        <td>£7/day</td>
+                                        <td>£10</td>
+                                        <td>£5/week</td>
+
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <br>
 
-                        <p> Volunteer with local conservation teams to protect
-                            and restore forest ecosystems.
-                            Tasks include planting native trees, removing
+                        <p>Tasks include planting native trees, removing
                             invasive species, and monitoring
                             wildlife habitats in your local area.</p>
                         <br>
-
-                        <nav class="prog-buttons">
-                            <ul>
-                                <li><a href="#" class="learn">Learn
-                                        more</a></li>
-                                <li><a href="#" class="join">Join</a></li>
-                            </ul>
-                        </nav>
+                       
+                        <ul class="prog-buttons">
+                            <li><a href="#" class="learn">Learn more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ul>                
                     </div>
 
                     <!--Second Program-->
@@ -373,13 +387,12 @@
                             your community.</p>
                         <br>
 
-                        <nav class="prog-buttons">
-                            <ul>
-                                <li><a href="#" class="learn">Learn
-                                        more</a></li>
+                       
+                            <ol class="prog-buttons">
+                                <li><a href="#" class="learn">Learn more</a></li>
                                 <li><a href="#" class="join">Join</a></li>
-                            </ul>
-                        </nav>
+                            </ol>
+                       
                     </div>
 
                     <!--Third Program-->
@@ -440,13 +453,11 @@
                             healthier place.</p>
                         <br>
 
-                        <nav class="prog-buttons">
-                            <ul>
-                                <li><a href="#" class="learn">Learn
-                                        more</a></li>
-                                <li><a href="#" class="join">Join</a></li>
-                            </ul>
-                        </nav>
+                        <ul class="prog-buttons">
+                            <li><a href="#" class="learn">Learn
+                                    more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ul>
                     </div>
 
                     <!--Fourth Porgram -->
@@ -507,13 +518,11 @@
                             other wildlife.</p>
                         <br>
 
-                        <nav class="prog-buttons">
-                            <ul>
-                                <li><a href="#" class="learn">Learn
-                                        more</a></li>
-                                <li><a href="#" class="join">Join</a></li>
-                            </ul>
-                        </nav>
+                        <ul class="prog-buttons">
+                            <li><a href="#" class="learn">Learn
+                                    more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -654,6 +663,7 @@
 
                     // Clear previous errors
                     document.querySelectorAll(".error").forEach(el => el.textContent = "");
+                    document.getElementById("name").style.border = "2px solid red";
 
                     // Name
                     const name = document.getElementById("name").value;
