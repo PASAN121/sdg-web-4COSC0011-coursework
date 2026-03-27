@@ -276,6 +276,8 @@ footer {
   color: var(--white);
   padding: var(--spacing-md) var(--spacing-lg);
   margin-top: var(--spacing-xl);
+  position: sticky;
+  bottom: 0;
 }
 
 .footer-content {
