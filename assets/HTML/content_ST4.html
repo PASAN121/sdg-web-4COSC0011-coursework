@@ -1,58 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NatureGuard | SDG 15 - Life on Land</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      body {
+         
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      .hero-section {
+        text-align: center;
+      }
+      .hero-section ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+        gap: 1rem;
+        padding-left: 0;
+        margin-top: 1rem;
+      }
+      .hero-section ul li {
+        display: block;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SDG Website</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+      .stcard {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        overflow: hidden; /*to fix overflow when image*/
+      }
+      .contentText p {
+        color: black;
+        line-height: 1.8;
+      }
+      .contentText ul {
+        list-style-position: inside;
+        margin: 0.5rem 0 1rem 1rem;
+        color: #1a1a1a;
+        line-height: 1.9;
+      }
+      .stcard img {
+        width: 35%;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.338);
+        object-fit: cover;
+        transition: transform 1.3s ease;
+      }
+      .stcard img:hover {
+        transform: scale(1.05) rotate(1deg);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      }
+      
+      /* Conclusion card –  */
+      .conclusion {
+        text-align: center;
+      }
+         /* Go to Top Button */
+      .go-top-btn {
+        position: sticky;
+        text-align: right;
+        bottom: 30px;
+        right: 30px;
+        z-index: 999;/* Ensure it sits above all other elements */
+         
+      }
+       .fact-box {
+        background-color: rgba(56, 142, 60, 0.12);
+        border-left: 4px solid #388e3c;
+        border-radius: 6px;
+        padding: 0.8rem 1.2rem;
+        margin: 1rem 0;
+        font-style: italic;
+        color: #2e6b30;
+      }
+    </style>
+  </head>
 
-<body>
-
+  <body>
     <header>
-        <div class="header-content">
-            <div class="logo-section">
-                <img src="logo.png" alt="NatureGuard Logo">
-                <h1 class="site-title"> NatureGuard</h1>
-            </div>
-            <nav>
-                <a href="home.html">Home</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="ais.html">Impact Simulator</a>
-                <a href="feedback.html">Feedback</a>
-                <a href="team.html">Team</a>
-                <a href="profile.html">Profile</a>
-                <a href="sitemap.html">Sitemap</a>
-            </nav>
-        </div>
+      <!--DONT CHANGE THIS-->
+      <div class="header-content">
+        <a href="home.html">
+          <div class="logo-section">
+            <img src="logo.png" alt="NatureGuard Logo" />
+            <h1 class="site-title">NatureGuard</h1>
+          </div>
+        </a>
+        <nav>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="ais.html">Impact Simulator</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="team.html">Team</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
     <main>
-        <h2>Page under construction</h2>
-<p class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus veniam, nam dignissimos magnam
-    natus sed necessitatibus voluptates suscipit, quia eaque omnis esse nesciunt nihil vero accusantium nobis.
-    Provident, voluptatum!</p>
-<p class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae repellendus veniam, nam dignissimos magnam
-    natus sed necessitatibus voluptates suscipit, quia eaque omnis esse nesciunt nihil vero accusantium nobis.
-    Provident, voluptatum!</p>
+      <!-- SECTION: Hero / Page Title + Internal Nav -->
+      <section class="card hero-section" id="top">
+        <h2>How You Can Protect Life on Land</h2>
+        <p>
+          Taking action individually for protect the life on land is nessasry.
+        </p>
+        <ul>
+          <li>
+            <a href="#Action" class="btn">Why Action Matters</a>
+          </li>
+          <li><a href="#homeAction" class="btn">Actions at Home</a></li>
+          <li>
+            <a href="#uniAction" class="btn">Actions at University</a>
+          </li>
+          <li>
+            <a href="#Comaction" class="btn">Actions in Your Community</a>
+          </li>
+          <li>
+            <a href="#barriers" class="btn">Challanges and Solutions</a>
+          </li>
+          <li>
+            <a href="#bigpicture" class="btn">The Bigger Picture</a>
+          </li>
+          <li>
+            <a href="#conclusion" class="btn">Conclusion</a>
+          </li>
+        </ul>
+      </section>
 
+      <!--section 1-->
+      <div class="card stcard" id="Action">
+        <h3 class="text-center">Why Action Matters</h3>
+
+        <div class="contentText">
+          <p>
+            Knowledge about the biodiversity crisis, deforestation, and land
+            degradation is important but knowledge alone does not save a species
+            or restore a forest. Action does. SDG 15 is not just a target for
+            governments and scientists; it is a call to every individual,
+            community, and organisation to change their relationship with the
+            natural world.
+          </p>
+
+          <p>
+            The good news is that individual actions, when multiplied across
+            millions of people, have a real and measurable impact. Research
+            consistently shows that behaviour change at scale particularly in
+            high-consumption societies is one of the fastest routes to
+            reducing environmental pressure on ecosystems. Guo (2025) notes that
+            citizen engagement and public participation are among the key
+            indicators tracked in SDG 15 monitoring, reflecting the UN's
+            recognition that governments cannot achieve these goals alone
+          </p>
+
+        </div>
+        <img
+          src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of " />
+
+      </div>
+
+      <!--section 2-->
+      <div class="card stcard" id="homeAction">
+        <h3 class="text-center">Reduce, Reuse, Recycle</h3>
+        <img
+          src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of" />
+
+        <div class="contentText">
+          <p>
+            The demand for products like timber, palm oil, beef, and soy is a
+            direct driver of deforestation and land degradation. By reducing
+            what you consume, choosing second-hand or sustainably certified
+            products, and recycling materials, you reduce the pressure on the
+            land systems that produce those goods.
+          </p>
+          <ul>
+            <li>Switch to recycled paper and FSC-certified products</li>
+            <li>Illegal hunting and wildlife trade</li>
+            <li> Avoid single-use plastics that end up in natural habitats
+            </li>
+            <li>Compost food waste to reduce landfill pressure and create
+              soil-enriching compost</li>
+            <li> Choose plant-based meals more often even one day a week
+              makes a difference</li>
+          </ul>
+
+          <p>
+            Even if you live in a city, you can support local biodiversity.
+            Growing native plants on balconies or in gardens provides food and
+            shelter for insects and birds. Avoiding pesticides protects
+            pollinators. Installing a bird feeder or bat box contributes to
+            urban wildlife corridors.
+          </p>
+        </div>
+      </div>
+      <!--section 3-->
+      <div class="card stcard" id="uniAction">
+        <h3 class="text-center">Actions at University</h3>
+
+        <div class="contentText">
+          <h4>Join or Start a Conservation Club</h4>
+          <p>Many universities have environmental or conservation societies
+            that organise tree planting, habitat restoration, and awareness
+            campaigns. If yours does not, the NatureGuard website itself is a
+            demonstration of how students can create platforms to inspire
+            action.
+          </p>
+          <h4>Advocate for Sustainable Campus Policies</h4>
+          <p>
+            Push your student union and university management to adopt
+            sustainable procurement policies — choosing sustainably sourced
+            paper, reducing single-use packaging in canteens, and offsetting
+            carbon through reforestation partnerships.
+          </p>
+          <h4>Use Your Degree</h4>
+          <p>
+            Whatever you study, you can integrate sustainability into your
+            future career. Engineers can design infrastructure that minimises
+            land disturbance. Business students can model sustainable supply
+            chains. Computer scientists can develop apps that help communities
+            monitor deforestation in real time.
+          </p>
+        </div>
+        <img
+          src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of " />
+      </div>
+      <!--section 4-->
+      <div class="card stcard" id="Comaction">
+        <h3 class="text-center">Actions in Your Community</h3>
+        <img src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of" />
+
+        <div class="contentText">
+          <h4>Participate in Citizen Science</h4>
+          <p>
+            Programmes like iNaturalist allow ordinary people to record and
+            photograph wildlife, contributing to global biodiversity
+            monitoring databases. This data is used by researchers and
+            policymakers to track species populations and identify areas
+            needing protection.
+          </p>
+
+          <h4>Support Local Conservation Organisations</h4>
+          <p>
+            Volunteering with local wildlife trusts, national parks, or
+            community green spaces directly contributes to habitat restoration
+            and species monitoring. In Sri Lanka, organisations such as the
+            Wildlife and Nature Protection Society (WNPS) and the Field
+            Ornithology Group of Sri Lanka (FOGSL) actively welcome student
+            volunteers.
+          </p>
+          <h4>Responsible Tourism</h4>
+          <p>
+            When visiting natural areas, stick to marked trails, do not
+            disturb wildlife, support locally owned eco-tourism businesses,
+            and report any evidence of illegal activity such as poaching or
+            unauthorised logging. Chango-Cañaveral et al. (2025) specifically
+            identify responsible tourism as a critical factor in either
+            protecting or damaging terrestrial ecosystems, depending on how it
+            is managed.
+          </p>
+        </div>
+      </div>
+      <!--section 5-->
+      <div class="card stcard" id="barriers">
+        <h3 class="text-center">Barriers to Action and How to Overcome
+          Them</h3>
+        <img
+          src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of" />
+
+        <div class="contentText">
+          <p>
+            Many people want to act but feel overwhelmed, guilty, or
+            powerless. Here are the most common barriers and practical ways to
+            address them
+          </p>
+          <h4>'My actions are too small to matter'</h4>
+          <p>
+            Individual actions matter both directly and indirectly. Directly,
+            they reduce demand. Indirectly, they signal to businesses and
+            policymakers that consumers care about sustainability. Market and
+            policy changes have consistently followed shifts in consumer
+            behaviour
+          </p>
+
+          <h4>'It is too expensive to be sustainable'</h4>
+          <p>
+            Many sustainable choices are free or cheaper — eating less meat,
+            buying second-hand, using the library instead of buying new books,
+            cycling instead of driving. Start with the free or low-cost
+            changes and build from there.
+          </p>
+          <h4>'I do not know enough to act'</h4>
+          <p>
+            You do not need to be an expert to take action. Reeya et al.
+            (2024) emphasise that community-based restoration programmes are
+            specifically designed to involve participants with no prior
+            environmental knowledge — the skills are taught, and the act of
+            participation is itself educational.
+          </p>
+        </div>
+      </div>
+      <!--section 6-->
+      <div class="card stcard" id="bigpicture">
+        <h3 class="text-center">The Bigger Picture </h3>
+
+        <div class="contentText">
+
+          <p>
+            SDG 15 has 12 specific targets, ranging from protecting ecosystems
+            and halting biodiversity loss to combating poaching and
+            integrating biodiversity values into national policy. Individual
+            action feeds into this framework at multiple levels.
+          </p>
+          <ul>
+            <li>Consumer choices change market incentives, pushing businesses
+              toward sustainable sourcing
+            </li>
+            <li>Citizen science data directly informs conservation policy and
+              species protection lists</li>
+            <li>Volunteer restoration work contributes measurably to land
+              degradation neutrality targets
+            </li>
+            <li>Student advocacy shapes institutional policy at universities,
+              local councils, and beyond</li>
+
+          </ul>
+
+          <p>
+            The SDG framework was designed to be universal applicable to every
+            country, city, organisation, and individual. Your actions are not
+            separate from the goal; they are part of it.
+          </p>
+        </div>
+        <img
+          src="Gemini_Generated_Image_acsbacsbacsbacsb.png"
+          alt="Image of " />
+      </div>
+      <!--conclusion-->
+      <div class="card conclusion" id="conclusion">
+        <h3 class="text-center">Conclusion</h3>
+
+        <div class="contentText">
+          <p>
+            Protecting life on land is one of the most urgent challenges of
+            our generation. It requires action at every scale
+            international
+            treaties, national laws, community projects, and daily
+            individual
+            choices. As a student in 2026, you are uniquely positioned: you
+            have access to information, to networks, and to the energy and
+            creativity needed to make change happen. Start with one action
+            this week. Then another. The planet cannot wait, but neither can
+            your generation and the two are inseparable.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center go-top-btn">
+        <a href="#top" class="btn">▲ Go to Top</a>
+      </div>
     </main>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="../../page-editor/pageEditor_ST4.html">Page Editor</a>
-                <a href="../../page-editor/pageEditor_ST4.html">Validation</a>
-                <a href="#">Accessibility Statement</a>
-            </div>
-            <div class="student-info">
-                Student 4: Hamid Razik | NatureGuard Project 2026
-            </div>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="../../page-editor/pageEditor_ST4.html">Page Editor</a>
+          <a href="../css/pageEditor_validator.css/">Validation</a>
+          <a href="#">Accessibility Statement</a>
         </div>
+        <div class="student-info">
+          Student 4: Hamid Razik | NatureGuard Project 2026
+        </div>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
