@@ -156,8 +156,9 @@
     margin: 0;
     color: rgba(255,255,255,0.85);
   }
-html{
-    scroll-padding-top: 12000px;
+html{   
+    
+     scroll-padding-top: 300px;
     scroll-behavior: smooth;
 }
  
@@ -243,7 +244,7 @@ html{
                         and a modern user interface.
                     </p>
 
-                    <h3>Accessibility</h3>
+                    <h3 id="acc1">Accessibility</h3>
                     <p>
                         Accessibility was considered by using descriptive
                         <code>alt</code>
@@ -329,7 +330,7 @@ html{
                         user experience without reloading the page.
                     </p>
 
-                    <h3>Accessibility</h3>
+                    <h3 id="acc2">Accessibility</h3>
                     <p>
                         Accessibility was considered by including descriptive
                         <code>alt</code> attributes for all images, ensuring
@@ -368,17 +369,60 @@ html{
                 <section>
                     <h2 id="content">Content Page</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p>
+                        This page is implemented using semantic HTML5 elements
+                        and CSS styling to create a structured, responsive, and
+                        visually appealing layout. Key HTML tags include
+                        <code>&lt;header&gt;</code> for site navigation,
+                        <code>&lt;main&gt;</code> to contain primary content,
+                        <code>&lt;section&gt;</code> and
+                        <code>&lt;div&gt;</code> for organizing content blocks,
+                        <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> for
+                        headings, <code>&lt;p&gt;</code> for paragraphs,
+                        <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> for
+                        lists, and <code>&lt;img&gt;</code> for images with
+                        descriptive alt text.
+                    </p>
+                    <p>
+                        CSS is used to create layout and style. Flexbox
+                        (<code>display: flex;</code>,
+                        <code>justify-content</code>, <code>align-items</code>)
+                        is applied for card and list layouts to allow flexible
+                        alignment and spacing. Images use <code>object-fit:
+                            cover;</code> and <code>border-radius</code> for
+                        proper scaling and rounded corners, while
+                        <code>box-shadow</code> adds depth. Interactive effects
+                        like <code>transition</code> and <code>:hover</code>
+                        provide subtle animation for user engagement. Classes
+                        like <code>.fact-box</code> highlight important
+                        information with background color, border, and padding.
+                        The sticky "Go to Top" button (<code>position:
+                            sticky;</code>) improves navigation across long
+                        content.
+                    </p>
+                    <p>
+                        Overall, the combination of semantic HTML and targeted
+                        CSS ensures that the page is structured, visually
+                        organized, and responsive while supporting user
+                        interaction and readability.
+                    </p>
 
-                    <h3 id="acc">Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <h3 id="acc3">Accessibility</h3>
+                    <p>
+                        Accessibility is addressed by using semantic tags
+                        (<code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>,
+                        <code>&lt;section&gt;</code>) which help screen readers
+                        understand content structure. Images include descriptive
+                        <code>alt</code> attributes for users with visual
+                        impairments. Text contrast and line-height are chosen
+                        for readability. Navigation links are keyboard
+                        accessible and focusable. Interactive elements, like
+                        buttons and "Go to Top" links, are properly labeled.
+                        Using list semantics for menus and content improves
+                        clarity, while consistent headings and content order
+                        maintain logical reading flow for assistive
+                        technologies.
+                    </p>
 
                     <h3>Link to the validation page</h3>
                     <!-- Update the path to link the Page Editor with the splash page -->
@@ -394,24 +438,92 @@ html{
                 </section>
 
                 <section>
-                    <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the
-                        implementation process and explain how they were
-                        resolved. Reflect on the lessons learned from overcoming
-                        these challenges.</p>
+                    <h2 id="challenge">Challenges and Lessons Learned</h2>
+                    <p>
+                        During this project, I initially faced several
+                        challenges, especially in understanding how to work with
+                        JavaScript objects and arrays effectively. At first,
+                        managing data structures and accessing nested values was
+                        confusing, but I improved my understanding by following
+                        a LinkedIn Learning JavaScript course. This helped me
+                        apply concepts more confidently in practical scenarios.
+                    </p>
+                    <p>
+                        I also struggled with implementing advanced CSS features
+                        such as overlays, smooth hover effects, and transitions.
+                        Creating visually appealing and interactive elements
+                        required a deeper understanding of timing, positioning,
+                        and styling techniques. Through practice, I was able to
+                        improve these aspects and achieve smoother user
+                        interactions.
+                    </p>
+                    <p>
+                        Another challenge was implementing smooth scrolling
+                        behavior across the website. Initially, it did not work
+                        as expected, but by researching and testing different
+                        approaches, I was able to refine it and create a better
+                        user experience.
+                    </p>
+                    <p>
+                        Additionally, while working with CSS, I noticed that I
+                        had to repeatedly use the same colors and styles across
+                        different sections. This made the code harder to manage
+                        and maintain. To solve this, I learned how to use CSS
+                        root variables (<code>:root</code>), which allowed me to
+                        define global styles such as colors and reuse them
+                        efficiently throughout the project.
+                    </p>
+                    <p>
+                        Overall, these challenges helped me learn and grow my
+                        skills in JavaScript and CSS, and I was able to overcome
+                        them through consistent practice and learning.
+                    </p>
                 </section>
 
                 <section>
-                    <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with
-                        Janet regulations governing web page publication. This
-                        includes demonstrating your understanding and
-                        application of these regulations. Be realistic and
-                        truthful. <a
-                            href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html"
-                            target="_blank">See the lecture notes for more
-                            details on compliance.</a></p>
-
+                    <h2 id="compliance">Compliance with Janet Regulations</h2>
+                    <p>
+                        While developing my web pages, I ensured that the
+                        content and implementation adhered to Janet regulations
+                        and best practices. The pages are intended for
+                        educational purposes, and I avoided any content that
+                        could be deemed inappropriate or illegal.
+                    </p>
+                    <p>
+                        I followed GDPR and UK Data Protection Act principles by
+                        not collecting any personal data from users. Any
+                        external content, such as images and fonts, were
+                        properly attributed and used under copyright rules, in
+                        line with ethical and legal web development practices.
+                    </p>
+                    <p>
+                        For security, all pages are designed to avoid malicious
+                        code, and any sensitive information is protected.
+                        Although this project is for learning purposes and does
+                        not involve real user data, I am aware of Janet CSIRT
+                        procedures and would report any potential security
+                        issues if they arose.
+                    </p>
+                    <p>
+                        Accessibility and inclusivity were also considered. I
+                        used semantic HTML elements such as
+                        <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+                        and <code>&lt;section&gt;</code> to structure content
+                        properly. Images include <code>alt</code> attributes,
+                        colors were chosen for high contrast, and interactive
+                        elements are navigable via keyboard to comply with WCAG
+                        2.1 AA standards. This ensures the site is accessible to
+                        all users, including those with disabilities.
+                    </p>
+                    <p>
+                        Overall, these practices demonstrate my understanding
+                        and application of Janet regulations, including ethical
+                        use of the network, data protection, secure coding
+                        practices, copyright compliance, and digital
+                        accessibility. By following these principles, the
+                        website aligns with both Janet policies and UK legal
+                        requirements for web publication.
+                    </p>
                 </section>
 
                 <section>
@@ -511,83 +623,245 @@ html{
                     </table>
 
                 </section>
-
                 <section>
                     <h2 id="ref">References</h2>
-                    <p>Provide links to resources you used following a
-                        consistent format (e.g., APA, MLA, or a simplified
-                        style). For example:<br><br>
-                        <ul class="ref">
-                            <li>iStock (2025) <i>iStock.</i> Available at: <a
-                                    href="#">https://www.istockphoto.com/</a>
-                                (Last accessed: 11 Feb 2025).</li>
-                            <li>Duckett, J., 2011. HTML and CSS: Design and
-                                Build Websites,<i>John Willey&Sons. Inc.
-                                    Indianappolis.</i></li>
-                        </ul>
-                    </section>
+                    <ul class="ref">
 
-                    <p class="top"><a href="# ">Go top</a></p>
-                </main>
+                        <li>Arlind, D. (2024) <i>Deforested winter landscape
+                                with tree stumps</i> [Photograph]. Pexels.
+                            Available at:
+                            <a
+                                href="https://www.pexels.com/photo/deforested-winter-landscape-with-tree-stumps-30555905/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/deforested-winter-landscape-with-tree-stumps-30555905/</a>
+                            (Accessed: 15 March 2026).</li>
 
-                <!-- Sidebar area -->
-                <aside>
-                    <h3>Core pages developed:</h3>
+                        <li>Mazumder, A. (2023) <i>Person holding a green
+                                plant</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/person-holding-a-green-plant-1072824/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/person-holding-a-green-plant-1072824/</a>
+                            (Accessed: 16 March 2026).</li>
 
-                    <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
-                    <ul class="top-level-ul">
-                        <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
-                        <li>Student 1</li>
-                        <ul>
-                            <li><a href="#home">Home page </a></li>
-                            <li><a href="#gallery">Gallery</a></li>
-                            <li><a href="#content">Content</a></li>
-                        </ul>
-                        <li>Student 2</li>
-                        <ul>
-                            <li><a href="#">Splash Screen</a></li>
-                            <li><a href="#">Action Impact Simulator</a></li>
-                            <li><a href="#">Content</a></li>
-                        </ul>
+                        <li>Shvets, A. (2023) <i>A close-up shot of a person
+                                picking up a water bottle</i> [Photograph].
+                            Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/a-close-up-shot-of-a-person-picking-up-a-water-bottle-5029811/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/a-close-up-shot-of-a-person-picking-up-a-water-bottle-5029811/</a>
+                            (Accessed: 17 March 2026).</li>
 
-                        <li>Student 3</li>
-                        <ul>
-                            <li><a href="#">Feedback</a> </li>
-                            <li><a href="#">Team</a></li>
-                            <li><a href="#">Content</a></li>
-                        </ul>
-                        <li>Student 4</li>
-                        <ul>
-                            <li><a href="#">User Profile </a></li>
-                            <li><a href="#">Sitemap</a></li>
-                            <li><a href="#">Content</a></li>
-                        </ul>
-                        <li><a href="#challenge">Challenges and Lessons
-                                Learned</a></li>
-                        <li><a href="#compliance">Compliance</a></li>
-                        <li><a href="#group">Group Meetings and Individual
-                                Contribution Log</a></li>
-                        <li><a href="#ref">References</a></li>
+                        <li>Shvets, A. (2022) <i>Close-up shot of a person
+                                holding a plant</i> [Photograph]. Pexels.
+                            Available at:
+                            <a
+                                href="https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-plant-5027792/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-plant-5027792/</a>
+                            (Accessed: 18 March 2026).</li>
+
+                        <li>Shvets, A. (2022) <i>Person putting plastic bottle
+                                in garbage bag</i> [Photograph]. Pexels.
+                            Available at:
+                            <a
+                                href="https://www.pexels.com/photo/person-in-blue-denim-jacket-putting-plastic-bottle-inside-black-garbage-bag-5029862/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/person-in-blue-denim-jacket-putting-plastic-bottle-inside-black-garbage-bag-5029862/</a>
+                            (Accessed: 19 March 2026).</li>
+
+                        <li>Podrez, A. (2024) <i>Paper cutouts on a green
+                                surface</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/paper-cutouts-on-a-green-surface-7048040/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/paper-cutouts-on-a-green-surface-7048040/</a>
+                            (Accessed: 20 March 2026).</li>
+
+                        <li>Durand, C. (2023) <i>Dried cracked mud surface</i>
+                            [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/dried-cracked-mud-surface-6491627/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/dried-cracked-mud-surface-6491627/</a>
+                            (Accessed: 15 March 2026).</li>
+
+                        <li>Cottonbro Studio (2022) <i>A brown dry earth
+                                surface</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/a-brown-dry-earth-surface-5803272/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/a-brown-dry-earth-surface-5803272/</a>
+                            (Accessed: 16 March 2026).</li>
+
+                        <li>Shoot, D. (2025) <i>Gray langur with baby in lush
+                                forest scene</i> [Photograph]. Pexels. Available
+                            at:
+                            <a
+                                href="https://www.pexels.com/photo/gray-langur-with-baby-in-lush-forest-scene-36194850/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/gray-langur-with-baby-in-lush-forest-scene-36194850/</a>
+                            (Accessed: 17 March 2026).</li>
+
+                        <li>Boshoff, K. L. (2023) <i>Koalas on tree branches</i>
+                            [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/koalas-on-tree-branches-7243663/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/koalas-on-tree-branches-7243663/</a>
+                            (Accessed: 18 March 2026).</li>
+
+                        <li>Behr, M. (2023) <i>Deforestation in wood on
+                                sunset</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/deforestation-in-wood-on-sunset-6175399/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/deforestation-in-wood-on-sunset-6175399/</a>
+                            (Accessed: 19 March 2026).</li>
+
+                        <li>Spiske, M. (2023) <i>Person holding a placard</i>
+                            [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/person-wearing-blue-sweater-holding-a-placard-11622794/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/person-wearing-blue-sweater-holding-a-placard-11622794/</a>
+                            (Accessed: 20 March 2026).</li>
+
+                        <li>Tanni, M. (2022) <i>Plastic bottles on a
+                                junkyard</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/heap-of-plastic-bottles-on-a-junkyard-5355033/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/heap-of-plastic-bottles-on-a-junkyard-5355033/</a>
+                            (Accessed: 15 March 2026).</li>
+
+                        <li>Pixabay (2022) <i>Elephants herd safari calves</i>
+                            [Photograph]. Pixabay. Available at:
+                            <a
+                                href="https://pixabay.com/photos/elephants-herd-safari-calves-279505/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://pixabay.com/photos/elephants-herd-safari-calves-279505/</a>
+                            (Accessed: 16 March 2026).</li>
+
+                        <li>Dsouza, R. (2025) <i>Leopard resting on elevated
+                                platform</i> [Photograph]. Pexels. Available at:
+                            <a
+                                href="https://www.pexels.com/photo/majestic-leopard-resting-on-elevated-platform-34582686/"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.pexels.com/photo/majestic-leopard-resting-on-elevated-platform-34582686/</a>
+                            (Accessed: 17 March 2026).</li>
+
+                        <!-- W3Schools -->
+
+                        <li>W3Schools (n.d.) <i>CSS Grid Layout</i>. Available
+                            at:
+                            <a href="https://www.w3schools.com/css/css_grid.asp"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.w3schools.com/css/css_grid.asp</a>
+                            (Accessed: 18 March 2026).</li>
+
+                        <li>W3Schools (n.d.) <i>How TO - Image Overlay</i>.
+                            Available at:
+                            <a
+                                href="https://www.w3schools.com/howto/howto_css_image_overlay.asp"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.w3schools.com/howto/howto_css_image_overlay.asp</a>
+                            (Accessed: 19 March 2026).</li>
+
+                        <li>W3Schools (n.d.) <i>How TO - CSS Modal</i>.
+                            Available at:
+                            <a
+                                href="https://www.w3schools.com/howto/howto_css_modals.asp"
+                                target="_blank"
+                                rel="noopener noreferrer">https://www.w3schools.com/howto/howto_css_modals.asp</a>
+                            (Accessed: 20 March 2026).</li>
+                        <li>W3Schools. (n.d.). <i>JavaScript Tutorial</i>
+                            [Website]. <a href="https://www.w3schools.com/js/"
+                                target="_blank">https://www.w3schools.com/js/</a>
+                            (Accessed: 27 March 2026)</li>
+                        <li>W3Schools. (n.d.). <i>JavaScript Popup Boxes</i>
+                            [Website]. <a
+                                href="https://www.w3schools.com/js/js_popup.asp"
+                                target="_blank">https://www.w3schools.com/js/js_popup.asp</a>
+                            (Accessed: 27 March 2026)</li>
+                        <li>W3Schools. (n.d.). <i>JavaScript Functions</i>
+                            [Website]. <a
+                                href="https://www.w3schools.com/js/js_functions.asp"
+                                target="_blank">https://www.w3schools.com/js/js_functions.asp</a>
+                            (Accessed: 27 March 2026)</li>
+
+                        <!-- LinkedIn Learning JavaScript Course -->
+                        <li>LinkedIn Learning. (n.d.). <i>JavaScript Essential
+                                Training</i> [Online course]. LinkedIn. <a
+                                href="https://www.linkedin.com/learning/javascript-essential-training?u=76664938"
+                                target="_blank">https://www.linkedin.com/learning/javascript-essential-training</a>
+                            (Accessed: 10 March 2026)</li>
+
                     </ul>
-                </aside>
-            </div>
+                </section>
 
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-links">
-                        <a
-                            href="../../ST1_pageEditor_validation/pageEditor_ST0.html">Page
-                            Editor</a>
-                        <a
-                            href="../../ST1_pageEditor_validation/validation_ST0.html">Validation</a>
-                        <a
-                            href="../../ST1_pageEditor_validation/pageEditor_ST0.html#acc">Accessibility
-                            Statement</a>
-                    </div>
-                    <div class="student-info">
-                        Student 1: Pasan Chandima | NatureGuard Project 2026
-                    </div>
+                <p class="top"><a href="# ">Go top</a></p>
+            </main>
+
+            <!-- Sidebar area -->
+            <aside>
+                <h3>Core pages developed:</h3>
+
+                <!-- Customize this to the role you undertook. Keep only the list items you were responsible to develop, delete the rest -->
+                <ul class="top-level-ul">
+                    <!-- Keep only the list items you were responsible to develop, delete the rest and update the links to the corresponding markers -->
+                    <li>Student 1</li>
+                    <ul>
+                        <li><a href="#home">Home page </a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#content">Content</a></li>
+                    </ul>
+                    <li>Student 2</li>
+                    <ul>
+                        <li><a href="#">Splash Screen</a></li>
+                        <li><a href="#">Action Impact Simulator</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+
+                    <li>Student 3</li>
+                    <ul>
+                        <li><a href="#">Feedback</a> </li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+                    <li>Student 4</li>
+                    <ul>
+                        <li><a href="#">User Profile </a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Content</a></li>
+                    </ul>
+                    <li><a href="#challenge">Challenges and Lessons
+                            Learned</a></li>
+                    <li><a href="#compliance">Compliance</a></li>
+                    <li><a href="#group">Group Meetings and Individual
+                            Contribution Log</a></li>
+                    <li><a href="#ref">References</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a
+                        href="../../ST1_pageEditor_validation/pageEditor_ST0.html">Page
+                        Editor</a>
+                    <a
+                        href="../../ST1_pageEditor_validation/validation_ST0.html">Validation</a>
+                    <a
+                        href="#">Accessibility
+                        Statement</a>
                 </div>
-            </footer>
-        </body>
-    </html>
+                <div class="student-info">
+                    Student 1: Pasan Chandima | NatureGuard Project 2026
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
