@@ -8,8 +8,65 @@
         <link rel="stylesheet" href="../css/style.css">
 
     <style>
+        .usertopic {
+        background-color: "";
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        }
+
+        h2{
+            color:white;
+            text-align:center ;
+
+        }
+        
+        .usertopic {
+        background-image: url(../../images/Profileh/profile.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 3rem 2rem;
+        border-radius: 12px;
+        color: white;
+        text-align: center;
+        margin-bottom: 3rem; 
+      }
+      
+      .bsec{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .progress-container {
+        width: 100%;
+        background-color: #ddd;
+        border-radius: 20px;
+        margin: 20px;
+        height: 20px;
+    }
+
+        #progress-bar {
+            height: 100%;
+            width: 0%;
+            background-color: green;
+            border-radius: 20px;
+        }
+
+        #progress{
+            font-weight: bold;
+            color: green;
+            text-align: center;
+        }
+
+
+
+    
  
     </style>
+
     </head>
 
     <body>
@@ -19,7 +76,7 @@
             <div class="header-content">
                 <a href="home.html">
                     <div class="logo-section">
-                        <img src="logo.png" alt="NatureGuard Logo">
+                        <img src="logo.png" alt ="NatureGuard Logo">
                         <h1 class="site-title"> NatureGuard</h1>
                     </div></a>
                 <nav>
@@ -38,109 +95,150 @@
         </header>
 
         <main>
+            <section class="usertopic">
 
-            <h1>Bulid your Enviromental Profile</h1>
+                <h2>Bulid your Enviromental Profile</h2>
 
-            <p>Create your profile by completing progressive steps about your
-                environmental interests and commitments to Life on Land.
-            </p>
+                <p>Create your profile by completing progressive steps about your
+                    environmental interests and commitments to Life on Land.
+                </p>
+
+            </section>
 
             <h2>User profile</h2>
 
-            <button onclick="StartProfile()">Start Profile</button>
 
-            <p id="output"></p>
+            <div class="bsec">
+
+                <button onclick="StartProfile1()" class="btn" >Personal Details</button>
+                <button onclick="StartProfile2()" class="btn">Interests</button>
+                <button onclick="StartProfile3()" class="btn">Action & Goals</button>
+
+            </div>
+
+
+
+            <div class="progress-container">
+                <p id="progress-bar"></p>
+            </div>
+            
             <p id="progress">Progress 0%</p>
+            <p id="output"></p>
+            
+
+            </main>
 
             <script>
 
-            function StartProfile(){
-
-    
-                let name = prompt("Enter your name: ");
-                if(name ==="" ||name ===null){
-                    return;
-                }
-                let age = prompt("Enter your age: ")
-                if(age===""|| age ===null){
-                    return;
-                }
-
-                document.getElementById("progress").innerHTML = "Progress 30%";
 
 
 
-                let interset = prompt("What do you like? (flowers, tress)")
-                if(interset===""||interset ===null){
-                    return;
-                }
+                function StartProfile1(){
+                    
+                    
+                    let name = prompt("Enter your name: ");
+                    if (name === "" || name === null) return;
 
-                document.getElementById("progress").innerHTML = "Progress 50%";
+                    let age = prompt("Enter your age: ");
+                    if (age === "" || age === null) return;
 
-
-
-                let action =prompt("Enter your what action do you take to protect the environment: ")
-                if(action==="" ||action ===null){
-                    return;
-                }
-
-
-                let goals = prompt("What is your future golas: ")
-                if(goals===""||goals ===null){
-                    return;
-                }
-                let commitments= prompt("What is your future commitments: ")
-                if(commitments===""||commitments ===null){
-                    return;
-                }
-                
-                document.getElementById("progress").innerHTML = "Progress 100%";
-
-
-            
-                document.getElementById("output").innerHTML=`
-
-
-                    <div class="card part1">
-                        <h4>part 1</h4>
-                        Name:  ${name} <br>
-                        Age:  ${age}
-                    </div>
-
-                    <div class="card part2">
-                        <h4>part 2</h4>
-                        Interest: ${interset} 
-                    </div>
+                    let country = prompt("What is your country: ");
+                    if (country === "" || country === null) return;
 
                     
-                    <div class="card part3">
-                        <h4>part 3</h4>
-                        Action: ${action}<br>  
-                        Goals: ${goals}<br>
-                        Commitments: ${commitments}
+
+                    document.getElementById("output").innerHTML += `
+                    <div class ="card part1">
+
+                        <h4>Part 1: Personal Details</h4>
+                        Name: ${name} <br>
+                        Age: ${age} <br>
+                        Country: ${country}
                     </div>
                     
                     `;
+
+                    document.getElementById("progress-bar").style.width = "33%";
+                    document.getElementById("progress").innerHTML = "Progress 33%";
+
+                }
+
+                function StartProfile2(){
+                
                     
+                    
+                    let interest = prompt("What do you like? (flowers, trees)");
+                    if (interest === "" || interest === null) return;
+
+
+                    let activities = prompt("what do activity do you like? (Planting, recycling)")
+                    if (activities === "" || activities === null) return;
+
+                    let particapate = prompt("How often do you do those? (Daily, Weekly, Rarely)");
+                    if (particapate === "" || particapate === null) return;
+
+
+
+
+
+                    document.getElementById("progress-bar").style.width = "66%";
+                    document.getElementById("progress").innerHTML = "Progress 66%";
+
+                    document.getElementById("output").innerHTML +=`
+                    <div class="card part2">
+
+                        <h4>part 2:Interests or Preferences</h4>
+                        Interest: ${interest}<br>
+                        Activities: ${activities}<br>
+                        Participation: ${particapate} 
+                    </div>
+                    `;
+
+                }
+
+                function StartProfile3(){
+
+
+                    let action = prompt("Enter what action you take to protect the environment:");
+                    if (action === "" || action === null) return;
+
+
+                    let goals = prompt("What are your future goals?");
+                    if (goals === "" || goals === null) return;
+
+                    let task = prompt("How can you contribute in the future?");
+                    if (task === "" || task === null) return;
+                        
+                    document.getElementById("progress-bar").style.width = "100%";
+                    document.getElementById("progress").innerHTML = "Progress 100%";
+
+
+                    document.getElementById("output").innerHTML +=`
+                    <div class="card part3">
+
+                        <h4>part 3:Actions Taken / Goals / Task</h4>
+                        Action: ${action}<br>  
+                        Goals: ${goals}<br>
+                        Task: ${task}
+                    
+                    </div>
+                    `;
                 }
 
         </script>
 
-        </main>
+       
 
         <!-- Footer -->
         <!--DONT CHANGE THIS-->
         <footer>
             <div class="footer-content">
                 <div class="footer-links">
-                    <a
-                        href="../../ST4_pageEditor_validation/pageEditor_ST0.html">Page
+                    <a href="../../page-editor/pageEditor_ST4.html">Page
                         Editor</a>
                     <a
-                        href="../../ST4_pageEditor_validation/validation_ST0.html">Validation</a>
-                    <a
-                        href="../../ST4_pageEditor_validation/pageEditor_ST0.html#acc">Accessibility
-                        Statement</a>
+                        href="../../page-editor/pageEditor_ST4.html">Validation</a>
+                    <a href="#">Accessibility Statement</a>
                 </div>
                 <div class="student-info">
                     Student 4: Hamid Razik | NatureGuard Project 2026
