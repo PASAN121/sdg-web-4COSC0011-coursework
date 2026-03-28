@@ -157,7 +157,7 @@
     color: rgba(255,255,255,0.85);
   }
 html{
-    
+    scroll-padding-top: 100px;
     scroll-behavior: smooth;
 }
  
@@ -204,112 +204,244 @@ html{
         <div class="container">]
             <!-- Main content area -->
             <main>
-
-                <!-- Update those first three sections for the pages you were responsible to implement -->
-
                 <section>
-                    <h2 id="home">Feedback & Program Directory</h2>
+                    <h2 id="feedback">Feedback & Program Directory</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p>This page is structured using semantic HTML elements such as 
+                        <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;form&gt;</code>, 
+                        and <code>&lt;fieldset&gt;</code> to clearly organise content into meaningful parts 
+                        like program listings, reviews, and the feedback form. The program directory is 
+                        designed using a CSS Grid layout (<code>display: grid</code>) with two columns, 
+                        allowing multiple program cards to appear side by side while maintaining a clean 
+                        and responsive structure. The <code>overflow-y: auto</code> property enables vertical 
+                        scrolling within the program section, improving usability when content exceeds 
+                        the set height.</p>
+
+                    <p>
+                        Each program is presented using reusable card components styled with 
+                        <code>border-radius</code>, <code>box-shadow</code>, and padding to create a modern 
+                        and visually appealing layout. Flexbox (<code>display: flex</code>) is used to align 
+                        icons, headings, and buttons evenly within each card. Buttons such as “Learn more” 
+                        and “Join” are styled using custom classes with hover effects to enhance 
+                        interactivity.
+                                        </p>
+
+                    <p>
+                        The feedback form uses input types like <code>text</code>, <code>email</code>, 
+                        <code>tel</code>, <code>date</code>, and <code>datetime-local</code> to ensure proper 
+                        data collection. JavaScript is implemented to provide client-side validation, 
+                        display error messages, and show a success message upon valid submission. A live 
+                        character counter is also included for the message field to improve user experience.
+                    </p>
 
                     <h3>Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <p>
+                        Accessibility is considered by using proper form labels linked to input fields, 
+                        ensuring screen readers can correctly interpret the form. Required fields are 
+                        clearly indicated, and error messages are displayed to guide users when invalid 
+                        input is detected. Images include descriptive <code>alt</code> text to support users 
+                        who rely on screen readers.
+                    </p>
+
+                    <p>
+                        The page maintains good colour contrast between text and background for readability, 
+                        and content is structured logically using headings (<code>&lt;h2&gt;</code>, 
+                        <code>&lt;h3&gt;</code>) to improve navigation. Interactive elements such as buttons 
+                        and links are clearly styled and easy to identify.
+                    </p>
 
                     <h3>Link to the validation page</h3>
-                    <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#splashVal">Include a link to
-                            the validation page</a>, use the marker to jump to
-                        the corresponding section of the validation page.</p>
-                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                    <p>
+                        <a href=".././ST3_pageEditor_validation/validation_ST0.html">
+            View the validation page for this Feedback & Program Directory
+                        </a>
+                    </p>
 
                     <h3>Link to the page</h3>
-                    <p><a href="splash.html">Include a link to the actual page
-                            you describe.</a></p>
+                     <p>
+                        <a href="../assets/HTML/feedback.html">
+                            View the Feedback & Program Directory page
+                        </a>
+                    </p>
                 </section>
 
                 <section>
-                    <h2 id="gallery">Gallery Page</h2>
+                    <h2 id="home">Home page</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                     <p>
+                        This page is structured using semantic HTML elements such as 
+                        <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, and headings 
+                        (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>) to organise content clearly. 
+                        The team members are displayed using a grid layout created with 
+                        <code>display: grid</code> and <code>grid-template-columns: repeat(4, 1fr)</code>, 
+                        which ensures that four cards appear evenly across the page.
+                    </p>
+
+                    <p>
+                        Each team member is presented using a reusable card component 
+                        (<code>.team-card</code>) styled with <code>padding</code>, 
+                        <code>border-radius</code>, and smooth transitions. Images are styled 
+                        using <code>object-fit: cover</code> to maintain consistent sizing 
+                        without distortion. A hover effect (<code>transform: scale()</code> 
+                        and <code>box-shadow</code>) is applied to create an interactive and 
+                        visually engaging experience.
+                    </p>
+
+                    <p>
+                        Additional details about each member are hidden by default using 
+                        <code>max-height: 0</code> and <code>opacity: 0</code>. These details 
+                        become visible on hover or focus using CSS transitions, creating a 
+                        smooth reveal effect without the need for JavaScript. The hero section 
+                        at the top uses a background image with <code>background-size: cover</code> 
+                        and <code>background-position: center</code> to create a visually appealing 
+                        introduction.
+                    </p>
 
                     <h3>Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                     <p>
+                        Accessibility is improved by using meaningful <code>alt</code> text for 
+                        all images, allowing screen readers to describe each team member. 
+                        The use of <code>tabindex="0"</code> on each card ensures that users 
+                        can navigate through the team members using a keyboard.
+                    </p>
+
+                    <p>
+                        The <code>:focus</code> pseudo-class is used alongside hover effects to 
+                        reveal additional details, ensuring that keyboard users have the same 
+                        experience as mouse users. A visible focus outline is also applied to 
+                        highlight the selected card. Clear heading structure and readable text 
+                        contrast further enhance usability and accessibility.
+                    </p>
 
                     <h3>Link to the validation page</h3>
-                    <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#volunteerVal">Include a link
-                            to the validation page</a>, use the marker to jump
-                        to the corresponding section of the validation page.</p>
-                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                    <p>
+                        <a href="../../ST3_pageEditor_validation/validation_ST0.html#teamVal">
+                            View the validation page for the Team page
+                        </a>
+                    </p>
 
                     <h3>Link to the page</h3>
-                    <p><a href="volunteer.html">Include a link to the actual
-                            page you describe.</a></p>
+                    <p>
+                        <a href="../assets/HTML/team.html">
+                            View the team page
+                        </a>
+                    </p>
                 </section>
 
                 <section>
-                    <h2 id="content">Content Page</h2>
+                    <h2 id="content">Content Page - Life on land</h2>
                     <h3>Technical Description</h3>
-                    <p>Explain the HTML and CSS techniques used to implement
-                        this page. Justify the logic and purpose of the key tags
-                        and styling choices focusing on functionality and design
-                        without copying large code sections. Explain the purpose
-                        of key HTML tags and CSS properties. Specify key HTML
-                        tags and CSS properties used to create structure and
-                        styling.</p>
+                    <p>
+                        This page is structured using semantic HTML elements such as 
+                        <code>&lt;section&gt;</code>, <code>&lt;div&gt;</code>, headings, 
+                        paragraphs, and lists to organise content into clear thematic sections. 
+                        Each topic (e.g., causes, consequences, and solutions) is separated into 
+                        individual content blocks using reusable card-style containers 
+                        (<code>.card</code> and <code>.stcard</code>) to maintain consistency 
+                        across the layout.
+                    </p>
+
+                    <p>
+                        The layout of each section uses Flexbox (<code>display: flex</code>) to 
+                        position text and images side by side, improving readability and visual 
+                        balance. Images are styled with <code>object-fit: cover</code>, 
+                        <code>border-radius</code>, and <code>box-shadow</code> to maintain 
+                        consistent sizing and enhance the visual design. A hover effect using 
+                        <code>transform</code> and <code>transition</code> is applied to images 
+                        to create a subtle interactive experience.
+                    </p>
+
+                    <p>
+                        Internal navigation is implemented at the top of the page using anchor 
+                        links (<code>&lt;a href="#sectionID"&gt;</code>) that allow users to 
+                        quickly jump to different sections of the page. A “Go to Top” button is 
+                        also included using a sticky position to improve navigation usability. 
+                        Lists (<code>&lt;ul&gt;</code>) are used to present actionable steps 
+                        clearly, and spacing and line-height properties are applied to improve 
+                        readability.
+                    </p>
 
                     <h3 id="acc">Accessibility</h3>
-                    <p>Explain how you used to addressed accessibility in this
-                        particular page you implemented.</p>
+                    <p>
+                        Accessibility is supported by using meaningful heading structures 
+                        (<code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>) 
+                        to create a logical content hierarchy that can be easily interpreted by 
+                        screen readers. All images include descriptive <code>alt</code> text to 
+                        ensure users with visual impairments can understand the content.
+                    </p>
+
+                    <p>
+                        Internal navigation links improve accessibility by allowing users to 
+                        quickly move between sections without excessive scrolling. Text is 
+                        styled with appropriate line spacing and contrast to enhance readability. 
+                        Interactive elements such as buttons and links are clearly visible and 
+                        easy to use, supporting both mouse and keyboard navigation.
+                    </p>
 
                     <h3>Link to the validation page</h3>
-                    <!-- Update the path to link the Page Editor with the splash page -->
-                    <p><a href="validation_ST0.html#contentVal">Include a link
-                            to the validation page</a>, use the marker to jump
-                        to the corresponding section of the validation page.</p>
-                    <!-- Update the path to link the Page Editor with the validation page and make it jump to the marker that contains a snapshot for the splash page -->
+                    <p>
+                        <a href="../../ST3_pageEditor_validation/validation_ST0.html#contentVal">
+                            View the validation page for this Content Page
+                        </a>
+                    </p>
 
                     <h3>Link to the page</h3>
-                    <p><a href="content.html">Include a link to the actual page
-                            you describe.</a></p>
+                    <p>
+                        <a href="../assets/HTML/content_ST3.html">
+                            View the Content Page – Life on Land
+                        </a>
+                    </p>
                 </section>
 
                 <section>
                     <h2 id="challenge"> Challenges and Lessons Learned</h2>
-                    <p>Detail any challenges encountered during the
-                        implementation process and explain how they were
-                        resolved. Reflect on the lessons learned from overcoming
-                        these challenges.</p>
+                    <p>
+                        One challenge was maintaining a consistent layout across pages using 
+                        Grid and Flexbox. This was solved by reusing common styles and adjusting 
+                        spacing carefully.
+                    </p>
+
+                    <p>
+                        Implementing JavaScript for form validation and the character counter 
+                        was also challenging, but it improved understanding of event handling 
+                        and DOM manipulation.
+                    </p>
+
+                    <p>
+                        Managing image sizes was resolved using <code>object-fit: cover</code>, 
+                        and accessibility was improved by adding proper <code>alt</code> text 
+                        and semantic HTML.
+                    </p>
+
+                    <p>
+                        Overall, this project improved skills in layout design, interactivity, 
+                        and maintaining consistency across a website.
+                    </p>
                 </section>
 
                 <section>
                     <h2 id="compliance"> Compliance</h2>
-                    <p>Discuss how the pages you have created are compliant with
-                        Janet regulations governing web page publication. This
-                        includes demonstrating your understanding and
-                        application of these regulations. Be realistic and
-                        truthful. <a
+                    <p>
+                        The pages follow JANET regulations by ensuring all content is appropriate, 
+                        educational, and does not include harmful or copyrighted material without permission.
+                    </p>
+
+                    <p>
+                        Accessibility is considered by using clear structure, readable text, and 
+                        alternative text for images.
+                    </p>
+
+                    <p>
+                        Overall, the website meets guidelines for safe, responsible, and 
+                        appropriate web publishing.
+                    <a
                             href="https://intranet.ecs.westminster.ac.uk/modules/4COSC011W/compliance.html"
                             target="_blank">See the lecture notes for more
                             details on compliance.</a></p>
 
                 </section>
 
-                section>
+                <section>
                     <h2 id="compliance">Group Meetings and Individual
                         Contribution Log</h2>
 
@@ -332,7 +464,7 @@ html{
                         <tbody>
                             <tr>
                                 <td>1</td>
-                                <td>05 Feb 2026</td>
+                                <td>10 Feb 2026</td>
                                 <td>Online</td>
                                 <td>Introduce project, discuss goals, assign
                                     roles</td>
@@ -342,7 +474,7 @@ html{
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>10 Feb 2026</td>
+                                <td>13 Feb 2026</td>
                                 <td>Physical</td>
                                 <td>Research and gather content for pages</td>
                                 <td>Yes</td>
@@ -351,7 +483,7 @@ html{
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>12 Feb 2026</td>
+                                <td>15 Feb 2026</td>
                                 <td>Online</td>
                                 <td>Review and discuss collected content</td>
                                 <td>Yes</td>
@@ -524,12 +656,9 @@ html{
                             Editor</a>
                         <a
                             href="../../ST3_pageEditor_validation/validation_ST0.html">Validation</a>
-                        <a
-                            href="../../ST3_pageEditor_validation/pageEditor_ST0.html#acc">Accessibility
-                            Statement</a>
                     </div>
                     <div class="student-info">
-                        Student 3: Krishanika | NatureGuard Project 2026
+                        Student 3: Krishanika Kathiresan | NatureGuard Project 2026
                     </div>
                 </div>
             </footer>
