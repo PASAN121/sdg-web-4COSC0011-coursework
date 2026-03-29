@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="card-grids">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            /* basic */
+            body {
+                margin: 0;
+                overflow-y: auto;
+            }
+
+            p{
+            font-size: 1rem;  
+            margin: 0;
+            color:black;
+                }
+
+            h2{
+                text-align:center;
+                color: white;
+            }
+
+            h3{
+                color:#1A4301;
+            }
+
+            /* four programs */
+            .card-grids {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+                max-height: 700px;/*limit the height  */
+                overflow-y: auto;  /*enables vertical scroll */
+                }
+
+            .prog-card {
+                width: 100%;
+                background: white;
+                border-radius: 10px;
+                padding: 10px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                box-sizing: border-box;
+            }
+
+            .prog-card img {
+                width: 100%;           
+                height: 180px;         
+                object-fit: cover;    
+                border-radius: 8px;   
+                    }
+
+            .sort{
+                text-align: right;
+            }
+
+            .icons-main{
+                text-align: center;
+            }
+
+            .icon{
+                font-size:40px;
+            }
+
+            .fees table{
+                width: 100%;            
+                border-collapse: collapse;
+            }
+
+            .fees th{
+                padding:10px;
+                text-align: left;
+                background-color: #73A942;
+            }
+
+            .fees td{
+                padding:10px;
+                text-align: left;
+                background-color:rgb(221, 217, 217);
+            }
+            .prog-buttons{
+                text-align: center;
+                justify-content: center;
+                gap:20px;
+                display: flex;
+                list-style-type:none;
+                    }
+
+            .learn{
+                display: block;
+                color:white;
+                background-color: rgb(221, 217, 217);
+                border-radius: 10px;
+                text-decoration: none;  
+                width:120px; 
+                height:30px;
+            }
+
+            .join{
+                display: block;
+                text-align: center;
+                color:white;
+                background-color: #1A4301;
+                border-radius: 10px;
+                text-decoration: none;
+                width:120px;
+                height:30px;
+            }
+
+            .learn:hover { opacity: 0.85; }
+            .join:hover  { opacity: 0.85; }
+            
+        </style>
+    </head>
+    <body>
+                    <!--First Program-->
+                    <div class="prog-card">
+                        <div
+                            style="display: flex; justify-content: space-between;">
+                        <span><h3>Volunteering Opportunity</h3></span>
+                        <span><p>♡</p></span>
+                        </div>
+
+                        <img src="../../images/volunteers.jpg"
+                            alt="Volunteers working">
+
+                        <div class="icons-main"
+                            style="display: flex; justify-content: space-between;">
+                            <div>
+                                <span class="icon">🌳 </span><br>
+                                <span>Protects<br> forests</span>
+                            </div>
+                            <div>
+                                <span class="icon">⌛</span><br>
+                                <span>3 - 5 hours<br> twice a week</span>
+                            </div>
+                            <div>
+                                <span class="icon">💵</span><br>
+                                <span>Program Fees<br> from £5</span>
+                            </div>
+                        </div>
+                        <br>
+
+                        <p>• Durations from 1 – 8 weeks</p>
+                        <p>• Open to all ages</p>
+                        <br>
+
+                        <div class="fees">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Duration</th>
+                                        <th>Program Fee</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 week</td>
+                                        <td>£10</td>
+                                        <td>£5/day</td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+
+                        <p>Tasks include planting native trees, removing
+                            invasive species, and monitoring
+                            wildlife habitats in your local area.</p>
+                        <br>
+
+                        <ul class="prog-buttons">
+                            <li><a href="#" class="learn">Learn more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Second Program-->
+                    <div class="prog-card">
+                        <div
+                            style="display: flex; justify-content: space-between;">
+                            <span><h3>Student Campaign</h3></span>
+                            <span><p>♡</p></span>
+                        </div>
+
+                        <img src="../../images/compaign.jpg"
+                            alt="Students holding banners at a wildlife awareness campaign">
+
+                        <div class="icons-main"
+                            style="display: flex; justify-content: space-between;">
+                            <div>
+                                <span class="icon">🦁</span><br>
+                                <span>Raises<br> awareness</span>
+                            </div>
+                            <div>
+                                <span class="icon">⌛</span><br>
+                                <span>2 – 4 hours<br> per week</span>
+                            </div>
+                            <div>
+                                <span class="icon">💵</span><br>
+                                <span>program Fees<br> from £0</span>
+                            </div>
+                        </div>
+                        <br>
+
+                        <p>• Runs throughout the academic year</p>
+                        <p>• aged 16+ welcome</p>
+                        <br>
+
+                        <div class="fees">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Duration</th>
+                                        <th>Program Fee</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1 day</td>
+                                        <td>£0</td>
+                                        <td>free</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+
+                        <p> Organise events, create social media content, and
+                            collaborate with local
+                            environmental organisations to drive real change in
+                            your community.</p>
+                        <br>
+
+                        <ol class="prog-buttons">
+                            <li><a href="#" class="learn">Learn more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ol>
+
+                    </div>
+
+                    <!--Third Program-->
+                    <div class="prog-card">
+                        <div
+                            style="display: flex; justify-content: space-between;">
+                            <span><h3>Student Action</h3></span>
+                            <span><p>♡</p></span>
+                        </div>
+
+                        <img src="../../images/student-actions.jpg"
+                            alt="Students planting trees as part of a student action programme">
+
+                        <div class="icons-main"
+                            style="display: flex; justify-content: space-between;">
+                            <div>
+                                <span class="icon">🌱</span><br>
+                                <span>Grows<br> biodiversity</span>
+                            </div>
+                            <div>
+                                <span class="icon">⌛</span><br>
+                                <span>4 – 6 hours<br> twice a week</span>
+                            </div>
+                            <div>
+                                <span class="icon">💵</span><br>
+                                <span>program Fees<br> from £20</span>
+                            </div>
+                        </div>
+                        <br>
+
+                        <p>• Durations from 1 – 4 weeks</p>
+                        <p>• Students aged 21+ welcome</p>
+                        <br>
+
+                        <div class="fees">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Duration</th>
+                                        <th>Program Fee</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2 weeks</td>
+                                        <td>£12</td>
+                                        <td>£6/day</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br>
+
+                        <p>Take action on campus by planting native trees and
+                            creating green corridors that
+                            support local wildlife.</p>
+                        <br>
+
+                        <ul class="prog-buttons">
+                            <li><a href="#" class="learn">Learn
+                                    more</a></li>
+                            <li><a href="#" class="join">Join</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Fourth Porgram -->
+                    <div class="prog-card">
+                        <div
+                            style="display: flex; justify-content: space-between;">
+                            <span><h3>Community Project</h3></span>
+                            <span><p>♡</p></span>
+                        </div>
+
+                        <img src="../../images/community-projects.jpg"
+                            alt="Community members restoring a local wetland area">
+
+                        <div class="icons-main"
+                            style="display: flex; justify-content: space-between;">
+                            <div>
+                                <span class="icon">💧</span><br>
+                                <span>Restores<br> wetlands</span>
+                            </div>
+                            <div>
+                                <span class="icon">⌛</span><br>
+                                <span>4–5 hours<br> weekly <span>
+                                    </div>
+                                    <div>
+                                        <span class="icon">💵</span><br>
+                                        <span>program Fees<br> from £2</span>
+                                    </div>
+                                </div>
+                                <br>
+
+                                <p>• Durations from 2 – 12 weeks</p>
+                                <p>• Volunteers aged 16+ and families</p>
+                                <br>
+
+                                <div class="fees">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Duration</th>
+                                                <th>Program Fee</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2 weeks</td>
+                                                <td>£10</td>
+                                                <td>£2/day</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <br>
+
+                                <p>Partner with local conservation groups. Help
+                                    re-establish native plant species,
+                                    improve water quality, and
+                                    create safe habitats for birds, amphibians,
+                                    and
+                                    other wildlife.</p>
+                                <br>
+
+                                <ul class="prog-buttons">
+                                    <li><a href="#" class="learn">Learn
+                                            more</a></li>
+                                    <li><a href="#" class="join">Join</a></li>
+                                </ul>
+                            </div>
+                        </div>
