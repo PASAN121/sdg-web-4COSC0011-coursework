@@ -314,30 +314,30 @@
                 const message = document.getElementById("message");
                 const charCount = document.getElementById("charCount");
                 
-                // live character Counter
+                /* live character Counter */
                 message.addEventListener("input", function () {
                     let remaining = 200 - message.value.length;
                     charCount.textContent = remaining + " characters remaining";
                     });
 
-                // Form Validation
+                /* Form Validation */
                 form.addEventListener("submit", function (e) {
                      e.preventDefault();
 
                     let valid = true;
 
-                    // Clear previous errors
+                    /* Clear previous errors */
                     document.querySelectorAll(".error").forEach(el => el.textContent = "");
                     document.getElementById("name").style.border = "2px solid red";
 
-                    // Name
+                    /* Name */
                     const name = document.getElementById("name").value;
                     if (name === "") {
                         document.getElementById("name-error").textContent = "Name is required";
                         valid = false;
                     }
 
-                    // Email          
+                    /* Email */       
                     const email = document.getElementById("email").value;
                     if (email === "") {
                         document.getElementById("email-error").textContent = "Email is required";
@@ -346,27 +346,28 @@
                         document.getElementById("email-error").textContent = "Enter a valid email";
                         valid = false;
                     }
-                    // Phone
+
+                    /* phone */
                     const phone = document.getElementById("phone").value;
                     if (phone.length < 10) {
                         document.getElementById("phone-error").textContent = "Enter valid phone number";
                         valid = false;
                     }
 
-                    // Address
+                    /* Address */
                     const address = document.getElementById("address").value;
                     if (address === "") {
                         document.getElementById("address-error").textContent = "Address required";
                         valid = false;
                     }
 
-                    // Message
+                    /* Message */
                     if (message.value === "") {
                         document.getElementById("message-error").textContent = "Message required";
                         valid = false;
                     }
 
-                    // Success Message
+                    /* Success Message */
                     if (valid) {
                         document.getElementById("successMessage").textContent = "Thank you for your feedback!";
                         form.reset();
@@ -376,7 +377,6 @@
 
             </script>
                 <!-- Footer -->
-                <!--DONT CHANGE THIS-->
         <footer>
             <div class="footer-content">
                 <div class="footer-links">
